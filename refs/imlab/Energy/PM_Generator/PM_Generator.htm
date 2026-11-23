@@ -1,0 +1,1397 @@
+<script type="text/javascript">try{document.cookie="pushi=1; path=/; max-age=82800; SameSite=Lax"}catch(e){}</script><!--IMLAB-OFF:PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLz80a3V4VjZLblZEeTZmSSUyMUYwSUYwMkY4JTNCODRyZGZEa3AlMjFuOXJ5Y1QxNVFxRzRuUHUwVTJPRiUyMSUyMWJZeEwlMjFDR1VTNUc0WHAwN3RReWxuNVJmc3hjWUl5WiUzQjFZenJWMHZkbHB6cSUzQmJEbHciPg==--><!--/IMLAB-OFF--></script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narodadst1?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narod_desktop_ad?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script><script type="text/javascript">
+		var ucoz_rndid = 'cZlIm172';
+		function uOnDomOrLater(f){
+			if(document.readyState == 'loading') {
+				if(document.addEventListener) {
+					document.addEventListener('DOMContentLoaded',f);
+				} else {
+					window.attachEvent('onload',f);
+				}
+			} else {
+				setTimeout(f,0);
+			}
+		}
+	
+			function resizeFrame() {
+				var WX, WY, BX, BY;
+				var o = document.getElementById("iFcZlIm172") , t , d;
+				if (!o) return;
+				d = o.contentDocument;
+				if (!(t = d.getElementById("wrapperXcZlIm172"))) WX = 0;
+				else WX = t.value;
+				if (!(t = d.getElementById("wrapperYcZlIm172"))) WY = 0;
+				else WY = t.value;
+				if (!(t = d.getElementById("bannerXcZlIm172"))) BX = 0;
+				else BX = t.value;
+				if (!(t = d.getElementById("bannerYcZlIm172"))) BY = 0;
+				else BY = t.value;
+				BX = parseInt(BX) + parseInt(WX);
+				BY = parseInt(BY) + parseInt(WY);
+				if (BX < 0) o.style.width = "100%";
+				else if (BX > 0) o.style.width = BX + "px";
+				if (BY < 0) o.style.height = "100%";
+				else if (BY > 0) {
+					o.style.height = Math.max(BY, 100) + "px";
+				}
+
+				if (d.body) {
+					d.body.insertAdjacentHTML('beforeend', '<style>html,body{width:100%;min-width:200px;min-height:90px;padding:0;margin:0;display:block;}</style>');
+				}
+			}
+			document.write('<iframe style="position:fixed;right:0px;top:0px;z-index:2147483646;" height="90px" width="100%" onload="resizeFrame();" id="iFcZlIm172" frameborder="0" scrolling="no" src="/?QmOvEqeRsL4mJJBMNBDfqHZ2PzEDLApmI7XrX85fIUCsas9L%5ELBidMbP%3BZBkywx3SiA2B%211GixOV8Qm43KXBq9VIxxz23zKC6sso"></iframe>');
+		</script><script type="text/javascript" src="../../.s/src/jquery-3.3.1.min.js"></script><html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta name="description"
+content="PM_Generator: Программа расчета параметров дискового или цилиндрического однофазного электрогенератора на постоянных магнитах">
+<meta name="keywords"
+content="PM_Generator: Программа расчета параметров дискового или цилиндрического однофазного электрогенератора на постоянных магнитах">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>PM_Generator: Программа расчета параметров дискового или цилиндрического 
+однофазного электрогенератора на постоянных магнитах</title>
+<style>/* добавлено зеркалом: пометка о несохранённом рисунке и hiding рекламного фрейма ucoz */.imlab-missing{display:block;margin:10px 0;padding:8px 12px;border:1px dashed #9ab;color:#5a6b7a;background:#f4f6f8;font:13px/1.5 sans-serif;text-decoration:none}iframe[style*="position:fixed"]{display:none!important}</style></head>
+
+<body bgcolor="#FFFFFF">
+<div align="left">
+
+<table border="0" cellspacing="5">
+    <tr>
+        <td align="center"><a href="../../index.html"><strong>Главная страница</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Contact.htm"><strong>
+		Контактная информация</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/News.htm"><strong>Новости 
+		науки и техники</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Find.htm"><strong>Поиск на 
+		сайте</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><strong><a href="../../Contact/Forum.htm">Форум</a> </strong></td>
+    </tr>
+</table>
+</div>
+
+<hr>
+
+<p align="left"><font size="3"><b>PM_Generator: <span lang="ru">Программа 
+расчета параметров дискового или цилиндрического однофазного электрогенератора 
+на постоянных магнитах</span></b></font></p>
+
+<p class="MsoNormal" align="left"><b><font size="2">1. Обозначения:</font></b></p>
+<p class="MsoNormal" style="text-align: left"><span lang="EN-US"><font size="2">
+A</font></span><font size="2"> – средняя ширина прямоугольной или 
+трапецеидальной (трапецевидной) катушки <br>
+</font><font size="2">A<sub><span lang="EN-US">M</span>­</sub> – расстояние 
+между центрами соседних магнитов<br>
+</font><span lang="EN-US"><font size="2">B</font></span><font size="2"><sub>0</sub> 
+– магнитная индукция в центре зазора между оппозитными магнитами или амплитудное 
+значение магнитной индукции в центре катушки<br>
+Вообще говоря, при расчетах в качестве параметра B<sub>0</sub> следует 
+использовать среднюю величину магнитной индукции на оси катушки при максимальном 
+потокосцеплении с источником возбуждающего магнитного поля, но для 
+рассматриваемых конструкций генераторов среднее значение индукции на оси близко 
+к значению в центре как для катушек без ферромагнитного сердечника с небольшой 
+высотой H, так и для катушек с сердечниками.<br>
+B<sub><span lang="EN-US">r</span>­</sub> – остаточная индукция магнита <br>
+</font><span lang="EN-US"><font size="2">D</font></span><font size="2"> – 
+диаметр обмоточного провода катушки <br>
+D2 – диаметр цилиндрического магнита<br>
+</font><span lang="EN-US"><font size="2">E</font></span><font size="2"> – длина 
+прямоугольной или трапецеидальной катушки<br>
+</font><span lang="EN-US"><font size="2">E<sub>C</sub></font></span><font size="2"> 
+– электродвижущая сила (ЭДС) одной катушки <br>
+</font><span lang="EN-US"><font size="2">F – частота </font></span>
+<font size="2">вращения ротора <br>
+</font><span lang="EN-US"><font size="2">f</font></span><font size="2"> – 
+частота выходного напряжения <br>
+</font><span lang="EN-US"><font size="2">G</font></span><font size="2"> – 
+величина зазора между оппозитными магнитами<br>
+</font><span lang="EN-US"><font size="2">h </font></span><font size="2">– 
+толщина (высота) одного магнита<br>
+</font><span lang="EN-US"><font size="2">H</font></span><font size="2"> – высота 
+катушки<br>
+</font><span lang="EN-US"><font size="2">I</font></span><font size="2"> – 
+выходной ток генератора под нагрузкой<br>
+</font><span lang="EN-US"><font size="2">L</font></span><font size="2"> – длина 
+отверстия в прямоугольной или трапецеидальной катушке <br>
+</font><span lang="EN-US"><font size="2">L<sub>M</sub></font></span><font size="2"> 
+– минимальная длина прямоугольного или трапецеидального магнита&nbsp;<br>
+</font><span lang="EN-US"><font size="2">M</font></span><font size="2"> – 
+крутящий момент на валу под нагрузкой <br>
+</font><span lang="EN-US"><font size="2">m</font></span><font size="2"> – число 
+обмоток (катушек) <span lang="ru">генератора </span><br>
+</font><span lang="EN-US"><font size="2">N</font></span><font size="2"> – число 
+витков обмотки (катушки)<span lang="ru"> <br>
+</span></font><span lang="EN-US"><font size="2">n</font></span><font size="2"> – 
+число магнитных полюсов генератора <br>
+</font><font size="2">P – мощность генератора в нагрузке <br>
+</font><font size="2">R – активное сопротивление одной катушки генератора<span lang="ru">
+<br>
+</span></font><span lang="EN-US"><font size="2">R<sub>IN</sub></font></span><font size="2"> 
+– внутреннее (активное) сопротивление генератора <br>
+R<sub><span lang="EN-US">H</span></sub><span lang="EN-US"> – 
+</span>сопротивление нагрузки <br>
+R1 – радиус отверстия цилиндрической катушки<span lang="ru"> <br>
+</span>R2 – внешний радиус цилиндрической катушки<span lang="ru"> <br>
+</span></font><span lang="EN-US"><font size="2">S</font></span><font size="2"> – 
+площадь сердечника (или отверстия) в прямоугольной или трапецеидальной катушке<span lang="ru">
+<br>
+</span></font><span lang="EN-US"><font size="2">T</font></span><font size="2"> – 
+средняя ширина отверстия в прямоугольной или трапецеидальной катушке<span lang="ru">
+<br>
+</span></font><span lang="EN-US"><font size="2">T<sub>M</sub></font></span><font size="2"> 
+– средняя ширина прямоугольного или трапецеидального магнита <br>
+</font><span lang="EN-US"><font size="2">U</font></span><font size="2"> – 
+действующее выходное напряжение генератора на нагрузке<span lang="ru"> <br>
+</span>U<sub><span lang="EN-US">C</span></sub> – действующее напряжение 
+холостого хода одной катушки<span lang="ru"> <br>
+</span>U<sub><span lang="EN-US">XX</span></sub> – действующее напряжение 
+холостого хода генератора <br>
+</font><span lang="EN-US" style="font-family: GreekC"><font size="2">l</font></span><font size="2"> 
+– фактор упаковки <span lang="en-us">[9]</span><br>
+</font><span lang="EN-US" style="font-family: GreekC"><font size="2">r</font></span><font size="2"><sub><span lang="EN-US">E</span></sub> 
+– удельное электрическое сопротивление обмоточного провода <br>
+</font><span lang="EN-US" style="font-family: GreekC"><font size="2">F</font></span><font size="2"><sub><span lang="EN-US">i</span></sub> 
+– магнитный поток, пронизывающий площадь, охватываемую i-м витком катушки<span lang="ru">
+<br>
+</span></font><span lang="EN-US" style="font-family: GreekC"><font size="2">Y</font></span><font size="2"> 
+– потокосцепление обмотки с магнитным полем <br>
+</font><span lang="EN-US" style="font-family: GreekC"><font size="2">w</font></span><font size="2"> 
+– угловая скорость вращения ротора </font></p>
+<p class="MsoNormal" align="left"><b><font size="2">2. Введение</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При разработке и 
+изготовлении электрогенераторов <span lang="en-us">[</span>1<span lang="en-us">, </span>
+6<span lang="en-us">, </span>7<span lang="en-us">]</span>, в том числе на 
+постоянных магнитах, возникает проблема вихревых токов, которые наводятся в 
+магнитопроводе генератора под воздействием переменного магнитного поля. Решать 
+эту проблему можно разными способами, например, применяя шихтованные 
+магнитопроводы, набранные из тонких листов электротехнической стали, или, 
+используя в качестве материала магнитопровода ферромагнетики с высоким удельным 
+сопротивлением (феррит, альсифер и т. п.). Оба эти метода имеют свои недостатки. 
+Сердечники из листовой электротехнической стали достаточно сложны в 
+изготовлении, а ферромагнетики с высоким удельным сопротивлением, как правило, 
+имеют низкую индукцию насыщения. Еще один метод решения проблемы вихревых токов 
+– изменение конструкции генератора таким образом, чтобы в нем отсутствовали 
+детали магнитопровода, движущиеся относительно возбуждающего магнитного поля. </font></p>
+<p class="MsoNormal" align="left"><b><font size="2">3. Конструкция 
+электрогенератора</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Генератор, в 
+котором возбуждающее магнитное поле вращается вместе с магнитопроводом, по форме 
+исполнения может быть либо дисковым (аксиальным), либо цилиндрическим 
+(радиальным).</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">3.1. Конструкция дискового 
+генератора с постоянными магнитами</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Конструкция 
+дискового генератора представлена на рис. 3.1.1.</font></p>
+
+<p align="left"><img border="0" src="Disk_01.jpg" width="472" height="253"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;font-family:Arial">Рис. 3.1.1. Конструкция 
+дискового генератора: ротор с постоянными магнитами, статор – катушки без 
+сердечников.</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Генератор состоит 
+из ротора и статора. Ротор представляет собой два закрепленных на оси стальных 
+диска, на которых установлены постоянные магниты в виде секторов или трапеций 
+(или даже прямоугольной формы при большом числе магнитов), обращенные друг к 
+другу разноименными полюсами (чтобы поля оппозитных магнитов в рабочем зазоре 
+между дисками складывались). Между магнитами расположен дисковый статор, 
+представляющий из себя секторные катушки, уложенные друг за другом по кругу, 
+образуя диск. Так как поле возбуждения, создаваемое постоянными магнитами, 
+вращается вместе с магнитопроводом (стальными дисками) с одной угловой 
+скоростью, то, соответственно, вихревых токов в нем оно не создает.</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">3.2. Конструкция 
+цилиндрического генератора с постоянными магнитами</font></b></p>
+<p class="MsoNormal" align="left"><font size="2">Конструкция цилиндрического 
+генератора представлена на рис. 3.2.1.</font></p>
+<p align="left"><img border="0" src="Cilinder_01.jpg" width="526" height="316"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;font-family:Arial">Рис. 3.2.1. Конструкция 
+цилиндрического генератора: ротор с постоянными магнитами, статор – катушки без 
+сердечников.</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Генератор состоит 
+из ротора и статора. Ротор представляет собой два закрепленных на оси стальных 
+цилиндра, на которых установлены постоянные магниты в виде слегка изогнутых 
+сегментов прямоугольной формы (или даже прямоугольные призмы при большом числе 
+магнитов), обращенные друг к другу разноименными полюсами (чтобы поля оппозитных 
+магнитов в рабочем зазоре между цилиндрами складывались). Между магнитами 
+расположен цилиндрический статор, представляющий из себя прямоугольные в 
+поперечном сечении катушки, уложенные друг за другом, образуя цилиндр. Так как 
+поле возбуждения, создаваемое постоянными магнитами, вращается вместе с 
+магнитопроводом (стальными цилиндрами) с одной угловой скоростью, то, 
+соответственно, вихревых токов в нем оно не создает.</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">4. Общие соотношения</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">В соответствии с 
+законом электромагнитной индукции Фарадея<span lang="en-us"> [</span>5<span lang="en-us">]</span> 
+под действием переменного магнитного поля в обмотке (катушке) возникает 
+электродвижущая сила (ЭДС) E<sub><span lang="EN-US">C</span></sub>. Она равна 
+сумме ЭДС отдельных витков и определяется выражением:</font></p>
+<p align="left"><img border="0" src="image008.gif" width="244" height="48"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где <span lang="EN-US">N</span> 
+– число витков обмотки (катушки), </font>
+<span lang="EN-US" style="font-family: GreekC"><font size="2">F</font></span><font size="2"><sub><span lang="EN-US">i</span></sub> 
+– магнитный поток, пронизывающий площадь, охватываемую i-м витком&nbsp;</font></p>
+<p align="left"><img border="0" src="image010.gif" width="75" height="45"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">– потокосцепление обмотки с 
+магнитным полем. Полагая, что потокосцепление изменяется по гармоническому 
+закону: </font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image012.gif" width="119" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> – 
+максимальное потокосцепление магнита и обмотки, n – число полюсов ротора,
+<span lang="EN-US" style="font-family: GreekC">w</span> – угловая скорость 
+вращения ротора (радианы в секунду), получим:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image014.gif" width="155" height="43"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Так как
+<span lang="EN-US" style="font-family: GreekC">w</span> = 2
+<span lang="EN-US" style="font-family: GreekC">p</span> F, где F – частота 
+вращения ротора (обороты в секунду), то</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image016.gif" width="179" height="24"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Действующее 
+напряжение холостого хода одной катушки U<sub><span lang="EN-US">C</span></sub>:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image018.gif" width="135" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Если число полюсов 
+генератора равно числу катушек (m = n), то ЭДС генератора E при их 
+последовательном соединении (с учетом фазировки):</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image020.gif" width="173" height="25"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><span lang="EN-US"><font size="2">
+Амплитуда ЭДС генератора E<sub>0</sub>:</font></span></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image022.gif" width="119" height="25"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Действующее 
+выходное напряжение U<sub><span lang="EN-US">XX</span></sub> генератора при 
+отсутствии нагрузки (напряжение холостого хода):</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image024.gif" width="201" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При необходимости 
+число катушек генератора можно уменьшить или увеличить на одну без их 
+перекоммутации (m = n – 1, <span lang="EN-US">m</span> = n + 1). </font>
+<span style="font-family: Times New Roman"><font size="2">Это может понадобиться 
+при использовании катушек с ферромагнитными сердечниками для уменьшения 
+залипания ротора за счет притяжения сердечников к магнитам. </font></span>
+<font size="2">Если общее число обмоток для одной фазы равно m, то угол между 
+соседними катушками составляет 2<span lang="EN-US" style="font-family: GreekC">p</span>/m, 
+а между соседними магнитами – 2<span lang="EN-US" style="font-family: GreekC">p</span>/n. 
+Разница геометрических углов составит 2<span lang="EN-US" style="font-family: GreekC">p</span>(<span lang="EN-US">n</span> 
+– <span lang="EN-US">m</span>)/(n<span lang="EN-US">m</span>). Сдвиг ЭДС на 2<span lang="EN-US" style="font-family: GreekC">p</span><span lang="EN-US">
+</span>для одной катушки соответствует углу между двумя ближайшими однополюсными 
+магнитами, т. е. 4<span lang="EN-US" style="font-family: GreekC">p</span>/n. 
+Таким образом добавочный сдвиг по фазе ЭДС каждой следующей катушки по сравнению 
+с предыдущей будет равен доле от 2<span lang="EN-US" style="font-family: GreekC">p</span>, 
+равной отношению разницы геометрических углов между катушкой и магнитом к углу 
+между двумя ближайшими однополюсными магнитами:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image026.gif" width="217" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Если все катушки 
+соединены последовательно, то ЭДС генератора с <span lang="EN-US">m </span>
+катушками может быть рассчитана как сумма ЭДС всех катушек с учетом фазового 
+сдвига:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image028.gif" width="285" height="45"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">(для катушки с 
+индексом k = 0 фазовый сдвиг равен нулю, для катушки с индексом k = m фазовый 
+сдвиг равен <span lang="EN-US" style="font-family: GreekC">p</span> (n – m), т. 
+е. также дает нулевой вклад). Вычисляя сумму тригонометрических функций [4], 
+получаем:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image030.gif" width="492" height="45"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для m = n – 1 
+амплитуда ЭДС генератора:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image032.gif" width="195" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Напряжение 
+холостого хода генератора:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image034.gif" width="335" height="47"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для m = n + 1 
+амплитуда ЭДС генератора:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image036.gif" width="200" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Напряжение 
+холостого хода:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image038.gif" width="339" height="47"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Частота выходного напряжения f:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image040.gif" width="51" height="41"><font size="2"> </font>
+</p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Таким образом, для 
+расчета выходного напряжения генератора необходимо найти амплитудное значение 
+потокосцепления катушки с магнитным полем
+<span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub>. Для 
+определения выходной мощности и коэффициента полезного действия (КПД) необходимо 
+будет найти активное сопротивление одной обмотки R. Тогда при последовательном 
+соединении катушек внутреннее сопротивление R<sub><span lang="EN-US">IN</span></sub> 
+генератора будет равно сумме сопротивлений всех m обмоток:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image042.gif" width="80" height="24"><font size="2"> </font>
+</p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Выходной ток I 
+генератора под нагрузкой сопротивлением <span lang="EN-US">R<sub>H</sub></span>:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image044.gif" width="107" height="45"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Выходное напряжение генератора 
+на нагрузке <span lang="EN-US">U</span>:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image046.gif" width="113" height="24"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Выходная мощность генератора P:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image048.gif" width="53" height="19"><font size="2"> </font>
+</p>
+<p class="MsoNormal" align="left"><font size="2">Мощность, рассеиваемая в 
+обмотках генератора определяется соотношением:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image050.gif" width="53" height="25"><font size="2"> </font>
+</p>
+<p class="MsoNormal" align="left"><font size="2">Требуемый крутящий момент на 
+валу генератора под нагрузкой M:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image052.gif" width="111" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">КПД генератора может быть 
+найден из соотношения:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image054.gif" width="80" height="45"><font size="2"> </font>
+</p>
+<p class="MsoNormal" align="left"><b><font size="2">5. Расчет потокосцепления и 
+активного сопротивления обмоток</font></b></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.1. Расчет трапецеидальной 
+катушки дискового генератора</font></b></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.1.1. Расчет параметров 
+обмотки</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">В генераторе могут 
+использоваться катушки без ферромагнитного сердечника или с ферромагнитным 
+сердечником из шихтованной электротехнической стали. Чтобы получить максимальное 
+потокосцепление и вписаться в заданные габариты, необходимо использовать катушки 
+и постоянные магниты в виде секторов, которые с достаточно хорошим приближением 
+можно представить в форме трапеций (если число секторов на круг не меньше 8, с 
+уменьшением числа секторов до 4 точность представления существенно ухудшается, а 
+когда их меньше 4, то становится неприемлемой). При этом катушки следует 
+наматывать на оправку треугольной или трапецеидальной формы. Эскиз катушки 
+представлен на рис.<span lang="en-us"> 5</span>.1.1.1.</font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="image056.jpg" width="191" height="340">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">
+Рис. 5.1.1.1. Эскиз трапецеидальной катушки.</font></p>
+<p class="MsoNormal" align="left"><font size="2">Геометрические параметры 
+трапецеидальной катушки:<br>
+</font><span lang="EN-US"><font size="2">T</font></span><font size="2"> 
+– ширина отверстия в катушке по средней линии трапеции<span lang="en-us"> <br>
+</span></font><span lang="EN-US"><font size="2">A</font></span><font size="2"> – 
+ширина катушки по средней линии трапеции<span lang="en-us"> <br>
+</span></font><span lang="EN-US"><font size="2">L</font></span><font size="2"> – 
+длина отверстия в катушке<span lang="en-us"> <br>
+</span></font><span lang="EN-US"><font size="2">E</font></span><font size="2"> – 
+длина катушки<span lang="en-us"> <br>
+</span></font><font size="2">H – высота катушки</font></p>
+<p class="MsoNormal" align="left"><font size="2">Так как A – T ≈
+<span lang="EN-US">E</span> – <span lang="EN-US">L</span>, то E ≈ A – T + L</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Число витков
+<span lang="EN-US">N </span>трапецеидальной катушки может быть достаточно точно 
+найдено по формуле:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image058.gif" width="120" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">l</span> – фактор упаковки, D – 
+диаметр обмоточного провода. Активное сопротивление R трапецеидальной катушки 
+достаточно точно определяется выражением:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image060.gif" width="205" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">E</span></sub><span lang="EN-US">
+</span>– удельное электрическое сопротивление обмоточного провода. Если m 
+катушек генератора соединены последовательно, то внутреннее сопротивление 
+генератора R<sub><span lang="EN-US">IN</span></sub> может быть найдено следующим 
+образом:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image062.gif" width="233" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.1.2. Расчет 
+потокосцепления трапецеидальной катушки без сердечника</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">
+<img border="0" src="image064.jpg" width="624" height="133"> </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для получения 
+максимального потокосцепления величина A должна быть как можно ближе к 
+расстоянию между центрами соседних магнитами <span lang="EN-US">A<sub>M</sub></span>, 
+а длина отверстия в катушке L должна быть примерно равна длине магнитов. 
+Амплитуда потокосцепления катушки и создаваемого системой постоянных магнитов 
+магнитного поля <span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> 
+(момент, когда катушка находится точно между полюсами) определяется посредством 
+формулы:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image066.gif" width="157" height="75"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-family: Times New Roman"><font size="2">где </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">B</font><sub><font size="2">n</font></sub></span><span style="font-family: Times New Roman"><font size="2">(x) 
+– среднее значение нормальной составляющей магнитной индукции к плоскости 
+намотки в пределах контура площадью S(</font></span><span lang="EN-US" style="font-family: Times New Roman"><font size="2">x</font></span><span style="font-family: Times New Roman"><font size="2">), 
+N – число витков, x – переменная интегрирования (расстояние от центра катушки до 
+заданной точки по линии размера A). Вычисление амплитуды потокосцепления 
+производится с помощью программы <span lang="en-us">PM_Generator</span>. </font>
+</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Выходное напряжение 
+генератора (и, соответственно, выходная мощность) достигает максимума при 
+максимальном заполнении обмоткой пространства между магнитами, а именно:<br>
+- минимальном отверстии в катушке (T → 0) <br>
+- ширине катушки, равной расстоянию между магнитами (A → <span lang="EN-US">A<sub>M</sub></span>)
+<br>
+- максимальной высоте катушке H, которую ограничивает только необходимость 
+наличия конструктивных зазоров между магнитами и катушками <br>
+- максимальном значении фактора упаковки
+<span lang="EN-US" style="font-family: GreekC">l</span>. </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">А также когда число 
+катушек <span lang="EN-US">m</span> равно числу полюсов <span lang="EN-US">n</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кроме того, 
+величина потокосцепления, определяющая выходное напряжение генератора, зависит 
+от произведения B<sub>0</sub> ∙ <span lang="EN-US">H</span>. При увеличении 
+высоты катушки H (и, соответственно, расстояния между оппозитными постоянными 
+магнитами) величина магнитной индукции B<sub>0</sub> уменьшается. Их 
+произведение при этом может иметь локальный максимум (при некоторой величине H). 
+Соответствующая этому максимуму высота катушки <span lang="EN-US">H</span>, а 
+также расстояние между оппозитными магнитами (равное сумме высоты катушки и 
+конструктивных зазоров) будет оптимальной для снятия максимума мощности с 
+генератора.</font></p>
+<p class="MsoNormal" style="text-align: left"><b><font size="2">5.1.3. Расчет 
+потокосцепления трапецеидальной катушки с сердечником</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для получения 
+максимального потокосцепления средняя ширина катушки A должна быть как можно 
+ближе к расстоянию между центрами соседних магнитами <span lang="EN-US">A<sub>M</sub></span>, 
+а длина сердечника в катушке L должна быть примерно равна длине магнитов. Чтобы 
+обеспечить монотонно возрастающее (убывающее) изменение потокосцепления при 
+повороте ротора, необходимо либо принять ширину сердечника <span lang="EN-US">T
+</span>примерно равной ширине магнита T<sub><span lang="EN-US">M</span></sub>, 
+либо добавить к сердечнику полюсные наконечники, перекрывающие магнит по ширине. 
+В любом случае для предотвращения магнитного насыщения ширина (и, 
+соответственно, площадь) сердечника не должны быть слишком малы. </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">
+<img border="0" src="image086.jpg" width="623" height="139"> </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При использовании 
+сердечника магнитное поле будет в основном сосредоточено в нем и распределено 
+равномерно. Амплитуда потокосцепления катушки и создаваемого системой постоянных 
+магнитов магнитного поля <span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> 
+(момент, когда катушка находится точно между полюсами) определяется посредством 
+формулы:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image088.gif" width="87" height="24"><font size="2"> </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">где
+<span lang="EN-US">N</span> – число витков обмотки, S – площадь сердечника, B<sub>0</sub> 
+– индукция магнитного поля в сердечнике. </font>
+<span style="font-family: Times New Roman"><font size="2">Вычисление амплитуды 
+потокосцепления производится с помощью программы <span lang="en-us">PM_Generator</span>.
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Выходное напряжение 
+генератора (и, соответственно, выходная мощность) достигает максимума при 
+максимальном заполнении обмоткой пространства между магнитами, а именно:<br>
+- ширине катушки, равной расстоянию между магнитами (A → <span lang="EN-US">A<sub>M</sub></span>)
+<br>
+- максимальной высоте катушке H, которую ограничивает только необходимость 
+наличия полюсных наконечников и конструктивных зазоров между магнитами и 
+катушками <br>
+- максимальном значении фактора упаковки
+<span lang="EN-US" style="font-family: GreekC">l</span>. </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">А также когда число 
+катушек <span lang="EN-US">m</span> равно числу полюсов <span lang="EN-US">n</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Величина 
+потокосцепления, определяющая выходное напряжение генератора, зависит от 
+произведения B<sub>0</sub> ∙ <span lang="EN-US">H</span>. При увеличении высоты 
+катушки H (и, соответственно, расстояния между оппозитными постоянными 
+магнитами) величина магнитной индукции B<sub>0</sub> уменьшается. Их 
+произведение при этом может иметь локальный максимум (при некоторой величине H). 
+Соответствующая этому максимуму высота катушки <span lang="EN-US">H</span>, а 
+также расстояние между оппозитными магнитами (равное сумме высоты катушки и 
+конструктивных зазоров) будет оптимальной для снятия максимума мощности с 
+генератора. Кроме того, величина потокосцепления зависит от произведения B<sub>0</sub> 
+∙ (<span lang="EN-US">A</span> – <span lang="EN-US">T</span>) <span lang="EN-US">
+T</span>. В нулевом приближении при выполнении предположения B<sub>0</sub> = 
+const максимум достигается при <span lang="EN-US">T</span> = <span lang="EN-US">
+A</span>/2.</font></p>
+<p class="MsoNormal" style="text-align:justify"><b><font size="2">5.2. Расчет 
+цилиндрической катушки дискового генератора</font></b></p>
+<p class="MsoNormal"><b><font size="2">5.2.1. Расчет параметров обмотки</font></b></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Использование 
+цилиндрических форм катушек и постоянных магнитов в электрогенераторах менее 
+эффективно, но привлекает доступностью цилиндрических постоянных магнитов. Эскиз 
+цилиндрической катушки (цилиндрического соленоида) представлен на рис. 5.2.1.1.</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image102.jpg" width="324" height="164"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">
+Рис. 5.2.1.1. Эскиз цилиндрической катушки.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Геометрические 
+параметры цилиндрической катушки:<br>
+R1 – внутренний радиус соленоида (радиус отверстия) <br>
+R2 – внешний радиус соленоида <br>
+</font><font size="2">H – высота соленоида </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Расчет числа витков
+<span lang="EN-US">N </span>обмотки цилиндрического соленоида производится по 
+формуле:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image104.gif" width="137" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">l</span> – фактор упаковки, D – 
+диаметр обмоточного провода. Расчет активного сопротивления <span lang="EN-US">R
+</span>цилиндрического соленоида производится по формуле:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image106.gif" width="183" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">E</span></sub> 
+– удельное электрическое сопротивление обмоточного провода. </font>
+<span style="font-family: Times New Roman"><font size="2">Если m катушек 
+генератора соединены последовательно, то внутреннее сопротивление генератора R</font></span><sub><span lang="EN-US" style="font-family: Times New Roman"><font size="2">IN</font></span></sub><span style="font-family: Times New Roman"><font size="2"> 
+может быть найдено следующим образом:</font></span></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image108.gif" width="215" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.2.2. Расчет 
+потокосцепления цилиндрической катушки без сердечника</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">
+<img border="0" src="image110.jpg" width="348" height="130">&nbsp;</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для получения 
+максимального потокосцепления величина <span lang="EN-US">R</span>2 должна быть 
+как можно ближе к половине расстояния между центрами соседних магнитами
+<span lang="EN-US">A<sub>M</sub></span> (максимальное заполнение обмоткой 
+доступного пространства). Амплитуда потокосцепления катушки и создаваемого 
+системой постоянных магнитов магнитного поля
+<span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> (момент, 
+когда катушка находится точно между полюсами) определяется посредством формулы:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image112.gif" width="159" height="49"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-family: Times New Roman"><font size="2">где </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">B</font><sub><font size="2">n</font></sub></span><span style="font-family: Times New Roman"><font size="2">(x) 
+– среднее значение нормальной составляющей магнитной индукции к плоскости 
+намотки в пределах контура площадью S(</font></span><span lang="EN-US" style="font-family: Times New Roman"><font size="2">x</font></span><span style="font-family: Times New Roman"><font size="2">), 
+N – число витков, x – переменная интегрирования (расстояние от центра катушки до 
+заданной точки по линии размеров R1, R2). Вычисление амплитуды потокосцепления 
+производится с помощью программы <span lang="en-us">PM_Generator</span>. </font>
+</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Выходное напряжение 
+генератора (и, соответственно, выходная мощность) достигает максимума при 
+максимальном заполнении обмоткой пространства между магнитами, а именно:<br>
+- минимальном отверстии в катушке (<span lang="EN-US">R</span>1 → 0) <br>
+- диаметре катушки, равному расстоянию между магнитами (2 R2 →
+<span lang="EN-US">A<sub>M</sub></span>) <br>
+- максимальной высоте катушке H, которую ограничивает только необходимость 
+наличия конструктивных зазоров между магнитами и катушками <br>
+- максимальном значении фактора упаковки
+<span lang="EN-US" style="font-family: GreekC">l</span>. </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">А также когда число 
+катушек <span lang="EN-US">m</span> равно числу полюсов <span lang="EN-US">n</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кроме того, 
+величина потокосцепления, определяющая выходное напряжение генератора, зависит 
+от произведения B<sub>0</sub> ∙ <span lang="EN-US">H</span>. При увеличении 
+высоты катушки H (и, соответственно, расстояния между оппозитными постоянными 
+магнитами) величина магнитной индукции B<sub>0</sub> уменьшается. Их 
+произведение при этом может иметь локальный максимум (при некоторой величине H). 
+Соответствующая этому максимуму высота катушки <span lang="EN-US">H</span>, а 
+также расстояние между оппозитными магнитами (равное сумме высоты катушки и 
+конструктивных зазоров) будет оптимальной для снятия максимума мощности с 
+генератора.</font></p>
+<p class="MsoNormal" style="text-align: left"><b><font size="2">5.2.3. Расчет 
+потокосцепления цилиндрической катушки с сердечником</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для получения 
+максимального потокосцепления величина <span lang="EN-US">R</span>2 должна быть 
+как можно ближе к половине расстояния между центрами соседних магнитами
+<span lang="EN-US">A<sub>M</sub></span> (максимальное заполнение обмоткой 
+доступного пространства). Чтобы обеспечить монотонно возрастающее (убывающее) 
+изменение потокосцепления при повороте ротора, необходимо либо принять диаметр 
+сердечника 2∙R1 равным диаметру магнита <span lang="EN-US">D</span>2, либо 
+добавить к сердечнику полюсные наконечники, перекрывающие магнит по диаметру. В 
+любом случае для предотвращения магнитного насыщения диаметр (и, соответственно, 
+площадь) сердечника не должны быть слишком малы. </font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image130.jpg" width="348" height="132"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При использовании 
+сердечника магнитное поле будет в основном сосредоточено в нем и распределено 
+равномерно. Амплитуда потокосцепления катушки и создаваемого системой постоянных 
+магнитов магнитного поля <span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> 
+(момент, когда катушка находится точно между полюсами) определяется посредством 
+формулы:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image088.gif" width="87" height="24"><font size="2"> </font>
+</p>
+<p class="MsoNormal" style="text-align: left"><font size="2">где
+<span lang="EN-US">N</span> – число витков обмотки, S – площадь сердечника, B<sub>0</sub> 
+– индукция магнитного поля в сердечнике. </font>
+<span style="font-family: Times New Roman"><font size="2">Вычисление амплитуды 
+потокосцепления производится с помощью программы <span lang="en-us">PM_Generator</span>.
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Выходное напряжение 
+генератора (и, соответственно, выходная мощность) достигает максимума при 
+максимальном заполнении обмоткой пространства между магнитами, а именно:<br>
+- диаметре катушки, равному расстоянию между магнитами (2 R2 →
+<span lang="EN-US">A<sub>M</sub></span>) <br>
+- максимальной высоте катушке H, которую ограничивает только необходимость 
+наличия полюсных наконечников и конструктивных зазоров между магнитами и 
+катушками <br>
+- максимальном значении фактора упаковки
+<span lang="EN-US" style="font-family: GreekC">l</span>. </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">А также когда число 
+катушек <span lang="EN-US">m</span> равно числу полюсов <span lang="EN-US">n</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кроме того, 
+величина потокосцепления, определяющая выходное напряжение генератора, зависит 
+от произведения B<sub>0</sub> ∙ <span lang="EN-US">H</span>. При увеличении 
+высоты катушки H (и, соответственно, расстояния между оппозитными постоянными 
+магнитами) величина магнитной индукции B<sub>0</sub> уменьшается. Их 
+произведение при этом может иметь локальный максимум (при некоторой величине H). 
+Соответствующая этому максимуму высота катушки <span lang="EN-US">H</span>, а 
+также расстояние между оппозитными магнитами (равное сумме высоты катушки и 
+конструктивных зазоров) будет оптимальной для снятия максимума мощности с 
+генератора. Кроме того, величина потокосцепления зависит от произведения B<sub>0</sub> 
+∙ <span lang="EN-US">R</span>1<sup>2</sup> ∙ (<span lang="EN-US">R</span>2 –
+<span lang="EN-US">R</span>1). В нулевом приближении при выполнении 
+предположения B<sub>0</sub> = const максимум достигается при <span lang="EN-US">
+R</span>1 = (2/3)<span lang="EN-US">R</span>2.</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.3. Расчет прямоугольной 
+катушки цилиндрического генератора</font></b></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.3.1. Расчет параметров 
+обмотки</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">В генераторе могут 
+использоваться катушки без ферромагнитного сердечника или с ферромагнитным 
+сердечником из шихтованной электротехнической стали. Постоянные магниты ротора и 
+катушки представляют собой слегка изогнутые сегменты прямоугольной формы в 
+поперечном сечении, чтобы их можно было уложить на поверхность цилиндра. Для 
+расчета можно принять, что магниты и катушки представляют из себя прямоугольные 
+призмы. Эскиз катушки представлен на рис. 5.3.1.1.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">
+<img border="0" src="image144.gif" width="348" height="99"> </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">
+Рис. 5.3.1.1. Эскиз прямоугольной катушки.</font></p>
+<p class="MsoNormal" align="left"><font size="2">Геометрические параметры 
+прямоугольной катушки:<br>
+</font><span lang="EN-US"><font size="2">T</font></span><font size="2"> – ширина 
+отверстия в катушке <br>
+</font><span lang="EN-US"><font size="2">A</font></span><font size="2"> – ширина 
+катушки <br>
+</font><span lang="EN-US"><font size="2">L</font></span><font size="2"> – длина 
+отверстия в катушке <br>
+</font><span lang="EN-US"><font size="2">E</font></span><font size="2"> – длина 
+катушки <br>
+</font><span lang="EN-US"><font size="2">H – высота </font></span>
+<font size="2">катушки</font></p>
+<p class="MsoNormal" align="left"><font size="2">Так как A – T =
+<span lang="EN-US">E</span> – <span lang="EN-US">L</span>, то E = A – T + L</font></p>
+<p class="MsoNormal" align="left"><font size="2">Число витков <span lang="EN-US">
+N</span> прямоугольной катушки может быть найдено по формуле:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image058.gif" width="120" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">l</span> – фактор упаковки, D – 
+диаметр обмоточного провода. Активное сопротивление R прямоугольной катушки 
+определяется выражением:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image146.gif" width="201" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">E</span></sub> 
+– удельное электрическое сопротивление обмоточного провода. Если
+<span lang="EN-US">m</span> катушек одной фазы генератора соединены 
+последовательно, то внутреннее сопротивление одной фазы генератора R<sub><span lang="EN-US">IN</span></sub> 
+может быть найдено следующим образом:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image148.gif" width="229" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">5.3.2. Расчет 
+потокосцепления прямоугольной катушки без сердечника</font></b></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image149.jpg" width="612" height="130"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для получения 
+максимального потокосцепления ширина катушки A должна быть примерно равна 
+расстоянию между центрами соседних магнитов A<sub><span lang="EN-US">M</span></sub>, 
+а длина отверстия в катушке L должна быть примерно равна длине магнитов. 
+Амплитуда потокосцепления катушки и создаваемого системой постоянных магнитов 
+магнитного поля <span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> 
+(момент, когда катушка находится точно между полюсами) определяется посредством 
+формулы:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image066.gif" width="157" height="75"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-family: Times New Roman"><font size="2">где </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">B</font><sub><font size="2">n</font></sub></span><span style="font-family: Times New Roman"><font size="2">(x) 
+– среднее значение нормальной составляющей магнитной индукции к плоскости 
+намотки в пределах контура площадью S(</font></span><span lang="EN-US" style="font-family: Times New Roman"><font size="2">x</font></span><span style="font-family: Times New Roman"><font size="2">), 
+N – число витков, x – переменная интегрирования (расстояние от центра катушки до 
+заданной точки по линии размера A). Вычисление амплитуды потокосцепления 
+производится с помощью программы <span lang="en-us">PM_Generator</span>. </font>
+</span></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Выходное 
+напряжение генератора (и, соответственно, выходная мощность) достигает максимума 
+при максимальном заполнении обмоткой пространства между магнитами, а именно:<br>
+- минимальном отверстии в катушке (T → 0) <br>
+- ширине катушки, равной расстоянию между магнитами (A → <span lang="EN-US">A<sub>M</sub></span>)
+<br>
+- максимальной высоте катушке H, которую ограничивает только необходимость 
+наличия конструктивных зазоров между магнитами и катушками <br>
+- максимальном значении фактора упаковки
+<span lang="EN-US" style="font-family: GreekC">l</span>. </font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">А также когда 
+число катушек <span lang="EN-US">m</span> равно числу полюсов <span lang="EN-US">
+n</span>.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Величина 
+потокосцепления, определяющая выходное напряжение генератора, зависит от 
+произведения B<sub>0</sub> ∙ <span lang="EN-US">H</span>. При увеличении высоты 
+катушки H (и, соответственно, расстояния между оппозитными постоянными 
+магнитами) величина магнитной индукции B<sub>0</sub> уменьшается. Их 
+произведение при этом может иметь локальный максимум (при некоторой величине H). 
+Соответствующая этому максимуму высота катушки будет оптимальной для снятия 
+максимума мощности с генератора.</font></p>
+<p class="MsoNormal" style="text-align: left"><b><font size="2">5.3.3. Расчет 
+потокосцепления прямоугольной катушки с сердечником</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для получения 
+максимального потокосцепления ширина катушки A должна быть как можно ближе к 
+расстоянию между центрами соседних магнитами <span lang="EN-US">A<sub>M</sub></span>, 
+а длина сердечника в катушке L должна быть примерно равна длине магнитов. Чтобы 
+обеспечить монотонно возрастающее (убывающее) изменение потокосцепления при 
+повороте ротора, необходимо либо принять ширину сердечника <span lang="EN-US">T
+</span>примерно равной ширине магнита T<sub><span lang="EN-US">M</span></sub>, 
+либо добавить к сердечнику полюсные наконечники, перекрывающие магнит по ширине. 
+В любом случае для предотвращения магнитного насыщения ширина (и, 
+соответственно, площадь) сердечника не должны быть слишком малы. </font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image168.jpg" width="622" height="139"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При использовании 
+сердечника магнитное поле будет в основном сосредоточено в нем и распределено 
+равномерно. Амплитуда потокосцепления катушки и создаваемого системой постоянных 
+магнитов магнитного поля <span lang="EN-US" style="font-family: GreekC">Y</span><sub>0</sub> 
+(момент, когда катушка находится точно между полюсами) определяется посредством 
+формулы:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image088.gif" width="87" height="24"><font size="2"> </font>
+</p>
+<p class="MsoNormal" style="text-align: left"><font size="2">где
+<span lang="EN-US">N</span> – число витков обмотки, S – площадь сердечника, B<sub>0</sub> 
+– индукция магнитного поля в сердечнике. </font>
+<span style="font-family: Times New Roman"><font size="2">Вычисление амплитуды 
+потокосцепления производится с помощью программы <span lang="en-us">PM_Generator</span>.
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Выходное напряжение 
+генератора (и, соответственно, выходная мощность) достигает максимума при 
+максимальном заполнении обмоткой пространства между магнитами, а именно:<br>
+- ширине катушки, равной расстоянию между магнитами (A → <span lang="EN-US">A<sub>M</sub></span>)
+<br>
+- максимальной высоте катушке H, которую ограничивает только необходимость 
+наличия полюсных наконечников и конструктивных зазоров между магнитами и 
+катушками <br>
+- максимальном значении фактора упаковки
+<span lang="EN-US" style="font-family: GreekC">l</span>. </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">А также когда число 
+катушек <span lang="EN-US">m</span> равно числу полюсов <span lang="EN-US">n</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Величина 
+потокосцепления, определяющая выходное напряжение генератора, зависит от 
+произведения B<sub>0</sub> ∙ <span lang="EN-US">H</span>. При увеличении высоты 
+катушки H (и, соответственно, расстояния между оппозитными постоянными 
+магнитами) величина магнитной индукции B<sub>0</sub> уменьшается. Их 
+произведение при этом может иметь локальный максимум (при некоторой величине H). 
+Соответствующая этому максимуму высота катушки <span lang="EN-US">H</span>, а 
+также расстояние между оппозитными магнитами (равное сумме высоты катушки и 
+конструктивных зазоров) будет оптимальной для снятия максимума мощности с 
+генератора. Кроме того, величина потокосцепления зависит от произведения B<sub>0</sub> 
+∙ (<span lang="EN-US">A</span> – <span lang="EN-US">T</span>) <span lang="EN-US">
+T</span>. В нулевом приближении при выполнении предположения B<sub>0</sub> = 
+const максимум достигается при <span lang="EN-US">T</span> = <span lang="EN-US">
+A</span>/2.</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">6. Расчет магнитной индукции 
+в зазоре</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Точный расчет 
+магнитной индукции в магнитной системе электрогенератора лучше выполнить методом 
+конечных элементов <span lang="en-us">[</span>3<span lang="en-us">, 1</span>1<span lang="en-us">]</span>. 
+Программа <span lang="en-us">PM_Generator </span>позволяет выполнить только 
+приблизительный расчет амплитуды магнитной индукции<span lang="en-us"> </span>B<sub>0</sub> 
+в зазоре между постоянными магнитами. Впрочем, получаемые значения, как правило, 
+вполне соответствует реальным данным. Для расчета магнитной индукции в зазоре 
+можно привести геометрию магнитной системы к конфигурации, показанной на рис. 
+6.1 в верхнем ряду (при условии, что магнитное сопротивление стального 
+основания, на котором крепятся магниты, близко к нулю, то есть оно имеет 
+достаточную толщину). Фактически, надо рассмотреть бесконечный набор магнитов 
+удвоенной высоты (толщины) 2h каждый с зазором G между ними (если используются 
+катушки без ферромагнитного сердечника).</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image170.jpg" width="312" height="217"><span lang="en-us"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align:justify">
+<span style="font-size: 10.0pt; font-family: Arial; ">Рис. 6.1. Геометрия 
+магнитной системы магнитов для расчета магнитной индукции в зазоре (в 
+приближении системы цилиндрических постоянных магнитов).</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Этот набор может 
+быть представлен в виде суммы одного бесконечно длинного магнита и магнитов 
+высотой (толщиной), равной зазору G, находящихся на расстоянии 2h друг от друга 
+и имеющих противоположную намагниченность. Расчет магнитной индукции постоянного 
+магнита может быть с достаточно хорошей точностью произведен методом 
+эквивалентного соленоида [<span lang="en-us">9</span>]. Магнитная индукция в 
+произвольной точке при известных геометрических размерах и остаточной индукции 
+магнита B<sub><span lang="EN-US">r</span></sub> может быть найдена численными 
+методами [2]. А магнитная индукция на оси цилиндрического магнита (ось Z, 
+аксиальная координата относительно центра магнита – z) диаметра D2 высотой 
+(толщиной) h определяется аналитической формулой:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image172.gif" width="341" height="59"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где B<sub><span lang="EN-US">r</span></sub> 
+– остаточная индукция магнита. В соответствии с принципом суперпозиции магнитных 
+полей магнитная индукция B<sub>0</sub> в центре зазора величиной G сумме 
+магнитной индукции полей однонаправленных магнитов высотой (толщиной 2h) G на 
+разных расстояниях от их центров. В первом приближении диаметр магнита можно 
+считать равным средней ширине магнита (D2 = T<sub><span lang="EN-US">M</span></sub>), 
+а вклад удаленных магнитов равным нулю (т. е. учитывать только четыре соседних 
+магнита толщиной 2h каждый). Тогда:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image174.gif" width="441" height="227"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Или:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image176.gif" width="561" height="112"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Другой способ 
+расчета заключается в следующем. В соответствии с принципом суперпозиции 
+магнитных полей магнитная индукция B<sub>0</sub> в центре зазора величиной G 
+будет равна сумме магнитной индукции в бесконечно длинном магните (т. е.
+<span lang="EN-US">B<sub>r</sub></span>) и магнитной индукции полей 
+противоположно направленных магнитов высотой (толщиной G) на разных расстояниях 
+от их центров, т. е.:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image178.gif" width="545" height="120"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">В первом 
+приближении диаметр магнита можно считать равным средней ширине магнита (D2 = T<sub><span lang="EN-US">M</span></sub>). 
+Тогда:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image180.gif" width="493" height="64"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Или:</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="image182.gif" width="573" height="64"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Причем во многих 
+случаях в последнем уравнении суммой по k (от 1 до ∞) можно пренебречь.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Если используются 
+катушки высотой H с ферромагнитным сердечником, высота которого примерно равна 
+высоте катушки (т. е. тоже H), то в вышеприведенных формулах вместо 2h следует 
+использовать 2h + H, а вместо G использовать G – <span lang="EN-US">H</span>. 
+Когда поперечная площадь сердечника отличается от поперечной площади магнита, то 
+магнитный поток в сердечнике либо сжимается либо расширяется пропорционально 
+отношению этих площадей, соответственно изменяется и магнитная индукция 
+(возрастает или уменьшается). Т. е. необходимо рассчитанное выше значение 
+магнитной индукции дополнительно умножить на поправочный коэффициент
+<span lang="EN-US">T<sub>M</sub></span>/<span lang="EN-US">T</span> или (D2)<sup>2</sup>/(2<span lang="EN-US">R</span>1)<sup>2</sup>, 
+с учетом того, что индукция насыщения электротехнической стали не превышает 
+примерно 2 Тл. </font></p>
+<p class="MsoNormal" style="text-align: left"><b><font size="2">7. Программа
+<span lang="en-us">Permanent Magnet Generator (PM_Generator)</span></font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Программа для 
+расчета параметров электрогенераторов на постоянных магнитах <span lang="en-us">
+Permanent Magnet Generator (PM_Generator)</span> 
+предназначена для работы в операционной среде Windows. После запуска программы 
+на экране монитора появляется ее главное окно (рис. 7.1). </font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="PM_Generator_V211_00.jpg" width="998" height="798">
+</font></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;
+font-family:Arial">Рис. 7.1. Окно программы PM_Generator </span>
+<span lang="EN-US" style="font-size: 10.0pt; font-family: Arial">V</span><span style="font-size:10.0pt;font-family:Arial"> 
+2.11.</span></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">Пользователь может задать исходные данные (входные параметры) 
+электрогенератора вручную, выбрав вначале с помощью переключателя «Конструкция 
+ротора» тип генератора. Переход от одного входного окошка к другому, а также 
+между кнопками, происходит с помощью либо указателя мыши, либо клавиши 
+табуляции. Для расчета нескольких генераторов одновременно можно запустить 
+программу необходимое число раз. Можно также считать входные параметры из файла, 
+если таковой имеется, нажав кнопку «Открыть файл». При нажатии кнопки «Новый 
+расчет» все окошки программы очищаются.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Исходные данные 
+должны быть представлены в системе СИ. В качестве десятичного разделителя для 
+исходных данных можно использовать как точку, так и запятую, но лучше применять 
+разделитель, принятый для десятичной дроби в операционной системе (ОС) данного 
+компьютера. </font></p>
+<p align="left"><span style="font-family: Times New Roman"><font size="2">При 
+вводе данных в экспоненциальном формате (например, 1.67E-8 вместо 0.0000000167) 
+необходимо использовать латинский алфавит для буквы E, при вводе русской буквы Е 
+вместо латинской E на экран монитора при попытке расчета будет выводиться 
+сообщение об ошибке (к цифрам это не относится).</font></span></p>
+<p align="left"><font size="2"><span style="font-family: Times New Roman">При 
+расчете следует помнить, что потокосцепление катушки с возбуждающим магнитным 
+полем при вращении ротора должно изменяться по синусоидальному 
+(косинусоидальному) закону. Это условие должна обеспечивать сама конструкция 
+магнитной системы электрогенератора, программа его не проверяет. Если магнитная 
+система данное условие не обеспечивает, то рассчитанные с помощью программы
+<span lang="en-us">PM_Generator </span>параметры электрогенератора (напряжение, 
+ток, мощность) будут отклоняться от реальных из-за наличия высших гармоник в 
+выходном сигнале.</span></font></p>
+<p style="text-align: left"><font size="2">Магнитная индукция в центре зазора 
+(амплитудное значение магнитной индукции в центре катушки при максимальном 
+потокосцеплении) B<sub>0</sub> может быть либо приблизительно рассчитана с 
+помощью самой программы <span lang="EN-US">PM</span>_<span lang="EN-US">Generator</span> 
+по заданной остаточной магнитной индукции <span lang="EN-US">B<sub>r</sub></span> 
+постоянных магнитов (переключатель «<span lang="EN-US">B<sub>r</sub></span> 
+задается»), либо вычислена иными средствами, например, методом конечных 
+элементов <span lang="en-us">[</span>3<span lang="en-us">, 1</span>1<span lang="en-us">]</span> 
+и подставлена в соответствующее окно программы (переключатель «B<sub>0</sub> 
+задается»).<span lang="en-us"> </span>
+Вообще говоря, программа позволяет рассчитывать параметры и других конструкций 
+генераторов по заданным параметрам катушек. В качестве параметра B<sub>0</sub> 
+следует использовать среднюю величину магнитной индукции на оси катушки при ее 
+максимальном потокосцеплении с источником возбуждающего магнитного поля.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При малом числе 
+полюсов генератора (обычно меньше 6) формы магнитов или катушек начинают 
+существенно отличаться от принятых в программе, поэтому точность расчетов 
+вследствие этого может ухудшиться.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">После задания всех 
+исходных данных можно начать расчет с помощью кнопки «Расчет», нажав на нее с 
+помощью мыши, либо нажав клавишу ввода (если какой либо из входных параметров 
+отсутствует, то при попытке расчета будет выводиться сообщение об ошибке). 
+Программа производит проверку корректности введенных данных на их соответствие 
+возможному физическому диапазону и друг другу. Если проверка выявляет ошибку в 
+задании входных данных, то в главном окне программы в строке готовности над 
+кнопками «Расчет», «Очистить», «Выход» появляется сообщение о необходимости 
+внести соответствующее исправление. Если входные данные введены правильно, то 
+программа производит вывод расчетных значений в соответствующие окошки (рис. 
+7.2). При необходимости их можно очистить, нажав кнопку «Очистить». </font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="PM_Generator_V211_01.jpg" width="998" height="797"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;
+font-family:Arial">Рис. 7.2. Окно программы PM_Generator </span>
+<span lang="EN-US" style="font-size: 10.0pt; font-family: Arial">V</span><span style="font-size:10.0pt;font-family:Arial"> 
+2.11 с расчетными значениями для пробных входных данных (имя рабочего файла 
+Генератор_11.<span lang="en-us">csv</span>).</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Полученный 
+результат можно записать в файл, нажав на кнопку «Сохранить файл». В результате 
+пользователь получит два файла: <span lang="EN-US">FileName</span>.csv для 
+входных параметров и <span lang="EN-US">FileName</span>_Result.csv для расчетных 
+данных, где FileName – имя файла. Для числовых данных в сохраняемых файлах 
+предусмотрен выбор формата десятичного разделителя – точка или запятая. Фйл 
+входных параметров<span lang="en-us"> 
+FileName.csv</span> можно использовать для дальнейшей работы с программой. </font>
+<span style="font-family: Times New Roman"><font size="2">Структуры файлов, 
+соответствующие вышеприведенному расчету (рис. 7.2), показаны на рис. 7.3 и 7.4.</font></span></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="FileName.jpg" width="158" height="304"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;
+font-family:Arial">Рис. 7.3. Структура файла <span lang="en-us">FileName.csv</span></span><span style="font-size:10.0pt;font-family:Arial">.</span></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="FileName_Results.jpg" width="147" height="243"><span lang="en-us"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;
+font-family:Arial">Рис. 7.4. Структура файла <span lang="en-us">
+FileName_Results.csv</span></span><span style="font-size:10.0pt;font-family:Arial">.</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для вывода данных 
+на печать служат кнопки «Настройка принтера» и «Печать».</font></p>
+<p align="left"><span style="font-family: Times New Roman"><font size="2">
+Получить дополнительную информацию о возможности программы можно, нажав кнопку 
+«Информация» (рис. 7.5). Чтобы закончить работу с программой, следует нажать 
+кнопку </font></span><font size="2">«Выход» или закрыть окно кнопкой вверху 
+справа.</font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="Information.jpg" width="698" height="598">
+</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<span style="font-size:10.0pt;
+font-family:Arial">Рис. 7.5. Окно «Информация» программы PM_Generator </span>
+<span lang="EN-US" style="font-size: 10.0pt; font-family: Arial">V</span><span style="font-size:10.0pt;font-family:Arial"> 
+2.11.</span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Демонстрационная 
+версия программы <span lang="en-us">PM_Generator V 2.11:</span> 
+<a href="PM_Generator_V211_Demo.rar">PM_Generator_V211_Demo.rar</a> (<span lang="en-us">~</span>215 
+Кбайт, архиватор <span lang="en-us">WinRAR 3.50</span>).</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Демонстрационная 
+версия программы <span lang="en-us">PM_Generator </span>имеет следующие 
+ограничения. Мощность рассчитываемых генераторов не более 100 Вт при частоте 
+вращения ротора не более 5 оборотов в секунду. Возможность работы с файлами 
+отсутствует, исходные данные (входные параметры) можно вводить только вручную. 
+Также нельзя вывести исходные и рассчитанные данные на печать. Проверить 
+правильность расчета на данном компьютере для пробных входных данных можно по 
+главному окну программы на рис. 7.2.</font></p>
+
+<p><font size="2">По вопросу получения полной версии программы
+<span lang="en-us">PM_Generator</span>, а также соответствующей ей методики 
+расчета электрогенераторов, обращайтесь к автору (см. раздел </font><a href="../../Contact/Contact.htm"><font
+size="2">Контактная информация</font></a><font
+size="2">).</font></p>
+
+<p class="MsoNormal" style="text-align: left"><b><font size="2">8. Примеры 
+расчетов</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2"><span lang="en-us">
+<b>8</b></span><b>.1. Расчет 6-полюсного низкооборотного электрогенератора
+<span lang="en-us">[</span>1<span lang="en-us">]</span></b></font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Конструкция 
+генератора отличается от рассмотренных в п. 3, тем не менее, как указано выше в 
+п. 7, расчет может быть выполнен по известному среднему значению магнитной 
+индукции B<sub>0</sub> в сердечнике цилиндрической катушки при максимальном 
+потокосцеплении с возбуждающим магнитным полем. Чтобы его найти, можно 
+воспользоваться методом конечных элементов <span lang="en-us">[3, 1</span>1<span lang="en-us">]</span>, 
+а затем сравнить расчетное значение магнитной индукции в воздушном зазоре между 
+постоянным магнитом и полюсным наконечником катушки с измеренным на 
+экспериментальной модели. Если эти значения соответствуют друг другу, то можно 
+сделать вывод, что расчетная модель хорошо согласуется с реальной. На рис. 8.1.1 
+показана расчетная трехмерная модель магнитной системы электрогенератора в 
+программе <span lang="en-us">Ansoft Maxwell [3]</span>. Стальные детали, 
+показанные серым цветом, изготовлены из малоуглеродистой стали, магнитные 
+свойства которой представлены на рис. 8.1.2. </font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="Gen_06_07_Model.jpg" width="677" height="441"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">Рис. 
+8.1.1. Трехмерная расчетная<span lang="en-us"> </span>модель магнитной системы 
+электрогенератора с дисковым ротором на постоянных магнитах <span lang="en-us">[</span>1<span lang="en-us">]</span> 
+в программе
+<span lang="en-us">Ansoft Maxwell [3]</span>.<span lang="en-us">
+</span>Шаг сетки 1 мм. Стальные детали показаны серым цветом, постоянные магниты 
+- красным и синим. Обмотки не показаны.</font></p>
+<p class="MsoNormal" style="text-align: left">
+<img border="0" src="St_120.jpg" width="572" height="534"><font size="2"> </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">Рис. 
+8.1.2. Кривая намагничивания малоуглеродистой стали, использованной при 
+изготовлении модели 6-полюсного низкооборотного электрогенератора
+<span lang="en-us">[1]</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">6-полюсный 
+постоянный магнит, сектора которого показаны синим и красным цветом, имеет 
+состав <span lang="en-us">Fe-B</span>, типоразмер К75 х 28 х 12, остаточную 
+индукцию 0.3<span lang="en-us">5</span> Тл, коэрцитивную силу по намагниченности 
+1<span lang="en-us">5</span>0 кА/м, намагничен в установке намагничивания
+<span lang="en-us">[13] </span>с 6-полюсным намагничивающим индуктором. Так как 
+ток в обмотках генератора предполагается равным нулю (реакция якоря 
+отсутствует), то в расчетной модели обмотки отсутствуют. На рис. 8.1.3 показана 
+зависимость магнитной индукции на оси катушки от расстояния от ее основания. 
+Среднее значение магнитной индукции в сердечнике 0.861 Тл.</font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="Gen_06_07_Plot.jpg" width="561" height="557">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">Рис. 
+8.1.2. Магнитная индукция на оси катушки электрогенератора при максимальном 
+потокосцеплении и нулевом токе в катушке. Магнитная индукция в воздушном зазоре 
+между магнитом и полюсным наконечником катушки 0.22 Тл (усредненное расчетное 
+значение) соответствует измеренной 0.2<span lang="en-us">05</span> Тл. Среднее 
+расчетное значение магнитной индукции в сердечнике катушки 0.861 Тл.</font></p>
+<p class="MsoNormal" style="text-align: left"><span lang="ru"><font size="2">
+Рассчитанное значение магнитной индукции в воздушном зазоре 0.22 Тл (рис. 8.1.2) 
+не слишком сильно отличается от измеренного (0.205 Тл - усредненное измеренное 
+значение по всем полюсам). Таким образом, можно сделать вывод, что расчетная 
+модель достаточно хорошо соответствует реальной конструкции. </font></span>
+<font size="2">Среднее расчетное значение магнитной индукции в сердечнике 
+катушки на длине 20 мм B<sub>0</sub> 
+<font face="Times New Roman">≈ 0<span lang="ru">.861 Тл может быть подставлено в 
+программу </span>
+<span lang="en-us">PM_Generator</span>. Результат расчета показан на рис. 8.1.3 
+и частично в таблице 8.1.1. </font></font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="Gen_06_07_01.jpg" width="998" height="798">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">
+Рис. 8.1.3. Расчет параметров 6-полюсного низкооборотного электрогенератора <span lang="en-us">
+[</span>1<span lang="en-us">]</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Таблица 8.1.1. 
+Соответствие рассчитанных и измеренных параметров 6-полюсного низкооборотного 
+электрогенератора
+<span lang="en-us">[</span>1<span lang="en-us">]</span>.</font></p>
+<table border="1" width="512" height="34" bordercolor="#000000" style="border-collapse: collapse" id="table1">
+	<tr>
+		<td height="11" width="173"><font size="2">Параметр</font></td>
+		<td height="11" width="167" align="center"><font size="2">Рассчитанное 
+		значение</font></td>
+		<td height="11" width="161" align="center"><font size="2">Измеренное 
+		значение</font></td>
+	</tr>
+	<tr>
+		<td height="13" width="173"><font size="2">Число витков одной катушки</font></td>
+		<td height="13" width="167" align="center"><font size="2">
+		<font face="Times New Roman">≈</font>517</font></td>
+		<td height="13" width="161" align="center"><font size="2">500</font></td>
+	</tr>
+	<tr>
+		<td height="13" width="173"><font size="2">Внутреннее сопротивление
+		<span lang="en-us">Rin</span>, Ом</font></td>
+		<td height="13" width="167" align="center"><font size="2">24.94</font></td>
+		<td height="13" width="161" align="center"><font size="2">28</font></td>
+	</tr>
+	<tr>
+		<td height="13" width="173"><font size="2">Напряжение холостого хода
+		<span lang="en-us">Uxx</span>, В</font></td>
+		<td height="13" width="167" align="center"><font size="2">2.095</font></td>
+		<td height="13" width="161" align="center"><font size="2">1.91</font></td>
+	</tr>
+</table>
+
+<p>
+<font size="2">Соответствие измеренных и рассчитанных значений достаточно 
+хорошее с учетом того, что форма выходного напряжения генератора отличается от 
+синусоидальной (рис. 8.1.4), а удельное сопротивление обмоточного провода, как 
+правило, несколько больше справочного значения для меди (1.67
+<font face="Times New Roman">∙ 10<sup>-8</sup> Ом ∙ м
+<span lang="en-us">[12]</span>) из-за наличия примесей.</font></font></p>
+<p><img border="0" src="MAP008.BMP" width="400" height="240"><font size="2">
+</font></p>
+<p><font size="2" face="Arial">Рис. 8.1.4. Выходное напряжение холостого хода 
+6-полюсного низкооборотного однофазного электрогенератора <span lang="en-us">[1]</span> 
+при частоте вращения ротора 1 об./с.</font></p>
+
+<p class="MsoNormal" style="text-align: left"><b><font size="2">8.2. Расчет 
+низкооборотного однофазного электрогенератора с дисковым ротором на постоянных 
+магнитах (18 полюсов, 19 обмоток) <span lang="en-us">[7]</span></font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для данной 
+конструкция генератора, отличающейся от рассмотренных в п. 3, расчет также может 
+быть выполнен по известному среднему значению магнитной индукции B<sub>0</sub> в 
+сердечнике цилиндрической катушки при максимальном потокосцеплении с полем 
+возбуждения.&nbsp;Ниже приведены результаты расчета магнитной системы 
+электрогенератора методом конечных элементов <span lang="en-us">[</span>3<span lang="en-us">, 
+1</span>1<span lang="en-us">]</span>. Трехмерная модель магнитной системы 
+показана на рис. 8.2.1. Стальные детали (показаны серым цветом) сделаны из 
+малоуглеродистой стали, кривая намагничивания которой представлена на рис. 
+8.1.2. Постоянные магниты (показаны зеленым цветом) состава <span lang="en-us">
+Nd-Fe-B</span>, типоразмера Д14 х 4, остаточная индукция 1.1 Тл, коэрцитивная 
+сила по намагниченности 850 кА/м, намагничены аксиально в установке импульсного 
+намагничивания <span lang="en-us">
+[13]</span>, обмотки на модели отсутствуют, так как ток в обмотках равен нулю 
+(реакция якоря отсутствует). На рис. 8.2.2 показана зависимость величины 
+магнитной индукции на оси катушки от расстояния (от основания катушки).</font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="Gen_18_19_Sh.jpg" width="761" height="514">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">Рис. 
+8.2.1. Трехмерная расчетная<span lang="en-us"> </span>модель магнитной системы 
+электрогенератора с дисковым ротором на постоянных магнитах <span lang="en-us">
+[7]</span> в программе
+<span lang="en-us">Ansoft Maxwell [3]</span>.<span lang="en-us">
+</span>Шаг сетки 5 мм. Стальные детали показаны серым цветом, постоянные магниты 
+- красным и синим, обмотки не показаны.</font><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">
+<img border="0" src="Gen_18_19_Plot.jpg" width="579" height="553"> </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">Рис. 
+8.2.2. Магнитная индукция на оси катушки электрогенератора при максимальном 
+потокосцеплении и нулевом токе в катушке. Магнитная индукция в воздушном зазоре 
+между магнитом и полюсным наконечником катушки 0.565 Тл (среднее расчетное 
+значение) соответствует измеренной 0.573 Тл. Среднее расчетное значение 
+магнитной индукции в сердечнике катушки 0.999 Тл.</font></p>
+<p class="MsoNormal" style="text-align: left"><span lang="ru"><font size="2">
+Рассчитанное значение магнитной индукции в воздушном зазоре 0.565 Тл (рис. 
+8.2.2) не слишком сильно отличается от измеренного (0.573 Тл - усредненное 
+измеренное значение по всем полюсам). Таким образом, можно сделать вывод, что 
+расчетная модель достаточно хорошо соответствует реальной конструкции. </font></span>
+<font size="2">Среднее расчетное значение магнитной индукции в сердечнике 
+катушки на длине 20 мм B<sub>0</sub> 
+<font face="Times New Roman">≈ 0<span lang="ru">.999 Тл может быть подставлено в 
+программу </span>
+<span lang="en-us">PM_Generator</span>. Результат расчета показан на рис. 8.2.3 
+и частично в таблице 8.2.1. </font></font></p>
+<p class="MsoNormal" style="text-align: left">
+<font size="2">
+<img border="0" src="Gen_18_19_01.jpg" width="997" height="798">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2" face="Arial">
+Рис. 8.2.3. Расчет параметров низкооборотного однофазного электрогенератора с 
+дисковым ротором на постоянных магнитах <span lang="en-us">[7]</span>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Таблица 8.2.1. 
+Соответствие рассчитанных и измеренных параметров низкооборотного однофазного 
+электрогенератора с дисковым ротором на постоянных магнитах
+<span lang="en-us">[7]</span>.</font></p>
+<table border="1" width="512" height="34" bordercolor="#000000" style="border-collapse: collapse">
+	<tr>
+		<td height="11" width="173"><font size="2">Параметр</font></td>
+		<td height="11" width="167" align="center"><font size="2">Рассчитанное 
+		значение</font></td>
+		<td height="11" width="161" align="center"><font size="2">Измеренное 
+		значение</font></td>
+	</tr>
+	<tr>
+		<td height="13" width="173"><font size="2">Число витков одной катушки</font></td>
+		<td height="13" width="167" align="center"><font size="2">
+		<font face="Times New Roman">≈</font>241</font></td>
+		<td height="13" width="161" align="center"><font size="2">250</font></td>
+	</tr>
+	<tr>
+		<td height="13" width="173"><font size="2">Внутреннее сопротивление
+		<span lang="en-us">Rin</span>, Ом</font></td>
+		<td height="13" width="167" align="center"><font size="2">10.03</font></td>
+		<td height="13" width="161" align="center"><font size="2">11.2</font></td>
+	</tr>
+	<tr>
+		<td height="13" width="173"><font size="2">Напряжение холостого хода
+		<span lang="en-us">Uxx</span>, В</font></td>
+		<td height="13" width="167" align="center"><font size="2">9.145</font></td>
+		<td height="13" width="161" align="center"><font size="2">7.3</font></td>
+	</tr>
+</table>
+
+<p>
+<font size="2">Соответствие измеренных и рассчитанных значений приемлемое с 
+учетом того, что форма выходного напряжения генератора отличается от 
+синусоидальной (рис. 8.2.4), а удельное сопротивление обмоточного провода, как 
+правило, несколько больше справочного значения для меди (1.67
+<font face="Times New Roman">∙ 10<sup>-8</sup> Ом ∙ м<span lang="en-us"> 
+[12]</span>) из-за наличия примесей.</font></font></p>
+<p><img border="0" src="MAP005.BMP" width="400" height="240"><font size="2">
+</font></p>
+<p><font size="2" face="Arial">Рис. 8.2.4. Выходное напряжение холостого хода 
+низкооборотного однофазного электрогенератора с дисковым ротором на постоянных 
+магнитах <span lang="en-us">[7]</span> при частоте вращения ротора 1 об./с.</font></p>
+
+<p><font size="2"><strong>Ссылки:</strong></font></p>
+
+<ol>
+	<li><a href="../Gen_0612/Gen_0612.htm"><font size="2">6-полюсный 
+	низкооборотный электрогенератор для ветрогенератора</font></a></li>
+	<li><strong style="font-weight: 400"><font size="2">
+	<a href="../../M_Fields/A_Magnet/A_Magnet.htm">A_Magnet: 
+	Программа-калькулятор индукции магнитного поля кольцевого (цилиндрического) 
+	магнита методом эквивалентного соленоида</a></font></strong></li>
+	<li><strong><span lang="EN-US" style="font-weight: normal"><font size="2">
+	ANSYS Maxwell – Low Frequency Electromagnetic Field Simulation. </font>
+	</span><span style="font-weight: normal"><font size="2">Электронный ресурс:
+	</font></span><span lang="EN-US" style="font-weight: normal">
+	<a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.ansys.com/Products/Electronics/ANSYS-Maxwell">
+	<font size="2">http<span lang="RU">://</span>www<span lang="RU">.</span>ansys<span lang="RU">.</span>com<span lang="RU">/</span>Products<span lang="RU">/</span>Electronics<span lang="RU">/</span>ANSYS<span lang="RU">-</span>Maxwell</font></a></span><span style="font-weight: normal"><font size="2"> 
+	. Доступен по состоянию на 30.07.2017.</font></span></strong></li>
+	<li><span style="font-family: Times New Roman"><font size="2">Градштейн И. 
+	С., Рыжик И. М. Таблицы интегралов, сумм, рядов и произведений. Изд. 4-е. 
+	М.: 1963.</font></span></li>
+    <li><a href="../../M_Fields/Magn_Field/Magn_Field.htm"><font
+        size="2">Законы и уравнения магнитного поля</font></a><font size="2"> </font></li>
+    <li><a href="../Gen_0610/Gen_0610.htm"><font size="2">Низкооборотный 
+	многополюсный электрогенератор на кольцевом постоянном магните (6 полюсов, 
+	10 обмоток)</font></a><font size="2"> </font></li>
+	<li><font size="2"><a href="../Gen_18_19/Gen_18_19.htm">Низкооборотный 
+	однофазный электрогенератор с дисковым ротором на постоянных магнитах (18 
+	полюсов, 19 обмоток)</a></font></li>
+	<li><span style="font-family: Times New Roman"><font size="2">Постоянные 
+	магниты: Справочник / Альтман А. Б., Герберг А. Н., Гладышев П. А. и др.; 
+	Под ред. Ю. М. Пятина. - 2-е изд., перераб. и доп. - М.: Энергия, 1980. - 
+	488 с., ил.</font></span></li>
+	<li><font face="Times New Roman" size="2">
+	<a href="../../M_Fields/Magn_Meas/Magn_Meas.htm">Приборы для измерения 
+	магнитных полей</a></font></li>
+	<li><font size="2"><a href="../../M_Fields/Pack_Factor/Pack_Factor.htm">
+	Расчет фактора упаковки при намотке соленоидов</a></font></li>
+    <li><font size="2">Сильвестер П., Феррари Р. Метод конечных элементов для 
+	радиоинженеров и инженеров-электриков: Пер. с англ. - М.: Мир, 1986. - 229 
+	с., ил. </font></li>
+	<li><font size="2">Таблицы физических величин. Справочник. Под ред. акад. И. 
+	К. Кикоина. М., Атомиздат, 1976, 1008 с.</font></li>
+	<li><font size="2"><a href="../../M_Fields/Magn_Equip/Magn_Equip.htm">
+	Установки импульсного намагничивания и размагничивания постоянных магнитов</a></font></li>
+</ol>
+
+<p><a href="../../Projects/Terms/Terms.htm"><font size="2"><strong>Словарь 
+терминов:</strong></font></a></p>
+
+<ul>
+    <li><font size="2"><strong>Активное сопротивление</strong> - часть полного 
+	сопротивления электрического контура, связанная с тепловыделением в контуре.</font></li>
+	<li><font size="2"><b>Соленоид</b> (от греч. </font>
+	<font face="GreekC" size="2">solen</font><font size="2"> - трубка и </font>
+	<font face="GreekC" size="2">eidos</font><font size="2"> - вид) – 
+	осесимметричная катушка индуктивности.</font></li>
+    <li><font size="2"><strong>Фактор упаковки (коэффициент заполнения)</strong> 
+	- отношение объема проводника к объему обмотки; при равномерной намотке 
+	равен отношению суммарной площади проводников в поперечном сечении обмотки 
+	(без учета изоляции) к площади поперечного сечения обмотки. </font></li>
+    <li><font size="2"><strong>Холостой ход </strong>- режим работы привода или 
+	преобразователя в отсутствие противодействующей силы (нагрузки).</font></li>
+    <li><font size="2"><b>Цилиндрический соленоид</b> - соленоид в виде цилиндра 
+	с центральным цилиндрическим отверстием (если таковое имеется).</font><font
+        size="1"> </font></li>
+    <li><font size="2"><strong>Электрогенератор (электрический генератор)</strong>
+        - преобразователь неэлектрической энергии источника в электрическую 
+	энергию.</font></li>
+</ul>
+
+<p><font size="2">04.07.2018</font></p>
+
+<hr>
+
+<p><a href="../Energy.htm"><font size="2">Альтернативные источники энергии</font></a><font size="2"><br>
+</font><a href="../../Computer/Computer.htm"><font size="2">Компьютеры и 
+Интернет</font></a><font size="2"><br>
+</font><a href="../../M_Fields/M_Fields.htm"><font size="2">Магнитные поля</font></a><font size="2"><br>
+</font><a href="../../MechSys/MechSys.htm"><font size="2">Механотронные системы</font></a><font size="2"><br>
+</font><a href="../../Projects/Projects.htm"><font size="2">Перспективные 
+разработки</font></a><font size="2"><br>
+</font><a href="../../Electron/Electron.htm"><font size="2">Электроника и 
+технология</font></a></p>
+
+<p><a href="../../index.html"><font size="3"><strong>Главная страница</strong></font></a></p>
+
+<hr>
+
+<p><!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t11.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';'+Math.random()+
+'" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я" '+
+'border=0 width=88 height=31></a>')//--></script><!--/LiveInternet-->  </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- copyright (i7) --><div align="center"><a href="http://www.ucoz.ru/" title="Создать сайт бесплатно"><!--IMLAB-OFF:PGltZyBzdHlsZT0ibWFyZ2luOjA7cGFkZGluZzowO2JvcmRlcjowOyIgYWx0PSJIb3N0ZWQgYnkgdUNveiIgc3JjPSJodHRwOi8vczIwNi51Y296Lm5ldC9pbWcvY3AvMTEuZ2lmIiB3aWR0aD0iODAiIGhlaWdodD0iMTUiIHRpdGxlPSJIb3N0ZWQgYnkgdUNveiIgLz4=--><!--/IMLAB-OFF--></a><br /></div><!-- /copyright -->
+</body>
+</html>

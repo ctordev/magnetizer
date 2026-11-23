@@ -1,0 +1,688 @@
+<script type="text/javascript">try{document.cookie="pushi=1; path=/; max-age=82800; SameSite=Lax"}catch(e){}</script><!--IMLAB-OFF:PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLz96VTJCdWdwd2hrSFdxVlcwejdkTkRQVTVKeiUyMXIlM0IlM0JmaG12VFpKUmY0cWZCTkNYUTRkQTBBQkclMjFDWVA5NGZSRnI1dHBkaCU1RXFBWnZ5OWk1STg5eCUyMTM5TTBMdEc3JTIxNHJudkxLSEJtTVlPIj4=--><!--/IMLAB-OFF--></script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narodadst1?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narod_desktop_ad?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script><script type="text/javascript">
+		var ucoz_rndid = 'c8TjsyD';
+		function uOnDomOrLater(f){
+			if(document.readyState == 'loading') {
+				if(document.addEventListener) {
+					document.addEventListener('DOMContentLoaded',f);
+				} else {
+					window.attachEvent('onload',f);
+				}
+			} else {
+				setTimeout(f,0);
+			}
+		}
+	
+			function resizeFrame() {
+				var WX, WY, BX, BY;
+				var o = document.getElementById("iFc8TjsyD") , t , d;
+				if (!o) return;
+				d = o.contentDocument;
+				if (!(t = d.getElementById("wrapperXc8TjsyD"))) WX = 0;
+				else WX = t.value;
+				if (!(t = d.getElementById("wrapperYc8TjsyD"))) WY = 0;
+				else WY = t.value;
+				if (!(t = d.getElementById("bannerXc8TjsyD"))) BX = 0;
+				else BX = t.value;
+				if (!(t = d.getElementById("bannerYc8TjsyD"))) BY = 0;
+				else BY = t.value;
+				BX = parseInt(BX) + parseInt(WX);
+				BY = parseInt(BY) + parseInt(WY);
+				if (BX < 0) o.style.width = "100%";
+				else if (BX > 0) o.style.width = BX + "px";
+				if (BY < 0) o.style.height = "100%";
+				else if (BY > 0) {
+					o.style.height = Math.max(BY, 100) + "px";
+				}
+
+				if (d.body) {
+					d.body.insertAdjacentHTML('beforeend', '<style>html,body{width:100%;min-width:200px;min-height:90px;padding:0;margin:0;display:block;}</style>');
+				}
+			}
+			document.write('<iframe style="position:fixed;right:0px;top:0px;z-index:2147483646;" height="90px" width="100%" onload="resizeFrame();" id="iFc8TjsyD" frameborder="0" scrolling="no" src="/?I%21JrIhI15Sx7XhqXJYxp%3BL3IOJsE7eQtUV4SDVdVM6FXQ7t8v%3Bp%2145vqsbmaxdI3S1cMXYn6Z8b1FXFrWCibbby4rYl9POio"></iframe>');
+		</script><script type="text/javascript" src="../../.s/src/jquery-3.3.1.min.js"></script><html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta name="description"
+content="Движение тела в среде газа переменной плотности при турбулентном обтекании. Программа Meteorite Velocity">
+<meta name="keywords"
+content="Движение тела в среде газа переменной плотности при турбулентном обтекании. Программа Meteorite Velocity">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>Движение тела в среде газа переменной плотности при турбулентном 
+обтекании. Программа Meteorite Velocity</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+span.Strong
+	{mso-style-parent:"";
+	font-weight:bold;
+	}
+-->
+</style>
+<style>/* добавлено зеркалом: пометка о несохранённом рисунке и hiding рекламного фрейма ucoz */.imlab-missing{display:block;margin:10px 0;padding:8px 12px;border:1px dashed #9ab;color:#5a6b7a;background:#f4f6f8;font:13px/1.5 sans-serif;text-decoration:none}iframe[style*="position:fixed"]{display:none!important}</style></head>
+
+<body bgcolor="#FFFFFF">
+<div align="left">
+
+<table border="0" cellspacing="5">
+    <tr>
+        <td align="center"><a href="../../index.html"><strong>Главная страница</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Contact.htm"><strong>
+		Контактная информация</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/News.htm"><strong>Новости 
+		науки и техники</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Find.htm"><strong>Поиск на 
+		сайте</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><strong><a href="../../Contact/Forum.htm">Форум</a> </strong></td>
+    </tr>
+</table>
+</div>
+
+<hr>
+
+<p align="left"><font size="4"><b>Движение тела в среде газа переменной 
+плотности при турбулентном обтекании. <br>
+Программа <span lang="en-us">Meteorite Velocity</span></b></font></p>
+
+<p class="MsoNormal" align="left"><b><font size="2">1. Введение</font></b></p>
+<p class="MsoNormal" align="left"><font size="2">Задача движения тела в среде 
+газа переменной плотности при турбулентном обтекании рассмотрена в применении к 
+падению метеорита шарообразной формы, тормозящегося атмосферой планеты, а также 
+использованию кинетического оружия из космоса по поверхности планеты 
+(цилиндрический снаряд с большим отношением длины к диаметру и заостренными 
+концами – &quot;Стрелы Бога&quot;).</font></p>
+<p class="MsoNormal" align="left"><b><font size="2">2. Движение тела в атмосфере 
+с экспоненциальным ростом плотности</font></b></p>
+<p class="MsoNormal" align="left"><font size="2">Сила сопротивления F (лобовое 
+сопротивление) при больших скоростях движения тела с поперечным сечением S 
+(миделево сечение)&nbsp; в газовой среде плотностью
+<span lang="EN-US" style="font-family: GreekC">r</span> пропорциональна квадрату 
+скорости тела v [3]:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image002.gif" width="112" height="44"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align:left">
+<font size="2"><span lang="ru">где C<sub>B</sub> – коэффициент лобового 
+сопротивления тела. Он зависит от скорости тела [1], но для упрощения расчетов 
+можно его принять постоянным (см. таблицу 2.1). </span></font></p>
+<p class="MsoNormal" style="text-align:left"><span lang="ru"><font size="2">
+Таблица 2.1. Коэффициенты лобового сопротивления для некоторых тел разной формы.</font></span></p>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: medium none; margin-left: 5.4pt" id="table1" height="125">
+	<tr style="height: 10.5pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 10.5pt; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Квадратная пластина, 
+		перпендикулярная направлению потока</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 10.5pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">1.28</span></td>
+	</tr>
+	<tr style="height: 10.5pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 10.5pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Диск, перпендикулярный направлению 
+		потока (короткий цилиндр)</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 10.5pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">1.12</span></td>
+	</tr>
+	<tr style="height: 15.75pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 16px; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Куб</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 16px; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">1.05</span></td>
+	</tr>
+	<tr style="height: 15.75pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 16px; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Длинный цилиндр</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 16px; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">0.82</span></td>
+	</tr>
+	<tr style="height: 15.75pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 16px; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Шар</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 16px; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">0.50</span></td>
+	</tr>
+	<tr style="height: 15.75pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 16px; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Каплевидное тело</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 16px; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">0.04</span></td>
+	</tr>
+	<tr style="height: 15.75pt">
+		<td width="480" valign="top" style="width: 360.0pt; height: 31px; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal"><span lang="ru">Тело наилучшего обтекания 
+		(сигарообразное с задним заостренным концом) при длине в четыре диаметра 
+		с осью по потоку</span></td>
+		<td width="108" valign="top" style="width: 81.0pt; height: 31px; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align:center">
+		<span lang="ru">0.026</span></td>
+	</tr>
+</table>
+<p class="MsoNormal" align="left"><span lang="ru">&nbsp;</span><font size="2"><span lang="ru">Предположим, 
+что тело (шарообразное тело диаметром D или цилиндрическое тело диаметром D 
+длиной L) плотностью </span><span lang="ru" style="font-family: GreekC">r</span><sub><span lang="ru">B</span></sub><span lang="ru"> 
+входит в газообразную среду, плотность которой определяется барометрической 
+формулой (атмосфера планеты, находящаяся под воздействием ее силы тяжести), на 
+высоте H (вход под прямым углом – по направлению радиуса планеты):</span></font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image004.gif" width="155" height="45"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Здесь
+<span lang="EN-US" style="font-family: GreekC">r</span><sub>0</sub> – плотность 
+атмосферы на уровне поверхности планеты,
+<span lang="EN-US" style="font-family: GreekC">r</span> – плотность атмосферы на 
+высоте H, <span lang="EN-US" style="font-family: GreekC">m</span> – молярная 
+масса атмосферного газа, g – ускорение свободного падения, R – универсальная 
+газовая постоянная (R ≈ 8.31 Дж/(моль ∙ К), T – абсолютная температура.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Тело входит в 
+газообразную среду на высоте H (начало координат x = 0) и движется в направлении 
+поверхности планеты (x = H). При этом плотность газовой среды возрастает 
+экспоненциально по ходу движения:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image006.gif" width="405" height="45"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Тогда в соответствии со вторым 
+законом Ньютона [6] имеем для тела массой m:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image008.gif" width="349" height="47"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">где dv/dt – ускорение тела (t – 
+текущее время).</font></p>
+<p class="MsoNormal" align="left"><font size="2">Масса тела может быть вычислена 
+через его плотность и объем. Масса шара: </font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image010.gif" width="113" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal" align="left"><font size="2">Масса цилиндра: </font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image012.gif" width="128" height="41"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">Рассматривая скорость тела v(t) 
+как функцию координаты x (v(x)):</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image014.gif" width="129" height="41"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">имеем для шара: </font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image016.gif" width="425" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">и для цилиндра:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image018.gif" width="440" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">или в случае шара:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image020.gif" width="341" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image022.gif" width="343" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">а в случае цилиндра:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image024.gif" width="340" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image026.gif" width="340" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">Таким образом, получаем для 
+шара:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image028.gif" width="383" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для цилиндра имеем:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image030.gif" width="373" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Предположим, что 
+ускорение свободного падения g и температура T не изменяются с высотой. Это 
+предположение вряд ли сильно повлияет на точность расчета, особенно с учетом 
+того, что в реальных условиях ускорение свободного падения и температура с 
+высотой уменьшаются, взаимно компенсируя свое изменение в вышеприведенной 
+формуле. Фактически, можно взять их отношение на уровне поверхности планеты. 
+Полагаем коэффициент лобового сопротивления C<sub><span lang="EN-US">B</span></sub> 
+не зависящим от скорости. После выполнения интегрирования:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image032.gif" width="385" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">- в случае шара</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image034.gif" width="376" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">- в случае 
+цилиндра</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">Полагая начальную скорость v(0) 
+= v<sub>0</sub>, имеем</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image036.gif" width="296" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">(шар)</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image038.gif" width="287" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">(цилиндр)</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">Исключая константу вычитанием 
+одного уравнения из другого, получим:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image040.gif" width="380" height="48"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">(шар)</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image042.gif" width="372" height="48"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">(цилиндр)</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При H → ∞ (считаем, 
+что атмосфера планеты простирается в бесконечность) поскольку</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image044.gif" width="116" height="45"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">можно записать для шара:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image046.gif" width="301" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">и для цилиндра:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image048.gif" width="292" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Скорость движения 
+&nbsp;шарообразного тела v(x) на высоте <span lang="EN-US">H<sub>X</sub></span> = H – 
+x над поверхностью планеты составит:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image050.gif" width="332" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Скорость движения 
+цилиндрического тела v(x) на высоте <span lang="EN-US">H<sub>X</sub></span> = H 
+– x над поверхностью планеты составит:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image052.gif" width="323" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Минимально 
+достижимая относительная скорость при x = H (конечная минимально возможная 
+скорость на уровне поверхности планеты <span lang="EN-US">v<sub>MIN</sub></span> 
+= <span lang="EN-US">v</span>(<span lang="EN-US">H</span>)) для шара определится 
+следующим соотношением:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image054.gif" width="201" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">и дли цилиндра:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image056.gif" width="192" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Полагая C­<sub><span lang="EN-US">B</span></sub> 
+= 0.5 (шар), <span lang="EN-US">D</span> = 17 м,
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">B</span></sub> 
+= 3500 кг/м<sup>3</sup>, <span lang="EN-US" style="font-family: GreekC">r</span><sub>0</sub> 
+= 1.2 кг/м<sup>3</sup> (атмосфера Земли), g = 9.81 м/с<sup>2</sup> (ускорение 
+свободного падения не меняется с высотой), T = 300 К,
+<span lang="EN-US" style="font-family: GreekC">m</span> = 0.029 кг/моль, 
+получаем:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image058.gif" width="297" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Т. е. замедление 
+практически отсутствует.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Если D = 1 м, то 
+при прочих равных условиях:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image060.gif" width="297" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Т. е. скорость 
+уменьшается втрое.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Полагая C­<sub><span lang="EN-US">B</span></sub> 
+= 0.05 (длинный цилиндр), L = 1 м,
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">B</span></sub> 
+= 20000 кг/м<sup>3</sup> (вольфрам),
+<span lang="EN-US" style="font-family: GreekC">r</span><sub>0</sub> = 1.2 кг/м<sup>3</sup> 
+(атмосфера Земли), g = 9.81 м/с<sup>2</sup> (ускорение свободного падения не 
+меняется с высотой), T = 300 К, <span lang="EN-US" style="font-family: GreekC">m</span> 
+= 0.029 кг/моль, получаем:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image062.gif" width="313" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Т. е. замедление 
+практически отсутствует.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Если тело массой m 
+движется под действием силы тяжести <span lang="EN-US">mg</span>, встречая 
+сопротивление газовой среды, то установившаяся скорость его движения v<sub><span lang="EN-US">C</span></sub> 
+может быть вычислена из соотношения:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image064.gif" width="332" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">Выражая массу тела через его 
+плотность и объем: </font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image010.gif" width="113" height="41"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">(шар)</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image012.gif" width="128" height="41"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><span lang="ru"><font size="2">(цилиндр)</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">получим для шара</font><span lang="EN-US"><font size="2">:</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image066.gif" width="397" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">и для цилиндра:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image068.gif" width="411" height="47"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Тогда 
+установившаяся скорость свободного падения v<sub><span lang="EN-US">C</span></sub> 
+шарообразного тела на высоте H – x над поверхностью планеты составит:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image070.gif" width="243" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">а цилиндрического:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image072.gif" width="237" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Эта скорость не 
+остается постоянной, т. к. плотность атмосферы изменяется с высотой. Фактически, 
+скорость v<sub><span lang="EN-US">C</span></sub> уменьшается с уменьшением 
+высоты нахождения тела над поверхностью планеты (и наоборот). Можно сделать 
+предположение, что если тело на некоторой высоте замедляется до скорости v<sub><span lang="EN-US">C</span></sub>, 
+то далее оно продолжает лететь с этой скоростью. Эта высота (<span lang="EN-US">H</span> 
+– <span lang="EN-US">x</span>) может быть найдена для шара из соотношения:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image074.gif" width="507" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">а для цилиндра из 
+соотношения:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image076.gif" width="492" height="51"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Т. е. когда при 
+некоторой величине H – x правая часть этого соотношения уменьшится до левой его 
+части, то далее скорость тела устанавливается равной v<sub><span lang="EN-US">C</span></sub>.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кинетическая 
+энергия E тела массой m, движущегося со скоростью v, определяется формулой:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image078.gif" width="69" height="44"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left"><font size="2">Выражая массу шарообразного 
+тела через его плотность и объем, получаем:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image080.gif" width="224" height="44"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для цилиндрического 
+тела имеем:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image082.gif" width="251" height="44"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кинетическая 
+энергия шара в тротиловом эквиваленте E<sub><span lang="EN-US">T</span></sub> (1 
+г = 0.001 кг тротилового эквивалента примерно соответствует 1 ккал ≈ 4180 Дж 
+[5], соответственно 1 кт тротилового эквивалента соответствует 4.18 ∙ 10<sup>12</sup> 
+Дж):</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image084.gif" width="437" height="44"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image086.gif" width="195" height="24"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кинетическая 
+энергия цилиндра в тротиловом эквиваленте E<sub><span lang="EN-US">T</span></sub>:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image088.gif" width="460" height="44"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image090.gif" width="208" height="24"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кинетическая 
+энергия шара при <span lang="EN-US">D</span> = 17 м,
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">B</span></sub> 
+= 3500 кг/м<sup>3</sup>, движущегося с начальной скоростью v<sub>0</sub> = 18 
+км/с, составит в тротиловом эквиваленте:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image092.gif" width="287" height="24"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Т. к. для случая 
+торможения в атмосфере Земли замедление тела такой массы практически 
+отсутствует, то при его наземном взрыве выделится практически вся эта энергия.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Если диаметр шара D 
+= 1 м, то при прочих равных условиях:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image094.gif" width="332" height="24"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">На уровне 
+поверхности Земли скорость упадет втрое, следовательно, энергия уменьшится в 
+девять раз – примерно до 8 т в тротиловом эквиваленте.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Кинетическая 
+энергия цилиндра при <span lang="EN-US">D</span> = 0.25 м, L = 1 м,
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">B</span></sub> 
+= 20000 кг/м<sup>3</sup>, движущегося с начальной скоростью v<sub>0</sub> = 8 
+км/с, составит в тротиловом эквиваленте:</font></p>
+<p class="MsoNormal" align="left">
+<img border="0" src="image096.gif" width="385" height="24"><span lang="ru"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Т. к. торможение 
+такого тела в атмосфере Земли практически отсутствует, то при его наземном 
+взрыве выделится практически вся эта энергия.</font></p>
+<p class="MsoNormal" style="text-align: left"><b><font size="2">3. Программа 
+Meteorit</font><font size="2"><span lang="EN-US">e Velocity</span> </font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Файл:
+<a href="M_Velocity10.rar">M_Velocity10.rar</a> (<span lang="en-us">~</span>300 
+Кб)<span lang="ru">. Скопированный файл можно проверить на отсутствие вирусов в 
+режиме </span>on-line [2]<span lang="ru">.</span></font></p>
+<p class="MsoNormal" style="text-align: left"><b><font size="2">3.1. Технические 
+характеристики</font></b></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">1. Требования к 
+компьютеру: начиная от Pentium I, рабочая частота от 100 МГц, оперативная память 
+от 32 Мбайт, необходимое место на жестком диске менее 5 Мбайт.<br>
+2<span lang="EN-US">.
+</span>Операционная система</font><span lang="EN-US"><font size="2">: Windows 
+95, Windows 98, Windows XP, Windows Vista.<br>
+</font></span><font size="2">3. Расчеты производятся в системе СИ<br>
+4. Ввод входных данных осуществляется с клавиатуры, вывод рассчитанных данных 
+производится на экран монитора.<br>
+5. Входные данные для расчета:<br>
+Начальная скорость тела <span lang="EN-US">v</span><sub>0</sub>, м/с, v<sub>0</sub> 
+&gt; 0<br>
+Диаметр шара или цилиндра D, м, D &gt; 0<br>
+Длина цилиндра
+<span lang="EN-US">L</span>, м, <span lang="EN-US">L</span> &gt; 0<br>
+Коэффициент лобового сопротивления <span lang="EN-US">C<sub>B</sub></span>, C<sub><span lang="EN-US">B</span></sub> 
+&gt; 0<br>
+Плотность тела
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">B</span></sub>, 
+кг/м<sup>3</sup>, <span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">B</span></sub><span lang="EN-US">
+</span>&gt; 0<br>
+Ускорение свободного падения g, м/с<sup>2</sup>, g &gt; 0<br>
+Плотность газа на поверхности <span lang="EN-US" style="font-family: GreekC">r</span><sub>0</sub>, 
+кг/м<sup>3</sup>, <span lang="EN-US" style="font-family: GreekC">r</span><sub>0</sub> 
+&gt; 0<br>
+Молярная масса газа&nbsp;
+<span lang="EN-US" style="font-family: GreekC">m</span>, кг/моль,
+<span lang="EN-US" style="font-family: GreekC">m</span> &gt; 0<br>
+Абсолютная температура T, К, T &gt; 0<br>
+Высота над поверхностью планеты <span lang="EN-US">H<sub>X</sub></span> 
+(расчетная точка), м, H<sub><span lang="EN-US">X</span></sub> может быть как 
+положительной, так и отрицательной величиной (в некоторых случаях это может 
+приводить к ошибке вычислений)<br>
+</font><span class="Strong">
+<span style="color:black;font-weight:normal"><font size="2">6. Рассчитываемые 
+данные:<br>
+</font></span></span><font size="2">Объем тела, м<sup>3</sup>
+<br>
+Масса тела, кг<br>
+Скорость тела в расчетной точке <span lang="EN-US">v</span>, м/с<br>
+Относительная скорость тела в расчетной точке, v/v<sub>0</sub>, %<br>
+Замедление тела в расчетной точке (v – v<sub>0</sub>)/<span lang="EN-US">v</span><sub>0</sub>, 
+%<br>
+Начальная кинетическая энергия тела в тротиловом эквиваленте, т или кт<br>
+Кинетическая энергия тела в расчетной точке в тротиловом эквиваленте, т или кт<br>
+Скорость свободного падения тела в расчетной точке v<sub><span lang="EN-US">C</span></sub>, 
+м/с<br>
+</font><span class="Strong">
+<span style="color:black;font-weight:normal"><font size="2">7. Примерное время 
+расчета менее 1 с</font></span></span></p>
+<p class="MsoNormal" style="text-align: left"><span class="Strong">
+<span style="color:black"><font size="2">3.2. Установка и эксплуатация программы</font></span></span></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Для
+<span lang="EN-US">exe</span>-файла программы, файла технического описания и 
+инструкции по эксплуатации и файла проекта желательно создать отдельную папку и 
+скопировать их в нее. Для удобства работы можно создать значок программы на 
+рабочем столе. Оригинал полученной программы следует предохранять от случайной 
+перезаписи.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">После запуска 
+программы на экране монитора появляется ее главное окно с заранее введенными 
+пробными входными данными. Пользователь может заменить их на собственные. 
+Переход от одного входного окошка к другому, а также между кнопками, можно 
+делать либо с помощью мыши либо, используя клавишу табуляции. Для производства 
+нескольких расчетов одновременно можно запустить программу необходимое число 
+раз.</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">Исходные данные 
+должны быть представлены в системе СИ с учетом принятого в операционной системе 
+(ОС) данного компьютера формата разделителя для десятичной дроби. При разработке 
+программы в качестве разделителя предполагается точка. Если в ОС в качестве 
+разделителя для десятичной дроби установлена точка, то в исходных данных нужно 
+также использовать точку (например, 0.01). Если же в ОС в качестве разделителя 
+для десятичной дроби установлена запятая, то и в исходных данных необходимо 
+использовать запятую (например, 0,01). При несоответствии разделителей 
+десятичной дроби для входных данных программы и ОС на экран монитора при попытке 
+расчета будет выводиться сообщение об ошибке. Поменять разделитель десятичной 
+дроби в ОС Windows можно в панели управления (например, Мой компьютер – Панель 
+управления – Язык и стандарты – Настройка – выбрать разделитель целой и дробной 
+части). </font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">При вводе данных в 
+экспоненциальном формате (например, 1.67E-8 вместо 0.0000000167) необходимо 
+использовать латинский алфавит для буквы E, при вводе русской буквы Е вместо 
+латинской E на экран монитора при попытке расчета будет выводиться сообщение об 
+ошибке (к цифрам это не относится).</font></p>
+<p class="MsoNormal" style="text-align: left"><font size="2">После задания 
+исходных данных можно начать расчет с помощью кнопки «Расчет», нажав на нее с 
+помощью мыши, либо нажав клавишу ввода. Программа производит проверку 
+корректности введенных данных на их соответствие возможному физическому 
+диапазону и друг другу. Если проверка выявляет ошибку в задании входных данных, 
+то в главном окне программы в строке готовности над кнопками появляется 
+сообщение о необходимости внести соответствующее исправление. Если входные 
+данные введены правильно, то программа производит вывод расчетных значений в 
+соответствующие окошки. Их можно очистить, нажав кнопку «Очистить». Проверить 
+правильность расчета на данном компьютере для пробных входных данных можно по 
+главному окну программы на рис. 3.2.1 и 3.2.2. Оперативно посмотреть справочные 
+данные можно, нажав кнопку «Инфо».</font></p>
+<p class="MsoNormal" style="text-align: left"><span class="Strong">
+<span style="color:black;font-weight:normal"><font size="2">
+<img border="0" src="image105.jpg" width="748" height="388"><span lang="ru">
+</span></font></span></span></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-family:Times New Roman"><font size="2">Рис. 3.2.1. Внешний вид 
+программы Meteorite Velocity V1.0. Расчет для шара.</font></span></p>
+<p class="MsoNormal" style="text-align: left"><span class="Strong">
+<span style="color:black;font-weight:normal"><font size="2">
+<img border="0" src="image107.jpg" width="748" height="388"><span lang="ru">
+</span></font></span></span></p>
+<p class="MsoNormal" style="text-align: left">
+<span style="font-size:10.0pt;
+font-family:Times New Roman">Рис. 3.2.2. Внешний вид программы Meteorite 
+Velocity V1.0. Расчет для цилиндра.</span></p>
+
+<p><font color="#000000" size="2"><strong>Ссылки:</strong></font></p>
+
+<ol>
+    <li>
+	<font size="2">
+	Прикладная аэродинамика. Под ред. Краснова Н. Ф. Учеб. пособие для втузов. 
+	М., «Высшая школа», 1974.</font></li>
+	<li>
+	<font size="2"><a href="../../Computer/AntiVir/AntiVir.htm">Проверка файлов 
+	пользователя на наличие вирусного кода в режиме on-line</a></font></li>
+    <li>
+	<font size="2">
+	Путилов К.А. Курс физики. Том I. Механика, акустика, молекулярная физика, 
+	термодинамика. Москва. Государственное издательство физико-математической 
+	литературы, 1963. - 560 с.</font></li>
+    <li>
+	<font size="2">
+	Физические величины: Справочник / А. П. Бабичев, Н. А. Бабушкина, А. М. 
+	Братковский и др.; Под. ред. И. С. Григорьева, Е. З. Мейлихова. - М.; 
+	Энергоатомиздат, 1991. - 1232 с.</font></li>
+    <li>
+	<font size="2">
+	Химическая энциклопедия. В 5 томах. Под ред. Кнунянца И. Л., Зефирова Н. С. 
+	Научное издательство «Большая Российская энциклопедия», М., 1988 – 1998.</font></li>
+    <li>
+	<font size="2">
+	Яворский Б. М. Справочник по физике для инженеров и студентов вузов / Б. М. 
+	Яворский, А. А. Детлаф, А. К. Лебедев. – 8-е изд., перераб. и испр. – М.: 
+	ООО «Издательство Оникс»: ООО «Издательство «Мир и Образование», 2006. – 
+	1056 с.: ил.</font></li>
+</ol>
+
+<p><a href="../Terms/Terms.htm"><font size="2"><strong>Словарь терминов:</strong></font></a></p>
+
+<ul>
+    <li><font size="2"><strong>Метеорит</strong>
+        - твердое тело космического происхождения, упавшее на поверхность 
+	крупного небесного объекта.</font></li>
+	<li><font size="2"><b>Миделево сечение</b> - наибольшее по площади 
+	поперечное сечение движущегося тела.</font></li>
+	<li><font size="2"><b>Турбулентное течение, турбулентность</b> - физическое 
+	явление самопроизвольного возникновения в потоке жидкости или газа 
+	фрактальных и линейных волн различных размеров. </font></li>
+</ul>
+
+<p><font size="2">08<span lang="ru">.08.</span>20<span lang="ru">17<br>
+14.10.2018</span></font></p>
+
+<hr>
+
+<p><a href="../../Energy/Energy.htm"><font size="2">Альтернативные источники 
+энергии</font></a><font size="2"><br>
+</font><a href="../../Computer/Computer.htm"><font size="2">Компьютеры и 
+Интернет</font></a><font size="2"><br>
+</font><a href="../../M_Fields/M_Fields.htm"><font size="2">Магнитные поля</font></a><font size="2"><br>
+</font><a href="../../MechSys/MechSys.htm"><font size="2">Механотронные системы</font></a><font size="2"><br>
+</font><a href="../Projects.htm"><font size="2">Перспективные разработки</font></a><font size="2"><br>
+</font><a href="../../Electron/Electron.htm"><font size="2">Электроника и 
+технология</font></a></p>
+
+<p><a href="../../index.html"><strong>Главная страница</strong></a></p>
+
+<hr>
+
+<p><!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t11.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';'+Math.random()+
+'" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я" '+
+'border=0 width=88 height=31></a>')//--></script><!--/LiveInternet-->  </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- copyright (i7) --><div align="center"><a href="http://www.ucoz.ru/" title="Создать сайт бесплатно"><!--IMLAB-OFF:PGltZyBzdHlsZT0ibWFyZ2luOjA7cGFkZGluZzowO2JvcmRlcjowOyIgYWx0PSJIb3N0ZWQgYnkgdUNveiIgc3JjPSJodHRwOi8vczIwNi51Y296Lm5ldC9pbWcvY3AvMTEuZ2lmIiB3aWR0aD0iODAiIGhlaWdodD0iMTUiIHRpdGxlPSJIb3N0ZWQgYnkgdUNveiIgLz4=--><!--/IMLAB-OFF--></a><br /></div><!-- /copyright -->
+</body>
+</html>

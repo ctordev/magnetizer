@@ -1,0 +1,797 @@
+<script type="text/javascript">try{document.cookie="pushi=1; path=/; max-age=82800; SameSite=Lax"}catch(e){}</script><!--IMLAB-OFF:PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLz9UUGIyUzVmM1BGZlklNUV6aDdmbE56V1pFQ1R1JTNCZk4lMjFKJTVFc3JHUnk0JTVFaWlLc1pCREMlMjFjcUNjYThWazA5YlptcHliaHlUQ2JBd3lCV01PNURkYSUyMWhuaCUzQnMlNUVJQUdubG1aTUpJYkdqY2dvbyI+--><!--/IMLAB-OFF--></script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narodadst1?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narod_desktop_ad?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script><script type="text/javascript">
+		var ucoz_rndid = 'c673R8';
+		function uOnDomOrLater(f){
+			if(document.readyState == 'loading') {
+				if(document.addEventListener) {
+					document.addEventListener('DOMContentLoaded',f);
+				} else {
+					window.attachEvent('onload',f);
+				}
+			} else {
+				setTimeout(f,0);
+			}
+		}
+	
+			function resizeFrame() {
+				var WX, WY, BX, BY;
+				var o = document.getElementById("iFc673R8") , t , d;
+				if (!o) return;
+				d = o.contentDocument;
+				if (!(t = d.getElementById("wrapperXc673R8"))) WX = 0;
+				else WX = t.value;
+				if (!(t = d.getElementById("wrapperYc673R8"))) WY = 0;
+				else WY = t.value;
+				if (!(t = d.getElementById("bannerXc673R8"))) BX = 0;
+				else BX = t.value;
+				if (!(t = d.getElementById("bannerYc673R8"))) BY = 0;
+				else BY = t.value;
+				BX = parseInt(BX) + parseInt(WX);
+				BY = parseInt(BY) + parseInt(WY);
+				if (BX < 0) o.style.width = "100%";
+				else if (BX > 0) o.style.width = BX + "px";
+				if (BY < 0) o.style.height = "100%";
+				else if (BY > 0) {
+					o.style.height = Math.max(BY, 100) + "px";
+				}
+
+				if (d.body) {
+					d.body.insertAdjacentHTML('beforeend', '<style>html,body{width:100%;min-width:200px;min-height:90px;padding:0;margin:0;display:block;}</style>');
+				}
+			}
+			document.write('<iframe style="position:fixed;right:0px;top:0px;z-index:2147483646;" height="90px" width="100%" onload="resizeFrame();" id="iFc673R8" frameborder="0" scrolling="no" src="/?w9X2xm5UO6RDU3mBFD4MfTU9giQHAcTge1URsjCLOBlqZAwzgxGuXi%5EdAOW73BaIJpuq8WaRRyWweNIUOxq9LDwplVdQrwoo"></iframe>');
+		</script><script type="text/javascript" src="../../.s/src/jquery-3.3.1.min.js"></script><html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta name="description"
+content="Расчет выходного напряжения многополюсного низкооборотного электрогенератора на основе постоянных магнитов">
+<meta name="keywords"
+content="Расчет выходного напряжения многополюсного низкооборотного электрогенератора на основе постоянных магнитов">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>Расчет выходного напряжения многополюсного низкооборотного 
+электрогенератора на основе постоянных магнитов</title>
+<style>/* добавлено зеркалом: пометка о несохранённом рисунке и hiding рекламного фрейма ucoz */.imlab-missing{display:block;margin:10px 0;padding:8px 12px;border:1px dashed #9ab;color:#5a6b7a;background:#f4f6f8;font:13px/1.5 sans-serif;text-decoration:none}iframe[style*="position:fixed"]{display:none!important}</style></head>
+
+<body bgcolor="#FFFFFF">
+<div align="left">
+
+<table border="0" cellspacing="5">
+    <tr>
+        <td align="center"><a href="../../index.html"><strong>Главная страница</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Contact.htm"><strong>
+		Контактная информация</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/News.htm"><strong>Новости 
+		науки и техники</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Find.htm"><strong>Поиск на 
+		сайте</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><strong><a href="../../Contact/Forum.htm">Форум</a> </strong></td>
+    </tr>
+</table>
+</div>
+
+<hr>
+
+<p align="left"><font size="3"><b>Расчет выходного напряжения многополюсного 
+низкооборотного электрогенератора на основе постоянных магнитов</b></font></p>
+
+<p><font size="2"><strong>Введение</strong></font></p>
+
+<p><font size="2">Многие двигатели и приводы имеют низкую скорость вращения. 
+Так, например, в</font><font
+size="2" face="Times New Roman">етродвигатель с вертикальной осью вращения 
+карусельного типа (лопастной) имеет простую конструкцию и высокую надежность</font><font size="2">, 
+но его скорость вращения не превышает</font><font
+size="2" face="Times New Roman"> нескольк</font><font
+size="2">их </font><font size="2" face="Times New Roman">оборотов в секунду.</font><font size="2"> 
+Ч</font><font size="2"
+face="Times New Roman">тобы использовать </font><font
+size="2">подобные </font><font size="2"
+face="Times New Roman">двигател</font><font size="2">и </font><font
+size="2" face="Times New Roman">для получения электрической энергии</font><font size="2">,</font><font
+size="2" face="Times New Roman"> требуется низкооборотный</font><font size="2"> </font><font
+size="2" face="Times New Roman">электрический генератор,</font><font size="2"> о</font><font size="2"
+face="Times New Roman">сь которого напрямую соединена с осью</font><font size="2"> </font><font
+size="2" face="Times New Roman">двигателя, так как применение повышающих 
+редукторов</font><font
+size="2"> </font><font size="2" face="Times New Roman">существенно уменьшает 
+кпд,</font><font size="2"> у</font><font
+size="2" face="Times New Roman">сложняет конструкцию и снижает надежность.</font><font
+size="2"> Для получения достаточно высокого выходного напряжения и повышения 
+электрической мощности необходимо использовать многополюсный электрический 
+генератор, ротор которого для упрощения и удешевления конструкции может быть 
+сделан на постоянных магнитах.</font></p>
+
+<p><font size="2"><strong>Принятые обозначения:</strong></font></p>
+
+<p><font size="2">E – электродвижущая сила (ЭДС</font><font size="2"
+face="Times New Roman">) катушки<br>
+</font><font size="2">E<sub>0</sub> –</font><font size="2"
+face="Times New Roman"> амплитуда ЭДС катушки<br>
+</font><font size="2">E<sub>gen</sub> – </font><font size="2"
+face="Times New Roman">действующее выходное напряжение генератора</font><font size="2">
+(в режиме холостого хода)</font><font
+size="2" face="Times New Roman"><br>
+</font><font size="2">P<sub>max</sub></font><font size="2"
+face="Times New Roman"> – электрическая мощность генератора в режиме короткого 
+замыкания<br>
+</font><font size="2">n – </font><font size="2"
+face="Times New Roman">число полюсов магнита<br>
+</font><font size="2">m – </font><font size="2"
+face="Times New Roman">количество</font><font size="2">
+</font><font size="2" face="Times New Roman">катушек<br>
+</font><font size="2">N –</font><font size="2"
+face="Times New Roman"> число витков </font><font
+size="2">катушки</font><font size="2"
+face="Times New Roman"><br>
+</font><font size="2">S –</font><font size="2"
+face="Times New Roman"> площадь </font><font size="2">потокосцепления (площадь </font><font size="2" face="Times New Roman">
+по</font><font
+size="2">люса)</font><font size="2" face="Times New Roman"><br>
+</font><font size="2">B –</font><font size="2"
+face="Times New Roman"> магнитная индукция в зазоре между магнитом и сердечником 
+катушки<br>
+</font><font size="2">B<sub>0</sub> –</font><font size="2"
+face="Times New Roman"> </font><font size="2">максимальное значение (амплитуда) </font><font size="2"
+face="Times New Roman">магнитной индукции в зазоре<br>
+</font><font size="2" face="GreekC">F</font><font size="2"> – </font><font
+size="2" face="Times New Roman">магнитный поток через сердечник катушки<br>
+</font><font size="2" face="GreekC">F</font><font size="2"><sub>0</sub>
+– </font><font size="2" face="Times New Roman">амплитуда магнитного потока через 
+сердечник катушки<br>
+</font><font size="2" face="GreekC">w</font><font size="2"> – </font><font
+size="2" face="Times New Roman">круговая частота вращения генератора<br>
+</font><font size="2">f –</font><font size="2"
+face="Times New Roman"> частота вращения генератора<br>
+</font><font size="2">T –</font><font size="2"
+face="Times New Roman"> период вращения генератора</font><font size="2"
+face="Times New Roman"><br>
+</font><font size="2">t –</font><font size="2"
+face="Times New Roman"> текущее время</font></p>
+
+<p><font size="2">Все расчеты ведутся в системе СИ.</font></p>
+
+<p><font size="2"><strong>Расчет выходного напряжения электрогенератора на 
+постоянных магнитах в режиме холостого хода</strong></font></p>
+
+<p><font size="2" face="Times New Roman">Низкооборотный многополюсный 
+электрический генератор может быть построен по простой схеме</font><font size="2"> 
+[1]</font><font
+size="2" face="Times New Roman">, показанной на рис. 1.</font></p>
+
+<p><img src="6_p_gen.jpg" width="250" height="388"> </p>
+
+<p><font size="2" face="Times New Roman">Рис. 1. Схема 6-полюсного 
+низкооборотного электрического генератора:</font><font
+size="2"> 1 –</font><font size="2" face="Times New Roman">
+верхнее основание </font><font size="2">(низкоуглеродистая сталь); </font><font size="2" face="Times New Roman">
+2 </font><font
+size="2">–</font><font size="2" face="Times New Roman">
+постоянный магнит (6-полюсное аксиальное намагничивание); 3 </font><font
+size="2">–</font><font size="2" face="Times New Roman">
+сердечники катушек</font><font size="2">
+(низкоуглеродистая сталь)</font><font
+size="2" face="Times New Roman">; 4 </font><font size="2">–</font><font
+size="2" face="Times New Roman"> обмотки катушек</font><font
+size="2"> (медный провод в эмалевой изоляции)</font><font size="2" face="Times New Roman">; 
+5
+</font><font size="2">–</font><font size="2"
+face="Times New Roman"> нижнее основание</font><font
+size="2"> (низкоуглеродистая сталь)</font><font
+size="2" face="Times New Roman">.</font></p>
+
+<p><font size="2" face="Times New Roman">Постоянный кольцевой магнит (2)</font><font size="2"> </font><font
+size="2" face="Times New Roman">крепится к стальному верхнему основанию (1), 
+способному вращаться относительно неподвижного нижнего основания (5), также 
+сделанному из стали для уменьшения магнитного сопротивления</font><font size="2">. </font><font
+size="2" face="Times New Roman">На нижнем основании крепятся стальные сердечники 
+(3)</font><font size="2">, на которые надеты катушки</font><font size="2"
+face="Times New Roman"> (4). Число катушек </font><font
+size="2">m </font><font size="2" face="Times New Roman">в данном случае равно 
+числу полюсов </font><font
+size="2">n (m = n = 6). </font><font size="2"
+face="Times New Roman">Кольцевой магнит может быть сплошным или набранным из 
+отдельных призматических или дисковых магнитов (число магнитов равно числу 
+полюсов </font><font size="2">n).</font><font
+size="2" face="Times New Roman"> Направление намагниченности магнита</font><font
+size="2"> </font><font size="2" face="Times New Roman">аксиальное 
+(параллельно/антипараллельно оси генератора)</font><font size="2">. Стальные 
+сердечники катушек имеют полюсные наконечники, форма которых идентична форме 
+магнитных полюсов (сектор, круг или прямоугольник). Постоянный кольцевой магнит 
+(2) с верхним основанием (1) образуют ротор генератора, а нижнее основание (5) с 
+катушками (4) и сердечниками (3) - статор.</font></p>
+
+<p><font size="2" face="Times New Roman">Для использования генератора совместно 
+со стабилизаторами напряжения, а также аккумуляторными батареями напряжением 12 
+или 24 вольта желательно, чтобы его выходное напряжение было достаточно высоким</font><font
+size="2"> (амплитудное</font><font size="2"
+face="Times New Roman"> значение не мен</font><font
+size="2">ьш</font><font size="2" face="Times New Roman">е 10 вольт при 
+использовании </font><font
+size="2">преобразователя</font><font size="2"
+face="Times New Roman"> напряжения</font><font size="2">,
+</font><font size="2" face="Times New Roman">а при </font><font
+size="2">подключении </font><font size="2"
+face="Times New Roman">аккумуляторной батареи</font><font size="2"> через 
+выпрямитель - больше</font><font size="2"
+face="Times New Roman"> ее выходного</font><font
+size="2"> </font><font size="2" face="Times New Roman">напряжения</font><font
+size="2"> на величину падения напряжения на выпрямителе) </font><font
+size="2" face="Times New Roman">при низких скоростях вращения (порядка одного 
+оборота в секунду). Это позволило бы уменьшить потери в преобразователях, 
+применяемых для стабилизации напряжения или зарядки аккумуляторов и упростить их 
+схему</font><font size="2">.</font></p>
+
+<p><font size="2" face="Times New Roman">Требуется сделать упрощенный расчет 
+выходного напряжения генератора с использованием</font><font size="2">
+параметров</font><font size="2" face="Times New Roman">, зависящих от 
+конструкции</font><font
+size="2">: n –</font><font size="2" face="Times New Roman">
+число полюсов, </font><font size="2">B<sub>0</sub>
+– </font><font size="2" face="Times New Roman">максимальное значение</font><font size="2"> 
+(амплитуда) </font><font
+size="2" face="Times New Roman">индукции в зазоре</font><font
+size="2">, S – </font><font size="2" face="Times New Roman">площадь 
+потокосцепления (площадь полюса), </font><font
+size="2">m – </font><font size="2" face="Times New Roman">число катушек, </font><font size="2">
+N – </font><font size="2"
+face="Times New Roman">число витков одной катушки,</font><font size="2"> f – </font><font size="2"
+face="Times New Roman">частота вращения, </font><font
+size="2">T –</font><font size="2" face="Times New Roman">
+период вращения (время одного оборота), </font><font size="2" face="GreekC">w</font><font
+size="2"> –</font><font size="2" face="Times New Roman">
+круговая частота вращения (угловая скорость)</font><font size="2">. </font></p>
+
+<p><font size="2"><u>Вариант 1</u></font></p>
+
+<p><font size="2"><img src="Var_01.gif" width="300" height="200">
+</font></p>
+
+<p><font size="2" face="Times New Roman">Предположим, что количество</font><font size="2"> </font><font
+size="2" face="Times New Roman">катушек равно количеству полюсов магнита (</font><font
+size="2">m = n)</font><font size="2" face="Times New Roman">, а при вращении 
+магнита относительно катушек индукция в зазоре </font><font
+size="2">мгновенно</font><font size="2"
+face="Times New Roman"> изменяется от </font><font
+size="2">-B<sub>0</sub> </font><font size="2"
+face="Times New Roman">до </font><font size="2">+B<sub>0</sub>
+и от +B<sub>0</sub> до -B<sub>0</sub> (то есть ротор вращается не плавно, а 
+скачками). </font><font size="2" face="Times New Roman">Магнитный поток через 
+сердечник катушки</font><font
+size="2">, </font><font size="2" face="Times New Roman">соответственно,
+</font><font size="2">мгновенно </font><font size="2"
+face="Times New Roman">изменяется</font><font size="2">
+</font><font size="2" face="Times New Roman">от</font><font
+size="2"> -</font><font size="2" face="GreekC">F</font><font
+size="2"><sub>0</sub> до +</font><font size="2" face="GreekC">F</font><font
+size="2"><sub>0</sub> и от +</font><font size="2"
+face="GreekC">F</font><font size="2"><sub>0</sub></font><font
+size="2" face="Times New Roman"> до </font><font size="2">-</font><font
+size="2" face="GreekC">F</font><font size="2"><sub>0</sub>, </font><font
+size="2" face="Times New Roman">где </font><font size="2"
+face="GreekC">F</font><font size="2"><sub>0</sub> = B<sub>0</sub>S</font><font
+size="2" face="Times New Roman">, </font><font size="2">в моменты времени 0, 
+T/n, 2T/n и т. д. (период изменения 2T/n).</font><font size="2"
+face="Times New Roman"> Тогда </font><font size="2">в соответствии с законом 
+электромагнитной индукции Фарадея [2]</font></p>
+
+<p><font size="2"><img src="Image34.gif" width="84" height="41"></font></p>
+
+<p><font size="2" face="Times New Roman">получаем</font><font
+size="2"> </font><font size="2" face="Times New Roman">ЭДС катушки:</font></p>
+
+<p><img src="Image128.gif" width="201" height="24"></p>
+
+<p><font size="2">где </font><font size="2" face="GreekC">d</font><font
+size="2" face="Times New Roman Cyr">(t) - дельта-функция Дирака. Усредняя ЭДС по 
+промежутку времени </font><font size="2"
+face="GreekC">D</font><font size="2" face="Times New Roman Cyr">t = T/n, 
+получаем значение амплитуды ЭДС одной катушки:</font></p>
+
+<p><img src="Image86.gif" width="84" height="41"></p>
+
+<p><font size="2" face="Times New Roman">Так как </font><font
+size="2">T = 1/f, </font><font size="2" face="Times New Roman">а
+</font><font size="2">f = </font><font size="2" face="GreekC">w</font><font
+size="2">/(2</font><font size="2" face="GreekC">p</font><font
+size="2">), то</font></p>
+
+<p><img src="Image88.gif" width="168" height="41"></p>
+
+<p><font size="2" face="Times New Roman">При последовательном соединении катушек 
+для выходного</font><font size="2">
+действующего </font><font size="2"
+face="Times New Roman">напряжения генератора получаем следующее выражение</font><font
+size="2"> </font><font size="2" face="Times New Roman">(</font><font
+size="2">считаем форму ЭДС прямоугольной, при этом E<sub>gen</sub> = nE<sub>0</sub></font><font
+size="2" face="Times New Roman">):</font></p>
+
+<p><img src="Image87.gif" width="405" height="41"></p>
+
+<p><font size="2"><u>Вариант 2</u></font></p>
+
+<p><font size="2"><img src="Var_02.gif" width="300" height="200">
+</font></p>
+
+<p><font size="2" face="Times New Roman">Предположим, что количество</font><font size="2"> </font><font
+size="2" face="Times New Roman">катушек равно количеству полюсов магнита (</font><font
+size="2">m = n)</font><font size="2" face="Times New Roman">, а при вращении 
+магнита относительно катушек </font><font size="2">магнитный поток </font><font size="2" face="Times New Roman">
+через сердечник катушки</font><font size="2">
+линейно </font><font size="2" face="Times New Roman">изменяется</font><font
+size="2"> </font><font size="2" face="Times New Roman">от</font><font
+size="2"> -</font><font size="2" face="GreekC">F</font><font
+size="2"><sub>0</sub> до +</font><font size="2" face="GreekC">F</font><font
+size="2"><sub>0</sub> и от +</font><font size="2"
+face="GreekC">F</font><font size="2"><sub>0</sub></font><font
+size="2" face="Times New Roman"> до </font><font size="2">-</font><font
+size="2" face="GreekC">F</font><font size="2"><sub>0</sub>, </font><font
+size="2" face="Times New Roman">где </font><font size="2"
+face="GreekC">F</font><font size="2"><sub>0</sub> = B<sub>0</sub>S (период 
+изменения 2T/n).</font><font size="2"
+face="Times New Roman"> Тогда </font><font size="2">в соответствии с законом 
+электромагнитной индукции Фарадея [2]</font></p>
+
+<p><font size="2"><img src="Image84.gif" width="84" height="41"> </font></p>
+
+<p><font size="2">получаем амплитуду ЭДС одной катушки:</font></p>
+
+<p><font size="2"><img src="Image130.gif" width="142" height="42">
+</font></p>
+
+<p><font size="2" face="Times New Roman">При последовательном соединении катушек 
+для выходного</font><font size="2">
+действующего </font><font size="2"
+face="Times New Roman">напряжения генератора получаем следующее выражение</font><font
+size="2"> </font><font size="2" face="Times New Roman">(</font><font
+size="2">форма ЭДС прямоугольная, при этом E<sub>gen</sub> = nE<sub>0</sub></font><font size="2"
+face="Times New Roman">):</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image131.gif"
+width="412" height="41"></font><font size="2"> </font></p>
+
+<p><font size="2"><u>Вариант 3</u></font></p>
+
+<p><font size="2" face="Times New Roman">Предположим, что количество</font><font size="2"> </font><font
+size="2" face="Times New Roman">катушек равно количеству полюсов магнита (</font><font
+size="2">m = n)</font><font size="2" face="Times New Roman">, а при вращении 
+магнита относительно катушек магнитный поток через сердечник катушки</font><font size="2"> </font><font
+size="2" face="Times New Roman">изменяется по закону </font><font size="2" face="GreekC">
+F</font><font
+size="2"> = </font><font size="2" face="GreekC">F</font><font
+size="2"><sub>0</sub> cos(n</font><font size="2" face="GreekC">w</font><font
+size="2">t/2), </font><font size="2" face="Times New Roman">где
+</font><font size="2" face="GreekC">F</font><font size="2"><sub>0</sub>
+= B<sub>eff</sub>S. </font><font size="2" face="Times New Roman">Здесь
+</font><font size="2">B<sub>eff </sub>– </font><font size="2"
+face="Times New Roman">эффективное значение магнитной индукции в зазоре, 
+получаемое усреднением по площади полюса</font><font size="2">. В соответствии с 
+законом электромагнитной индукции Фарадея [2]</font></p>
+
+<p><font size="2"><img src="Image39.gif" width="84" height="41"> </font></p>
+
+<p><font size="2" face="Times New Roman">получаем</font><font
+size="2"> </font><font size="2" face="Times New Roman">эдс катушки</font><font size="2">:</font></p>
+
+<p><font size="2"><img src="Image40.gif" width="325" height="41">
+</font></p>
+
+<p><font size="2" face="Times New Roman">Так как </font><font
+size="2">f = </font><font size="2" face="GreekC">w</font><font
+size="2">/(2</font><font size="2" face="GreekC">p</font><font
+size="2">), </font><font size="2" face="Times New Roman">получаем для </font><font size="2">
+амплитуды ЭДС </font><font
+size="2" face="Times New Roman">одной катушки</font><font
+size="2"> выражение:</font></p>
+
+<p><font size="2"><img src="Image42.gif" width="197" height="41">
+</font></p>
+
+<p><font size="2" face="Times New Roman">При последовательном соединении катушек 
+для выходного </font><font size="2">действующего
+</font><font size="2" face="Times New Roman">напряжения генератора получаем 
+выражение (</font><font
+size="2">форма ЭДС синусоидальная, E<sub>gen</sub>
+= nE<sub>0</sub>/2<sup>1/2</sup>):</font></p>
+
+<p><font size="2"><img src="Image41.gif" width="234" height="45">
+</font></p>
+
+<p><font size="2" face="Times New Roman">Эффективное значение магнитной индукции </font><font
+size="2">B<sub>eff</sub></font><font size="2"
+face="Times New Roman"> может быть получено усреднением магнитной индукции в 
+зазоре по площади полюса.</font><font
+size="2"> </font><font size="2" face="Times New Roman">Если распределение 
+магнитной индукции описывается синусоидальным законом, то можно считать</font><font
+size="2"> B<sub>eff</sub> <font face="Times New Roman">≈</font> (2/</font><font size="2"
+face="GreekC">p</font><font size="2">)B<sub>0</sub></font><font
+size="2" face="Times New Roman">. Тогда</font><font size="2">
+выходное действующее напряжение генератора</font></p>
+
+<p><font size="2"><img src="Image132.gif" width="409" height="43">
+</font></p>
+
+<p><font size="2" face="Times New Roman">С учетом принятых приближений можно 
+считать, что полученные формулы (1)</font><font
+size="2">, (2) </font><font size="2" face="Times New Roman">и (</font><font
+size="2">3</font><font size="2" face="Times New Roman">) хорошо соответствуют 
+друг другу.</font><font
+size="2"> Расчет по этим формулам может применяться и для других конструкций 
+многополюсных генераторов на постоянных магнитах. Испытания сконструированного 
+по схеме рис. 1 низкооборотного генератора [1] показали, что расчет по варианту 
+3 наиболее точно отражает характеристики генератора: магнитный поток в зазоре и, 
+соответственно, ЭДС генератора изменяются по синусоидальному закону, выходное 
+действующее напряжение генератора с хорошей точностью согласуется с рассчитанным 
+по формуле (3).</font></p>
+
+<p><font size="2">Для расчета выходного напряжения генератора (действующего и 
+амплитудного) по формуле (3) может быть использована программа PM_Generator.</font><font size="1"> </font><font
+size="2">Программа предназначена для работы с операционными системами (ОС) 
+Windows 3.1, Windows 95, 98 и XP (с другими ОС семейства Windows не 
+проверялась). Файл
+</font><a href="PM_Gen10.rar"><font size="2">PM_Gen10.rar</font></a><font
+size="2"> (~85 Кбайт) следует распаковать в заранее созданную папку. Упаковка 
+производилась с помощью WinRar 2.80. Результат распаковки: PM_Gen10.exe - 
+исполняемый файл программы. После запуска программы можно вводить параметры 
+генератора и производить расчет нажатием соответствующей кнопки. При вводе 
+данных учитывайте принятый в ОС формат разделителя для десятичной дроби: точка 
+или запятая, например, 0.0004 или 0,0004. При необходимости надо установить для 
+ОС точку в качестве десятичного разделителя или вводить исходные данные с 
+запятой, если в качестве десятичного разделителя в ОС используется именно она. 
+Скопированные файлы могут быть проверены на отсутствие вирусного кода в режиме 
+on-line [6].</font></p>
+
+<p><font size="2"><img src="PM_Gen10.jpg" width="508"
+height="248"> </font></p>
+
+<p><font size="2">Рис. 2. Внешний вид окна программы PM_Generator (версия 1.0).</font></p>
+
+<p><font size="2">Например, производя р</font><font
+size="2" face="Times New Roman">асчет для постоянного магнита из феррита бария (</font><font size="2">B<sub>0</sub> <font face="Times New Roman">
+≈</font> 0.2 </font><font
+size="2" face="Times New Roman">Тл) при числе полюсов </font><font size="2">n = 
+32, N = 200</font><font
+size="2" face="Times New Roman"> витков</font><font
+size="2">, S <font face="Times New Roman">≈</font> </font><font size="2" face="Times New Roman">
+4 см</font><font size="2"><sup>2</sup> = 0.0004 </font><font
+size="2" face="Times New Roman">м</font><font size="2"><sup>2</sup></font><font
+size="2" face="Times New Roman"> и частоте вращения </font><font size="2">f = 1 </font><font
+size="2" face="Times New Roman">Гц (один оборот в секунду</font><font size="2">), 
+получаем</font><font
+size="2" face="Times New Roman"> </font><font size="2">действующее напряжение 
+генератора <font face="Times New Roman">≈</font>23 вольт и амплитудное <font face="Times New Roman">
+≈</font>32 </font><font size="2"
+face="Times New Roman">вольт</font><font size="2"> (см. рис. 2). </font><font size="2" face="Times New Roman">
+При таком выходном напряжении для зарядки </font><font size="2">12-</font><font size="2"
+face="Times New Roman">и </font><font size="2">и даже </font><font
+size="2" face="Times New Roman">24-вольтовой аккумуляторной батареи можно 
+использовать диодный мост и простое реле напряжения для отключения генератора 
+при </font><font
+size="2">100 % </font><font size="2" face="Times New Roman">заряженном 
+аккумуляторе. Ограничение зарядного тока будет происходить за счет внутреннего 
+сопротивления генератора (суммарное сопротивление обмоток)</font><font size="2">.</font></p>
+
+<p><font size="2" face="Times New Roman"><b>Зависимость выходных параметров 
+генератора от числа полюсов</b></font></p>
+
+<p><font size="2" face="Times New Roman">Выходное напряжение генератора может 
+быть найдено по формуле (3):</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image45.gif"
+width="158" height="43"></font><font size="2"> </font></p>
+
+<p><font size="2">Тогда электрическая мощность генератора в режиме короткого 
+замыкания:</font></p>
+
+<p><font size="2"><img src="Image46.gif" width="217" height="46">
+</font></p>
+
+<p><font size="2" face="Times New Roman">где R – активное сопротивление одной 
+катушки генератора.</font></p>
+
+<p><font size="2" face="Times New Roman">Найдем зависимость выходного напряжения 
+генератора и электрической мощности от числа полюсов кольцевого магнита. Будем 
+считать, что каждая катушка генератора представляет из себя цилиндрический 
+соленоид, имеющий геометрические размеры: </font><font
+size="2">R1 – </font><font size="2" face="Times New Roman">внутренний радиус, </font><font size="2">
+R2 – </font><font size="2"
+face="Times New Roman">внешний радиус, </font><font
+size="2">H – </font><font size="2" face="Times New Roman">высота, намотанный 
+проводом диаметром </font><font
+size="2">d </font><font size="2" face="Times New Roman">с фактором упаковки </font><font size="2"
+face="GreekC">l</font><font size="2" face="Times New Roman">
+<span lang="en-us">[7] </span>(рис. 3).</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image47.gif"
+width="300" height="250"></font><font size="2"> <br>
+</font><font size="2" face="Times New Roman">Рис. 3. Геометрические параметры 
+цилиндрического соленоида: </font><font
+size="2">R1 – </font><font size="2" face="Times New Roman">внутренний радиус, </font><font size="2">
+R2 – </font><font size="2"
+face="Times New Roman">внешний радиус, </font><font
+size="2">H</font><font size="2" face="Times New Roman"> – высота.</font></p>
+
+<p><font size="2" face="Times New Roman">Количество витков цилиндрического 
+соленоида может быть найдено по формуле:</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image48.gif"
+width="138" height="41"></font><font size="2"> </font></p>
+
+<p><font size="2">Активное сопротивление:</font></p>
+
+<p><font size="2"><img src="Image49.gif" width="180" height="43">
+</font></p>
+
+<p><font size="2" face="Times New Roman">где </font><font
+size="2" face="GreekC">r</font><font size="2"><sub>e</sub> – </font><font
+size="2" face="Times New Roman">удельное электрическое сопротивление обмоточного 
+провода.</font></p>
+
+<p><font size="2" face="Times New Roman">Тогда:</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image50.gif"
+width="240" height="85"></font><font size="2"> </font></p>
+
+<p><font size="2">В первом приближении:</font></p>
+
+<p><font size="2"><img src="Image51.gif" width="70" height="18"> </font></p>
+
+<p><font size="2"><img src="Image52.gif" width="90" height="41"> </font></p>
+
+<p><font size="2"><img src="Image53.gif" width="102" height="41">
+</font></p>
+
+<p><font size="2" face="Times New Roman">где </font><font
+size="2">D – </font><font size="2" face="Times New Roman">внешний диаметр 
+кольцевого магнита, </font><font
+size="2" face="GreekC">D</font><font size="2"
+face="Times New Roman"> – ширина кольца. </font></p>
+
+<p><font size="2" face="Times New Roman">При этих приближениях:</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image54.gif"
+width="396" height="85"></font><font size="2"> </font></p>
+
+<p><font size="2">Например, для генератора [1] с шестиполюсным кольцевым 
+магнитом типоразмера К70 х 24 х 12 из феррита бария (D = 0.07 м, </font><font size="2"
+face="GreekC">D</font><font size="2"> = 0.023 м, B<sub>0</sub> = 0.2 Тл, n = 6) 
+с катушками, намотанными медным проводом (</font><font size="2"
+face="GreekC">r</font><font size="2"><sub>e</sub> = 1.67
+<font face="Times New Roman">∙ </font>10<sup>-8</sup>
+Ом <font face="Times New Roman">∙ </font>м, R1/R2 = 0.5, H = 0.02 м, </font><font size="2"
+face="GreekC">l</font><font size="2"> = 0.6) электрическая мощность в режиме 
+короткого замыкания в соответствии с формулой (4) составит примерно 100 мВт при 
+частоте вращения 1 оборот в секунду (</font><font size="2" face="GreekC">w</font><font
+size="2"> = 6.28 рад/сек). Экспериментальное значение примерно 140 мВт. 
+Соответствие достаточно хорошее, если учесть, что реальная конструкция [1] имеет 
+отличия от использованной в расчетах (рис. 1).</font></p>
+
+<p><font size="2" face="Times New Roman">При изменении числа полюсов можно 
+считать, что относительные размеры катушки (</font><font size="2">R1/R2</font><font size="2"
+face="Times New Roman">) и ее высота </font><font
+size="2">H</font><font size="2" face="Times New Roman"> не изменяются. Тогда 
+электрическая мощность генератора в режиме короткого замыкания растет прямо 
+пропорционально числу полюсов, а также прямо пропорционально квадрату частоты 
+вращения, квадрату индукции в зазоре и квадрат</font><font size="2">ам</font><font size="2"
+face="Times New Roman"> размеров кольцевого магнита (внешний диаметр, ширина 
+кольца).</font></p>
+
+<p><font size="2" face="Times New Roman">Действующее значение выходного 
+напряжения генератора в режиме холостого хода:</font></p>
+
+<p><font size="2" face="Times New Roman"><img src="Image55.gif"
+width="196" height="43"></font><font size="2"> </font></p>
+
+<p><font size="2">Или</font></p>
+
+<p><font size="2"><img src="Image56.gif" width="421" height="65">
+</font></p>
+
+<p><font size="2">Расчетное значение выходного напряжения генератора [1] по 
+формуле (5) 3.4 В при частоте вращения 1 оборот в секунду - выше измеренного (2 
+В). Расхождение можно объяснить тем, что в реальной конструкции [1] площадь 
+полюсного наконечника сердечника катушки меньше площади полюса магнита почти в 2 
+раза.</font></p>
+
+<p><font size="2">Если увеличивать число полюсов генератора и, соответственно, 
+уменьшать размер R2 катушки, сохраняя неизменными ее высоту H и отношение R1/R2, 
+то при намотке катушек проводом одного диаметра выходное напряжение генератора 
+будет оставаться приблизительно постоянным.</font></p>
+
+<p><font size="2" face="Times New Roman"><b>Выводы</b></font></p>
+
+<p><font size="2" face="Times New Roman">При постоянной угловой скорости 
+вращения выходное напряжение многополюсного генератора на постоянных магнитах 
+растет пропорционально квадрату числа полюсов при условии, что площадь полюса не 
+изменяется, то есть либо используется сплошной кольцевой магнит большего 
+диаметра, либо увеличивается количество магнитов, из которых набирается 
+кольцевой магнит</font><font size="2"> (1 - 3)</font><font size="2"
+face="Times New Roman">. </font></p>
+
+<p><font size="2" face="Times New Roman">Увеличение числа полюсов при 
+использовании кольцевого магнита заданных размеров приводит к уменьшению площади 
+потокосцепления S пропорционально увеличению числа полюсов n. Если число витков 
+катушек
+</font><font size="2">N</font><font size="2"
+face="Times New Roman"> остается неизменным, чего можно добиться, уменьшая 
+диаметр обмоточного провода, то выходное напряжение генератора </font><font
+size="2">E<sub>gen</sub> </font><font size="2"
+face="Times New Roman">будет расти</font><font size="2">
+</font><font size="2" face="Times New Roman">пропорционально</font><font
+size="2"> </font><font size="2" face="Times New Roman">числу полюсов </font><font size="2">
+n. </font><font size="2"
+face="Times New Roman">Если катушки наматываются обмоточным проводом заданного 
+диаметра, то при увеличении числа полюсов (и, соответственно, уменьшении размера 
+катушки) число витков одной катушки N уменьшается. Выходное напряжение 
+генератора E</font><font size="2"><sub>gen</sub></font><font
+size="2" face="Times New Roman"> при этом будет оставаться приблизительно 
+постоянным при увеличении числа полюсов n</font><font size="2"> (5)</font><font size="2"
+face="Times New Roman">.</font></p>
+
+<p><font size="2" face="Times New Roman">Электрическая мощность генератора не 
+зависит от диаметра обмоточного провода и растет прямо пропорционально квадрат</font><font size="2">ам</font><font size="2"
+face="Times New Roman"> размеров кольцевого магнита (внешний диаметр, ширина 
+кольца) и</font><font size="2"> прямо пропорционально </font><font size="2"
+face="Times New Roman">числу его полюсов</font><font
+size="2"> (4)</font><font size="2" face="Times New Roman">.</font></p>
+
+<p><font size="2" face="Times New Roman">Таким образом, при конструировании 
+низкооборотного электрического генератора по вышеприведенной схеме необходимо 
+использовать кольцевой магнит с максимально возможной остаточной индукцией, как 
+можно большего внешнего диаметра и ширины кольца с максимально возможным числом 
+полюсов, подбирая за счет изменения диаметра обмоточного провода число витков 
+катушек таким образом, чтобы выходное напряжение генератора находилось в 
+требуемом диапазоне при заданных частотах вращения.</font><font
+size="2"> Катушки желательно наматывать проводом с наименьшим удельным 
+сопротивлением (медным) с наибольшим возможным коэффициентом заполнения формы 
+(фактором упаковки). Достаточная общность вышеизложенных рассуждений позволяет 
+сказать то же самое и в отношении других конструкций электрогенераторов с 
+ротором на постоянных магнитах.</font></p>
+
+<p><font size="2" face="Times New Roman">Число катушек должно соответствовать 
+числу полюсов. Если число катушек равно числу полюсов магнита (m = n), то при 
+нахождении сердечника катушки напротив полюса кольцевого магнита за счет сил 
+притяжения возникает большой момент сопротивления, для преодоления которого 
+требуется значительное усилие (большая сила ветра</font><font size="2">)</font><font size="2"
+face="Times New Roman">. Поэтому можно увеличить</font><font size="2"> или 
+уменьшить </font><font size="2" face="Times New Roman">число катушек на единицу 
+(m = n + 1</font><font
+size="2">, m = n - 1</font><font size="2" face="Times New Roman">), что позволит 
+существенно уменьшить амплитудные значения момента сопротивления. </font><font size="2">
+Подобное решение использовано в конструкции 6-полюсного генератора <span lang="en-us">
+[1]</span>, в котором число полюсов магнита <span lang="en-us">n = 6</span>, 
+число катушек <span lang="en-us">m =
+</span>7, 6-полюсного генератора <span lang="en-us">[4]</span>, в котором число 
+полюсов магнита <span lang="en-us">n = 6</span>, число катушек в каждой из двух 
+групп <span lang="en-us">m = 5 (</span>дополнительно группы катушек сдвинуты 
+друг относительно друга на угол в 36 градусов) и 18-полюсного генератора
+<span lang="en-us">[5]</span> (число полюсов магнита n = 18, число катушек m = 
+19). </font><font
+size="2" face="Times New Roman">Можно вообще отказаться от применения стальных 
+сердечников в катушках, тогда момент сопротивления </font><font size="2">в 
+режиме холостого хода</font><font size="2"
+face="Times New Roman"> будет близок к нулю при любом положении ротора. Такие 
+катушки необходимо делать минимальной высоты, сравнимой с в</font><font
+size="2">еличиной зазора между магнитом и катушкой, чтобы уменьшение магнитной 
+индукции в зазоре было не слишком существенным</font><font size="2"
+face="Times New Roman">. Число катушек может быть при этом равно числу полюсов 
+магнита (</font><font size="2">m = n). </font></p>
+
+<p><font size="2"><strong>Ссылки:</strong></font></p>
+
+<ol>
+    <li><a href="../Gen_0612/Gen_0612.htm"><font size="2">6-полюсный 
+	низкооборотный электрогенератор для ветрогенератора</font></a></li>
+    <li><a href="../../M_Fields/Magn_Field/Magn_Field.htm"><font
+        size="2">Законы и уравнения магнитного поля</font></a></li>
+    <li><font size="2">Иродов И. Е. Основные законы электромагнетизма: Учеб. 
+	пособие для студентов вузов. - 2-е, стереотип. - М.: Высш. шк., 1991. - 288 
+	с.: ил.</font></li>
+    <li><a href="../Gen_0610/Gen_0610.htm"><font size="2">Низкооборотный 
+	многополюсный электрогенератор на кольцевом постоянном магните (6 полюсов, 
+	10 обмоток)</font></a></li>
+	<li><font size="2"><a href="../Gen_18_19/Gen_18_19.htm">Низкооборотный 
+	однофазный электрогенератор с дисковым ротором на постоянных магнитах (18 
+	полюсов, 19 обмоток)</a></font></li>
+    <li><a href="../../Computer/AntiVir/AntiVir.htm"><font
+        size="2">Проверка файлов пользователя на наличие вирусного кода в режиме 
+	on-line</font></a></li>
+	<li><font size="2"><a href="../../M_Fields/Pack_Factor/Pack_Factor.htm">
+	Расчет фактора упаковки при намотке соленоидов</a></font></li>
+</ol>
+
+<p><a href="../../Projects/Terms/Terms.htm"><font size="2"><strong>Словарь 
+терминов:</strong></font></a></p>
+
+<ul>
+    <li><font size="2"><strong>Активное сопротивление</strong> - часть полного 
+	сопротивления электрического контура, связанная с тепловыделением в контуре.</font></li>
+    <li><font size="2"><strong>Ветродвигатель</strong>
+        - преобразователь энергии воздушного потока в механическую энергию 
+	движения.</font><font
+        size="1"> </font></li>
+	<li><font size="2"><strong>Двигатель (мотор)</strong> - преобразователь 
+	энергии источника в механическую энергию движения.</font></li>
+	<li><font size="2"><strong>Привод</strong>
+	- устройство, имеющее рабочий орган, способный к механическому перемещению 
+	при наличии противодействующей силы.</font></li>
+    <li><font size="2"><strong>Фактор упаковки (коэффициент заполнения)</strong> 
+	- отношение объема проводника к объему обмотки; при равномерной намотке 
+	равен отношению суммарной площади проводников в поперечном сечении обмотки 
+	(без учета изоляции) к площади поперечного сечения обмотки. </font></li>
+    <li><font size="2"><strong>Холостой ход </strong>- режим работы привода или 
+	преобразователя в отсутствие противодействующей силы (нагрузки).</font></li>
+    <li><font size="2"><b>Цилиндрический соленоид</b> - соленоид в виде цилиндра 
+	с центральным цилиндрическим отверстием (если таковое имеется).</font><font
+        size="1"> </font></li>
+    <li><font size="2"><strong>Электрогенератор (электрический генератор)</strong> 
+	- преобразователь неэлектрической энергии источника в электрическую энергию.</font></li>
+</ul>
+
+<p><font size="2">Автор выражает благодарность Розину М. Н. за критические 
+замечания, которые были учтены при корректировке материала.</font></p>
+
+<p><font size="2">08.12.2003 <br>
+09.09.2005<br>
+20.09.2005<br>
+07.11.2005<br>
+17.11.2005<br>
+13.02.2006<br>
+27.06.2006<br>
+08.02.2007<br>
+22.06.2010<br>
+<span lang="en-us">04</span>.04.2018</font></p>
+
+<hr>
+
+<p><a href="../Energy.htm"><font size="2">Альтернативные источники энергии</font></a><font size="2"><br>
+</font><a href="../../Computer/Computer.htm"><font size="2">Компьютеры и 
+Интернет</font></a><font size="2"><br>
+</font><a href="../../M_Fields/M_Fields.htm"><font size="2">Магнитные поля</font></a><font size="2"><br>
+</font><a href="../../MechSys/MechSys.htm"><font size="2">Механотронные системы</font></a><font size="2"><br>
+</font><a href="../../Projects/Projects.htm"><font size="2">Перспективные 
+разработки</font></a><font size="2"><br>
+</font><a href="../../Electron/Electron.htm"><font size="2">Электроника и 
+технология</font></a></p>
+
+<p><a href="../../index.html"><font size="3"><strong>Главная страница</strong></font></a></p>
+
+<hr>
+
+<p><!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t11.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';'+Math.random()+
+'" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я" '+
+'border=0 width=88 height=31></a>')//--></script><!--/LiveInternet-->  </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- copyright (i7) --><div align="center"><a href="http://www.ucoz.ru/" title="Создать сайт бесплатно"><!--IMLAB-OFF:PGltZyBzdHlsZT0ibWFyZ2luOjA7cGFkZGluZzowO2JvcmRlcjowOyIgYWx0PSJIb3N0ZWQgYnkgdUNveiIgc3JjPSJodHRwOi8vczIwNi51Y296Lm5ldC9pbWcvY3AvMTEuZ2lmIiB3aWR0aD0iODAiIGhlaWdodD0iMTUiIHRpdGxlPSJIb3N0ZWQgYnkgdUNveiIgLz4=--><!--/IMLAB-OFF--></a><br /></div><!-- /copyright -->
+</body>
+</html>

@@ -1,0 +1,667 @@
+<script type="text/javascript">try{document.cookie="pushi=1; path=/; max-age=82800; SameSite=Lax"}catch(e){}</script><!--IMLAB-OFF:PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLz9qWWUyNnklNUUxbnFDJTIxOWd3VSU1RU5mclp1dDZ4bnBSVFM3OTlwQWh5QVNLd2tQRjFlUjJXSEV5MkxsNmRLQURqMGJsa1RLRGRKUGFTdG53OWVVNWRHamppSVdJM0JRaDFMJTVFNjN2azFZd29vIj4=--><!--/IMLAB-OFF--></script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narodadst1?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narod_desktop_ad?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script><script type="text/javascript">
+		var ucoz_rndid = 'cmwOkf';
+		function uOnDomOrLater(f){
+			if(document.readyState == 'loading') {
+				if(document.addEventListener) {
+					document.addEventListener('DOMContentLoaded',f);
+				} else {
+					window.attachEvent('onload',f);
+				}
+			} else {
+				setTimeout(f,0);
+			}
+		}
+	
+			function resizeFrame() {
+				var WX, WY, BX, BY;
+				var o = document.getElementById("iFcmwOkf") , t , d;
+				if (!o) return;
+				d = o.contentDocument;
+				if (!(t = d.getElementById("wrapperXcmwOkf"))) WX = 0;
+				else WX = t.value;
+				if (!(t = d.getElementById("wrapperYcmwOkf"))) WY = 0;
+				else WY = t.value;
+				if (!(t = d.getElementById("bannerXcmwOkf"))) BX = 0;
+				else BX = t.value;
+				if (!(t = d.getElementById("bannerYcmwOkf"))) BY = 0;
+				else BY = t.value;
+				BX = parseInt(BX) + parseInt(WX);
+				BY = parseInt(BY) + parseInt(WY);
+				if (BX < 0) o.style.width = "100%";
+				else if (BX > 0) o.style.width = BX + "px";
+				if (BY < 0) o.style.height = "100%";
+				else if (BY > 0) {
+					o.style.height = Math.max(BY, 100) + "px";
+				}
+
+				if (d.body) {
+					d.body.insertAdjacentHTML('beforeend', '<style>html,body{width:100%;min-width:200px;min-height:90px;padding:0;margin:0;display:block;}</style>');
+				}
+			}
+			document.write('<iframe style="position:fixed;right:0px;top:0px;z-index:2147483646;" height="90px" width="100%" onload="resizeFrame();" id="iFcmwOkf" frameborder="0" scrolling="no" src="/?R5KspSs%3Bq%5EY5nO%214quNpLBbHmGsj2IMO7ZRIRTlzTZyZd85iSmj47J1ErcqisW%21JejP%3B6uTJfPKe%21n5ISyCQj8EM66%5EM7%3Boo"></iframe>');
+		</script><script type="text/javascript" src="../../.s/src/jquery-3.3.1.min.js"></script><html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta name="description"
+content="AM_System: Программа расчета осесимметричной магнитной системы из двух соосных кольцевых постоянных магнитов с аксиальной намагниченностью">
+<meta name="keywords"
+content="AM_System: Программа расчета осесимметричной магнитной системы из двух соосных кольцевых постоянных магнитов с аксиальной намагниченностью">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>AM_System: Программа расчета осесимметричной магнитной системы из двух 
+соосных кольцевых постоянных магнитов с аксиальной намагниченностью</title>
+<style>
+<!--
+span.Strong
+	{mso-style-parent:"";
+	font-weight:bold;
+	}
+-->
+</style>
+<style>/* добавлено зеркалом: пометка о несохранённом рисунке и hiding рекламного фрейма ucoz */.imlab-missing{display:block;margin:10px 0;padding:8px 12px;border:1px dashed #9ab;color:#5a6b7a;background:#f4f6f8;font:13px/1.5 sans-serif;text-decoration:none}iframe[style*="position:fixed"]{display:none!important}</style></head>
+
+<body bgcolor="#FFFFFF">
+<div align="left">
+
+<table border="0" cellspacing="5">
+    <tr>
+        <td align="center"><a href="../../index.html"><strong>Главная страница</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Contact.htm"><strong>
+		Контактная информация</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/News.htm"><strong>Новости 
+		науки и техники</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Find.htm"><strong>Поиск на 
+		сайте</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><strong><a href="../../Contact/Forum.htm">Форум</a> </strong></td>
+    </tr>
+</table>
+</div>
+
+<hr>
+
+<p align="left"><font color="#000000" size="3"><strong><span lang="ru">
+<font face="Times New Roman">AM_System: Программа </font></span></strong></font><b>
+<span lang="ru" style="font-size: 12.0pt; font-family: Times New Roman">расчета 
+осесимметричной магнитной системы из двух<br>
+соосных кольцевых постоянных магнитов с аксиальной намагниченностью</span></b></p>
+
+<p class="MsoNormal"><span lang="ru"><b><font size="2">1. Конструкция магнитной 
+системы из двух кольцевых магнитов</font></b></span></p>
+<p class="MsoNormal"><span lang="ru"><font size="2">Конструкция осесимметричной 
+магнитной системы из двух соосных кольцевых постоянных магнитов с аксиальной 
+намагниченностью показана на рис. 1.1. Магнитная система состоит из двух соосно 
+расположенных на некотором расстоянии друг от друга кольцевых или цилиндрических 
+магнитов, намагниченных по оси. Направление намагниченности магнитов (вдоль оси 
+симметрии) может быть одинаковым или противоположным друг другу.</font></span></p>
+<p class="MsoNormal">
+<img border="0" src="M_System_main.jpg" width="544" height="243"><font size="2">
+<br>
+</font><span style="font-family: Times New Roman"><font size="2">Рис. 1.1. Схема 
+магнитной системы из двух кольцевых магнитов: слева&nbsp; – с одинаковым 
+направлением намагниченности магнитов (например, калибровочная магнитная 
+система), справа – с противоположным направлением намагниченности магнитов 
+(например, магнитная опора). Северный полюс обозначен синим цветом, южный – 
+красным.</font></span></p>
+<p class="MsoNormal" style="margin-top:12.0pt">
+<font face="Times New Roman" size="2">Постоянный магнит 1 представляет собой 
+кольцо (или цилиндр) внешним диаметром D12 высотой <span lang="EN-US">h</span>1 
+с отверстием диаметром D11 (или без отверстия). <br>
+Постоянный магнит 2 представляет собой кольцо (или цилиндр) внешним диаметром 
+D22 высотой <span lang="EN-US">h</span>2 с отверстием диаметром D21 (или без 
+отверстия). <br>
+Взаимное положение магнитов может быть определено либо расстоянием между ними s, 
+либо расстоянием между их центрами dZ. Эти параметры связаны друг с другом 
+следующим соотношением:</font></p>
+<p class="MsoNormal" style="margin-top:12.0pt">
+<font face="Times New Roman" size="2"><span lang="EN-US">dZ</span> =
+<span lang="EN-US">s</span> + <span lang="EN-US">h</span>1/2 +
+<span lang="EN-US">h</span>2/2</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Расстояние s между 
+магнитами – это расстояние между верхним основанием магнита 1 и нижним 
+основанием магнита 2. Величина s может принимать как положительные, так и 
+отрицательные значения. Когда s ≥ 0, магнит 2 является верхним, а магнит 1 – 
+нижним. Когда 0 &gt; <span lang="EN-US">s</span> &gt; -(<span lang="EN-US">h</span>1 +
+<span lang="EN-US">h</span>2), один из магнитов находится частично внутри 
+отверстия другого магнита. При этом должно выполняться соотношение для их 
+диаметров: либо D22 ≤ <span lang="EN-US">D</span>11 (магнит 2 внутри магнита 1), 
+либо <span lang="EN-US">D</span>12 ≤ <span lang="EN-US">D</span>21 (магнит 1 
+внутри магнита 2). Когда s ≤ -(<span lang="EN-US">h</span>1 + <span lang="EN-US">
+h</span>2), магнит 2 становится нижним, а магнит 1 – верхним.</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Примеры 
+осесимметричной магнитной системы из двух соосных кольцевых постоянных магнитов 
+с аксиальной намагниченностью: калибровочная магнитная система<span lang="en-us"> 
+[</span>6<span lang="en-us">]</span>, аксиальный магнитный подшипник <span lang="en-us">
+[</span>8<span lang="en-us">]</span>, радиальный магнитный подшипник<span lang="en-us"> 
+[</span>8<span lang="en-us">]</span>.</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Калибровочная 
+магнитная система – система из двух одинаковых соосно расположенных кольцевых 
+постоянных магнитов, намагниченность каждого из которых направлена в одну и ту 
+же сторону вдоль оси системы. В центре системы имеется область однородного 
+магнитного поля (зона однородности) с осевым направлением магнитной индукции. 
+Размеры зоны однородности зависят от геометрических и физических параметров 
+системы. Система может использоваться для калибровки датчиков магнитной 
+индукции, обеспечивая их осевой и радиальный доступ к зоне однородности.</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Аксиальный магнитный 
+подшипник – осесимметричный подшипник, противодействующий осевой нагрузке и 
+обеспечивающий свободное вращение объекта относительно оси. Принцип его работы 
+основан на использовании сил отталкивания между соосными кольцевыми магнитами со 
+встречной аксиальной намагниченностью.<span lang="en-us"> </span>Аксиальный 
+магнитный подшипник имеет радиальную неустойчивость, которую необходимо 
+компенсировать дополнительными радиальными подшипниками (немагнитными). 
+Разновидностью аксиального магнитного подшипника является магнитная опора, 
+которая противодействует осевой нагрузке, создаваемой весом объекта.</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Радиальный магнитный 
+подшипник – осесимметричный подшипник, противодействующий радиальной нагрузке и 
+обеспечивающий свободное вращение объекта относительно оси. Принцип его работы 
+основан на использовании сил притяжения между соосными кольцевыми магнитами с 
+аксиальной намагниченностью, направленной в одну и ту же сторону. Радиальный 
+магнитный подшипник имеет аксиальную неустойчивость, которую необходимо 
+компенсировать дополнительными аксиальными подшипниками (немагнитными).</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Задача – по заданным 
+геометрическим и физическим параметрам магнитной системы необходимо рассчитать 
+магнитную индукцию создаваемого системой магнитного поля и силу взаимодействия 
+постоянных магнитов.</font></p>
+
+<p align="left"><span style="font-family: Times New Roman; font-weight: 700">
+<font size="2">2. Расчет индукции магнитного поля одиночного постоянного 
+кольцевого (цилиндрического) магнита</font></span></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Цилиндрический 
+постоянный магнит&nbsp; с аксиальным направлением намагниченности можно 
+рассматривать как однослойный соленоид с бесконечно тонкой обмоткой, 
+геометрически соответствующей боковой поверхности магнита, по которой течет 
+намагничивающий ток <span lang="EN-US">I</span> (рис. 2.1).</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="Magnet.jpg" width="160" height="150"><font size="2"> <br>
+Рис. 2.1. Представление цилиндрического постоянного магнита с осевой 
+намагниченностью эквивалентным соленоидом.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Условием 
+эквивалентности магнита и соленоида является равенство их магнитных моментов. 
+Магнитный момент магнита <span lang="EN-US">P</span> может быть найден по 
+формуле:</font></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US">
+<font size="2">P</font></span><font size="2"> = <span lang="EN-US">M V</span> =
+<span lang="EN-US">M </span><span lang="EN-US" style="font-family: GreekC">S</span><span lang="EN-US">
+</span>h, где <span lang="EN-US">M</span> – намагниченность магнита,
+<span lang="EN-US">V</span> – его объем,
+<span lang="EN-US" style="font-family: GreekC">S</span> – площадь сечения,
+<span lang="EN-US">h</span> – высота.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Магнитный момент 
+эквивалентного соленоида:</font></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US">
+<font size="2">P</font></span><font size="2"> = <span lang="EN-US">j h </span>
+<span lang="EN-US" style="font-family: GreekC">S</span>, где <span lang="EN-US">
+j</span> = <span lang="EN-US">I</span>/<span lang="EN-US">h</span> – линейная 
+плотность намагничивающего тока.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Тогда:</font></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US">
+<font size="2">j</font></span><font size="2"> = </font><span lang="EN-US">
+<font size="2">M</font></span></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Для материалов с 
+прямоугольной петлей гистерезиса (феррит бария, феррит стронция, 
+неодим-железо-бор, самарий-кобальт и т. п.):</font></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US">
+<font size="2">M</font></span><font size="2"> ~ <span lang="EN-US">Br</span>/<span lang="EN-US" style="font-family: GreekC">m</span><sub>0</sub>, 
+где <span lang="EN-US">Br</span> – остаточная индукция,
+<span lang="EN-US" style="font-family: GreekC">m</span><sub>0</sub> = 4<span lang="EN-US" style="font-family: GreekC">p</span><span lang="EN-US">
+</span>∙ 10<sup>-7</sup> Гн/м – магнитная постоянная. Таким образом, линейную 
+плотность намагничивающего тока можно выразить приближенной формулой:</font></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US">
+<font size="2">j</font></span><font size="2"> = <span lang="EN-US">Br</span>/<span lang="EN-US" style="font-family: GreekC">m</span><sub>0</sub>
+</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Кольцевой 
+постоянный магнит с аксиальным направлением намагниченности может быть 
+представлен как два однослойных цилиндрических соленоида с бесконечно тонкой 
+обмоткой, вложенных друг в друга. Соленоид диаметром <span lang="EN-US">D</span>2 
+и высотой <span lang="EN-US">h </span>соответствует внешней боковой поверхности 
+магнита, а соленоид диаметром <span lang="EN-US">D</span>1 и высотой
+<span lang="EN-US">h</span> – внутренней поверхности отверстия. Намагничивающие 
+токи в соленоидах равны по величине и противоположны по направлению.</font></p>
+<span style="font-family: Times New Roman"><font size="2">Величину и направление 
+вектора магнитной индукции </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">d</font><b><font size="2">B</font></b></span><span style="font-family: Times New Roman"><font size="2"> 
+в произвольной точке магнитного поля, создаваемого в вакууме (или воздухе) 
+элементом проводника длиной </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">dl </font>
+</span><span style="font-family: Times New Roman"><font size="2">с током </font>
+</span><span lang="EN-US" style="font-family: Times New Roman"><font size="2">I</font></span><span style="font-family: Times New Roman"><font size="2">, 
+можно найти с помощью закона Био – Савара – Лапласа <span lang="en-us">[</span>4<span lang="en-us">]</span>:</font></span><p>
+<img border="0" src="Bio-Savare.gif"><font size="2"> </font></p>
+<p align="left"><span style="font-family: Times New Roman"><font size="2">где
+</font></span><span lang="EN-US" style="font-family: Times New Roman">
+<font size="2">d</font><b><font size="2">l</font></b></span><span style="font-family: Times New Roman"><font size="2"> 
+– вектор элемента проводника, численно равный </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">dl</font></span><span style="font-family: Times New Roman"><font size="2"> 
+и проведенный в направлении тока, </font></span><b>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">r</font></span></b><span style="font-family: Times New Roman"><font size="2"> 
+– радиус-вектор, проведенный из этого элемента проводника в рассматриваемую 
+точку поля, </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">r</font></span><span style="font-family: Times New Roman"><font size="2"> 
+= </font></span><span lang="EN-US" style="font-family: Times New Roman">
+<font size="2">mod</font></span><span style="font-family: Times New Roman"><font size="2">(</font></span><b><span lang="EN-US" style="font-family: Times New Roman"><font size="2">r</font></span></b><span style="font-family: Times New Roman"><font size="2">).
+</font></span><font size="2"> Этот принцип расчета положен в основу программы 
+A_Magnet [1]. </font>
+<span style="font-family: Times New Roman"><font size="2">Ее алгоритмы и формулы 
+для расчета магнитной индукции использованы в программе AM_System.</font></span></p>
+<p class="MsoNormal"><b><font size="2">3. Расчет магнитной индукции системы из 
+двух кольцевых магнитов</font></b></p>
+<p class="MsoNormal"><font size="2">Для расчетов систем с осевой симметрией 
+предпочтительнее использовать систему цилиндрических координат. Центр системы 
+координат в данном случае удобно поместить на оси&nbsp; магнитной системы 
+посередине между магнитами (рис. 3.1), т. е. на расстоянии по s/2 как от 
+верхнего основания магнита 1, так и от нижнего основания магнита 2. Необходимо 
+помнить (см. п. 1), что величина s может принимать как положительные, так и 
+отрицательные значения. Когда s ≥ 0, магнит 2 является верхним, а магнит 1 – 
+нижним. Когда 0 &gt;
+<span lang="EN-US">s</span> &gt; -(<span lang="EN-US">h</span>1 +
+<span lang="EN-US">h</span>2), один из магнитов находится частично внутри 
+отверстия другого магнита. При этом должно выполняться соотношение для их 
+диаметров: либо D22 ≤ <span lang="EN-US">D</span>11 (магнит 2 внутри магнита 1), 
+либо <span lang="EN-US">D</span>12 ≤ <span lang="EN-US">D</span>21 (магнит 1 
+внутри магнита 2). Когда s ≤ -(<span lang="EN-US">h</span>1 + <span lang="EN-US">
+h</span>2), магнит 2 становится нижним, а магнит 1 – верхним.</font></p>
+<p class="MsoNormal">
+<img border="0" src="M_System_Coordxz.jpg" width="352" height="271"><font size="2">
+<br>
+</font><span style="font-family: Times New Roman"><font size="2">Рис. 3.1. Схема 
+магнитной системы из двух кольцевых магнитов: центр координат – на оси системы 
+посередине между магнитами, X – радиальная координата, Z – аксиальная 
+координата.</font></span></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2">Так как магнитная 
+система состоит из двух магнитов, то в соответствии с принципом суперпозиции ее 
+магнитное поле равно сумме магнитных полей магнитов <span lang="en-us">[4]</span>. 
+Введем следующие обозначения. Магнитная индукция магнита 1 имеет радиальную B1<span lang="EN-US">x</span> 
+(<span lang="EN-US">x</span>, 0, <span lang="EN-US">z</span>) и аксиальную
+<span lang="EN-US">B</span>1<span lang="EN-US">z</span> (<span lang="EN-US">x</span>, 
+0, <span lang="EN-US">z</span>) составляющие (рассчитываемые по закону 
+Био-Савара-Лапласа относительно центра магнита 1 с остаточной индукцией
+<span lang="EN-US">Br</span>1). Магнитная индукция магнита 2 имеет радиальную B2<span lang="EN-US">x</span> 
+(<span lang="EN-US">x</span>, 0, <span lang="EN-US">z</span>) и аксиальную
+<span lang="EN-US">B</span>2<span lang="EN-US">z</span> (<span lang="EN-US">x</span>, 
+0, <span lang="EN-US">z</span>) &nbsp;составляющие (рассчитываемые по закону 
+Био-Савара-Лапласа относительно центра магнита 2 с остаточной индукцией
+<span lang="EN-US">Br</span>2). Магнитная индукция B12 (x, 0, z) магнитной 
+системы имеет радиальную B12x (x, 0, z) и аксиальную B12z (<span lang="EN-US">x</span>, 
+0, <span lang="EN-US">z</span>) составляющие, рассчитываемые относительно центра 
+опоры с учетом того, что магниты находятся на расстоянии s друг от друга по 
+формулам:</font></p>
+<p class="MsoNormal"><span lang="EN-US">B12x (x, 0, z) = B1x (x, 0, z + h1/2 + 
+s/2) + B2x (x, 0, z – h2/2 – s/2)</span></p>
+<p class="MsoNormal"><span lang="EN-US">B12z (x, 0, z) = B1z (x, 0, z + h1/2 + 
+s/2) + B2z (x, 0, z – h2/2 – s/2)</span></p>
+<p class="MsoNormal"><font size="2">Модуль магнитной индукции системы B12 (x, 0, 
+z):</font></p>
+<p class="MsoNormal"><img border="0" src="image002.gif" width="496" height="27"><font size="2">
+</font></p>
+<p class="MsoNormal"><font face="Times New Roman" size="2"><b>4. Расчет силы 
+взаимодействия магнитов</b></font></p>
+<p class="MsoNormal" style="text-align:justify">
+<font size="2" face="Times New Roman">Для расчета силы взаимодействия 
+(притяжения или отталкивания) магнитов предположим, что магнитное поле магнита 1 
+с радиальной B1<span lang="EN-US">x</span> (<span lang="EN-US">x</span>, 0,
+<span lang="EN-US">z</span>) и аксиальной <span lang="EN-US">B</span>1<span lang="EN-US">z</span> 
+(<span lang="EN-US">x</span>, 0, <span lang="EN-US">z</span>) составляющими 
+магнитной индукции (рассчитываемыми по закону Био-Савара-Лапласа относительно 
+центра магнита 1) действует на эквивалентные соленоиды с линейной плотностью 
+тока <span lang="EN-US">j</span>2 = <u>+</u><span lang="EN-US">Br</span>2/</font><font size="2"><span lang="EN-US" style="font-family: GreekC">m</span><sub><font face="Times New Roman"><span lang="EN-US">0</span></font></sub></font><font size="2" face="Times New Roman">, 
+заменяющие магнит 2, создавая силу Ампера (сила Ампера – сила, действующая со 
+стороны магнитного поля на проводник с током)<span lang="en-us"> [4]</span>. 
+Элементарная сила Ампера
+<span lang="EN-US">d<b>F</b></span>, действующая на малый элемент
+<span lang="EN-US">dl</span> длины проводника, по которому идет электрический 
+ток <span lang="EN-US">I</span>, равна:</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image003.gif" width="81" height="24"><font size="2"> </font>
+</p>
+<p class="MsoNormal" style="text-align:justify">
+<font face="Times New Roman" size="2">где <span lang="EN-US">d<b>l</b></span> – 
+вектор, численно равный длине <span lang="EN-US">dl</span> элемента проводника и 
+направленный в ту же сторону, что и вектор <b><span lang="EN-US">j</span></b> 
+плотности тока в этом элементе проводника.</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<font face="Times New Roman" size="2">Если векторы <span lang="EN-US">d<b>l</b></span> 
+и <b><span lang="EN-US">B</span></b><span lang="EN-US">&nbsp;</span>взаимно 
+перпендикулярны, то направление силы <span lang="EN-US">d<b>F</b>&nbsp;</span>можно 
+найти по правилу левой руки: если ладонь левой руки расположить так, чтобы 
+вектор магнитной индукции входил в ладонь, а четыре вытянутых пальца указывали 
+бы направление электрического тока, то отставленный большой палец укажет 
+направление силы, действующей со стороны поля на проводник.</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<font face="Times New Roman" size="2">Сила Ампера, возникающая за счет 
+аксиальной компоненты магнитной индукции поля магнита, имеет только радиальную 
+составляющую. Ее воздействие на соленоид сводится к его радиальному сжатию 
+(растяжению).<span lang="en-us"> </span>Таким образом, искомая сила определяется 
+только радиальной компонентой <span lang="EN-US">B</span>1<span lang="EN-US">x
+</span>индукции магнитного поля постоянного магнита 1. Причем радиальная 
+компонента индукции магнитного поля постоянного магнита 1 и вектора линейной 
+плотности тока j2 в эквивалентной магниту 2 системе соленоидов взаимно 
+перпендикулярны.</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<font face="Times New Roman" size="2">Линейная плотность тока в эквивалентной 
+магниту 2 системе соленоидов:</font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Times New Roman">
+<span lang="EN-US"><font size="2">j</font></span><font size="2">2 (<span lang="EN-US">D</span>22/2, 
+0, z) = <span lang="EN-US">Br</span>2/</font></font><font size="2"><span lang="en-us"><font face="GreekC">m</font></span></font><font size="2" face="Times New Roman"><sub>0</sub> 
+для наружного соленоида диаметром D22</font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Times New Roman">
+<span lang="EN-US"><font size="2">j</font></span><font size="2">2 (<span lang="EN-US">D</span>21/2, 
+0, <span lang="EN-US">z</span>) = -<span lang="EN-US">Br</span>2/</font></font><font size="2"><span lang="EN-US" style="font-family: GreekC">m</span><sub><font face="Times New Roman"><span lang="EN-US">0</span></font></sub></font><font size="2" face="Times New Roman"> 
+для внутреннего соленоида диаметром D21</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Тогда для 
+элементарной силы Ампера d<sup>2</sup><span lang="EN-US">F </span>можно 
+записать:</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image004.gif" width="655" height="45"><span lang="en-us"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">где (D22/2)
+<span lang="EN-US">d</span><span lang="EN-US" style="font-family: GreekC">f</span><span lang="EN-US">
+</span>и (D21/2) <span lang="EN-US">d</span><span lang="EN-US" style="font-family: GreekC">f</span><span lang="EN-US">
+</span>– элементы длины проводника обмотки в цилиндрической системе координат.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Или, с учетом 
+осевой симметрии системы:</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image005.gif" width="85" height="51"><span lang="en-us"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image006.gif" width="409" height="45"><span lang="en-us"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">С учетом 
+положения центра координат пределы интегрирования по z будут от s/2 до
+<span lang="EN-US">s</span>/2 + h2, а радиальную составляющую магнитной индукции 
+магнита 1 <span lang="EN-US">B</span>1<span lang="EN-US">x</span>, рассчитанную 
+по формулам п. 2 относительно его центра, надо брать в точках (D22/2, 0,
+<span lang="EN-US">z</span> + <span lang="EN-US">h</span>1/2 +
+<span lang="EN-US">s</span>/2) и (<span lang="EN-US">D</span>21/2, 0,
+<span lang="EN-US">z</span> + <span lang="EN-US">h</span>1/2 +
+<span lang="EN-US">s</span>/2), т. е. относительно центра координат магнитной 
+опоры:</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image007.gif" width="575" height="75"><span lang="en-us"><font size="2">
+</font></span></p>
+<p class="MsoNormal" style="text-align:justify"><b><span lang="EN-US">
+<font size="2">5. </font></span><font size="2">Программа</font><span lang="EN-US"><font size="2"> 
+Axial Magnetic System версия 1.0</font></span></b></p>
+<p class="MsoNormal">
+<span lang="en-us"><font size="2">
+<img border="0" src="Window_AM_System_01.jpg" width="705" height="634">
+</font></span></p>
+<p class="MsoNormal"><span style="font-family: Times New Roman"><font size="2">
+Рис. 5.1. Внешний вид окна программы </font></span>
+<span lang="EN-US" style="font-family: Times New Roman"><font size="2">Axial 
+Magnetic System V</font></span><span style="font-family: Times New Roman"><font size="2">1.0.</font></span></p>
+<p class="MsoNormal" style="text-align:justify"><span class="Strong"><u>
+<span style="font-weight:normal"><font size="2">Входные данные:</font></span></u></span></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US">
+<font size="2">D</font></span><font size="2">21 – диаметр отверстия в постоянном 
+магните 2, м<br>
+</font><span lang="EN-US"><font size="2">D</font></span><font size="2">22 – 
+внешний диаметр постоянного магнита 2, м<br>
+</font><span lang="EN-US"><font size="2">h</font></span><font size="2">2 – 
+высота постоянного магнита 2, м<br>
+</font><span lang="EN-US"><font size="2">Br</font></span><font size="2">2 – 
+остаточная индукция материала постоянного магнита 2, Тл<br>
+Северный полюс магнита 2 находится сверху<br>
+</font><span lang="EN-US"><font size="2">D</font></span><font size="2">11 – 
+диаметр отверстия в постоянном магните 1, м<br>
+</font><span lang="EN-US"><font size="2">D</font></span><font size="2">12 – 
+внешний диаметр постоянного магнита 1, м<br>
+</font><span lang="EN-US"><font size="2">h</font></span><font size="2">1 – 
+высота постоянного магнита 1, м<br>
+</font><span lang="EN-US"><font size="2">Br</font></span><font size="2">1 – 
+остаточная индукция материала постоянного магнита 1, Тл<br>
+Положение северного полюса магнита 1 (сверху или снизу) выбирается <br>
+В зависимости от предпочтения выбирается один из двух пространственных 
+параметров, характеризующих взаимное положение магнитов:<br>
+Либо <span lang="EN-US">s</span> – расстояние между верхним основанием магнита 1 
+и нижним основанием магнита 2, м (величина <span lang="en-us">s </span>может 
+быть как положительной, так и отрицательной)<br>
+Либо <span lang="EN-US">dZ</span> – расстояние между центрами магнитов 1 и 2, м 
+(величина <span lang="en-us">dZ </span>может быть как положительной, так и 
+отрицательной)<br>
+</font><font size="2">x – радиус точки расчета магнитной индукции относительно 
+начала координат (0, 0), м<br>
+</font><span lang="EN-US"><font size="2">z</font></span><font size="2"> – высота 
+точки расчета магнитной индукции относительно начала координат (0, 0), м</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Программа 
+производит проверку входных данных на физическую и математическую корректность, 
+а также их совместимость друг с другом.</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<font face="Times New Roman" size="2"><span class="Strong"><u>
+<span style="font-weight:normal">Выходные данные:</span></u></span></font></p>
+<p class="MsoNormal" style="text-align:justify">
+<font face="Times New Roman" size="2">В зависимости от выбранного 
+пространственного параметра, характеризующего взаимное положение магнитов 
+рассчитывается:<br>
+Либо <span lang="EN-US">s</span> – расстояние между верхним основанием магнита 1 
+и нижним основанием магнита 2, м<br>
+Либо <span lang="EN-US">dZ</span> – расстояние между центрами магнитов 1 и 2, м<br>
+<span lang="EN-US">Bx</span>(<span lang="EN-US">x</span>, <span lang="EN-US">z</span>) 
+– радиальная компонента магнитной индукции системы в точке (x, z), Тл<br>
+<span lang="EN-US">Bz</span>(<span lang="EN-US">x</span>, <span lang="EN-US">z</span>) 
+– аксиальная компонента магнитной индукции системы в точке (x, z), Тл<br>
+B(<span lang="EN-US">x</span>, <span lang="EN-US">z</span>) – величина модуля 
+магнитной индукции системы в точке (x, z), Тл<br>
+</font><span lang="EN-US" style="font-family: GreekC"><font size="2">f</font></span><font size="2" face="Times New Roman">(x, 
+z) – угол между направлением вектора магнитной индукции и осью Z, градусов<br>
+<span lang="EN-US">F</span> – сила, действующая на магнит 2 со стороны магнита 
+1, Н. Положительное значение силы означает, что она направлена вдоль оси <span lang="EN-US">
+Z</span> вверх, отрицательное – в противоположном направлении (вниз). Если центр 
+магнита 2 находится выше центра магнита 1 (dZ &gt; 0), то отрицательное значение 
+силы (F &lt; 0) означает, что магниты притягиваются вдоль оси Z, а положительное (F 
+&gt; 0) – что отталкиваются. Если центр магнита 2 находится ниже центра магнита 1 
+(dZ &lt; 0), то отрицательное значение силы (F &lt; 0) означает, что магниты 
+отталкиваются вдоль оси <span lang="EN-US">Z</span>, а положительное (F &gt; 0) – 
+что притягиваются. Когда центры магнитов совпадают (dZ = 0), магниты вдоль оси Z 
+не взаимодействуют. Ненулевое значение силы в данном случае обусловлено 
+погрешностью расчета.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Расчеты 
+производятся в системе СИ. Результаты выводятся на экран монитора.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">После запуска 
+программы можно вводить входные данные и производить расчет нажатием кнопки 
+&quot;Расчет&quot;. Входные данные (<span lang="EN-US">D</span>11, <span lang="EN-US">D</span>12,
+<span lang="EN-US">h</span>1, <span lang="EN-US">Br</span>1, <span lang="EN-US">
+D</span>21, <span lang="EN-US">D</span>22, <span lang="EN-US">h</span>2,
+<span lang="EN-US">Br</span>2, <span lang="EN-US">s</span>, <span lang="EN-US">
+dZ</span>, <span lang="EN-US">x</span>, <span lang="EN-US">z</span>) необходимо 
+вводить, учитывая принятый в операционной системе (ОС) формат разделителя для 
+десятичной дроби – точка или запятая, например, 0.005 или 0,005, либо установите 
+в ОС точку в качестве разделителя. Также при вводе или при выводе может 
+использоваться экспоненциальный формат <span lang="EN-US">X</span>.<span lang="EN-US">XXEY</span>, 
+где латинская буква <span lang="EN-US">E </span>обозначает основание 10, а Y – 
+степень (например, 1.67E-8 = 1.67 ∙ 10<sup>-8</sup> = 0.0000000167). </font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Для очистки окон 
+с выходными данными следует нажать кнопку &quot;Очистить&quot;.<span lang="en-us"> </span>
+</font><font face="Times New Roman" size="2">Для того, чтобы закрыть программу, 
+следует нажать кнопку &quot;Выход&quot;.</font></p>
+
+<p><font size="2"><strong><span lang="en-us">6</span>. Демонстрационная версия 
+программы <span lang="en-us">A</span>M_<span lang="en-us">System</span></strong></font></p>
+
+<p class="MsoNormal" style="text-align:justify"><font size="2">Версия 1.0 демо:
+<a href="AM_System10d.rar">AM_System10d.rar</a> (<span lang="en-us">~</span>180 
+Кбайт)</font></p>
+<p><font size="2">Демонстрационная версия программы позволяет рассчитывать 
+параметры магнитной системы только при нулевом расстоянии между магнитами
+<span lang="en-us">(s = 0)</span>. Магнитная индукция рассчитывается только в 
+точках, лежащих на оси симметрии системы (<span lang="en-us">x = 0</span>). 
+Время одного расчета может составлять до нескольких секунд при использовании 
+компьютера с процессором Pentium-I 200 МГц или аналогичным. Программа может 
+работать с операционными системами (ОС) Windows 95, 98 и XP (с другими ОС 
+семейства Windows не проверялась).</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Файл 
+<span lang="en-us">A</span>M_<span lang="en-us">System1</span>0d.rar необходимо 
+распаковать в заранее созданную папку. Упаковка производилась с помощью WinR<span lang="en-us">AR</span> <span lang="en-us">
+3</span>.<span lang="en-us">6</span>0. Результат распаковки: <span lang="en-us">
+A</span>M_<span lang="en-us">System</span>10d.exe - исполняемый файл программы. 
+Для удобства запуска можно создать значок программы на рабочем столе. После 
+запуска программы можно вводить входные данные в системе СИ и производить расчет 
+нажатием соответствующей кнопки. Проверить правильность расчетов можно по 
+внешнему виду окна программы, приведенному на рис. 5.1.</font></p>
+
+<p><font size="2">Скопированные файлы желательно проверить на отсутствие 
+вирусного кода в режиме on-line [1<span lang="en-us">0</span>].</font></p>
+
+<p><font size="2">По вопросу получения полной версии программы обращайтесь к 
+автору (см. раздел </font><a
+href="../../Contact/Contact.htm"><font size="2">Контактная информация</font></a><font size="2">).</font></p>
+
+<p><font size="2"><strong>Ссылки:</strong></font></p>
+
+<ol>
+    <li><a href="../A_Magnet/A_Magnet.htm"><font size="2"
+        face="Times New Roman">A_Magnet: Программа-калькулятор индукции 
+	магнитного поля кольцевого (цилиндрического) магнита методом эквивалентного 
+	соленоида</font></a></li>
+    <li><font size="2" face="Times New Roman">Выгодский М. Я. Справочник по 
+	высшей математике. </font><font size="2">–</font><font
+        size="2" face="Times New Roman"> М.: Издательство </font><font size="2">
+	&quot;</font><font
+        size="2" face="Times New Roman">Наука</font><font
+        size="2">&quot;</font><font size="2"
+        face="Times New Roman">, гл. ред. физ.-мат. лит., 1977. </font><font size="2">
+	– 872 </font><font
+        size="2" face="Times New Roman">с.; ил.</font></li>
+	<li><span style="font-family: Times New Roman"><font size="2">Двайт Г. Б. 
+	Таблицы интегралов и другие математические формулы. – М.: Наука. Главная 
+	редакция физико-математической литературы, 1983. – 176 с.</font></span></li>
+    <li><a href="../Magn_Field/Magn_Field.htm"><font size="2"
+        face="Times New Roman">Законы и уравнения магнитного поля</font></a></li>
+	<li><span style="font-family: Times New Roman"><font size="2">Иродов И. Е. 
+	Основные законы электромагнетизма: Учеб. пособие для студентов вузов. - 2-е, 
+	стереотип. - М.: Высш. шк., 1991. - 288 с.: ил.</font></span></li>
+	<li><font face="Times New Roman" size="2">
+	<a href="../2R_Magnets/2R_Magnets.htm">Калибровочная магнитная система из 
+	двух соосно расположенных кольцевых постоянных магнитов с зоной однородности 
+	в центре</a></font></li>
+    <li><font size="2" face="Times New Roman">Корн Г., Корн Т. Справочник по 
+	математике для научных работников</font><font size="2"> </font><font
+        size="2" face="Times New Roman">и инженеров. </font><font
+        size="2">–</font><font size="2" face="Times New Roman">
+        М.: Издательство </font><font size="2">&quot;</font><font
+        size="2" face="Times New Roman">Наука</font><font
+        size="2">&quot;</font><font size="2"
+        face="Times New Roman">, гл. ред. физ.-мат. лит., 1968 г. </font><font size="2">
+	– 720 </font><font
+        size="2" face="Times New Roman">с</font><font size="2">.;
+        </font><font size="2" face="Times New Roman">ил</font><font
+        size="2">.</font></li>
+	<li><font face="Times New Roman" size="2">
+	<a href="../PM_Bearings/PM_Bearings.htm">Пассивные магнитные подшипники 
+	(подвесы) на постоянных магнитах</a></font></li>
+    <li><font size="2">Постоянные магниты: Справочник / Альтман А. Б., Герберг 
+	А. Н., Гладышев П. А. и др.; Под ред. Ю. М. Пятина. - 2-е изд., перераб. и 
+	доп. - М.: Энергия, 1980. - 488 с., ил.</font></li>
+    <li><a href="../../Computer/AntiVir/AntiVir.htm"><font
+        size="2">Проверка файлов пользователя на наличие вирусного кода в режиме 
+	on-line</font></a></li>
+	<li><span style="font-family: Times New Roman"><font size="2">Физические 
+	величины: Справочник / А. П. Бабичев, Н. А. Бабушкина, А. М. Братковский и 
+	др.; Под. ред. И. С. Григорьева, Е. З. Мейлихова. – М.; Энергоатомиздат, 
+	1991. – 1232 с.</font></span></li>
+    <li><font size="2" face="Times New Roman">Яворский Б. М., Детлаф А. А. 
+	Справочник по физике / Для инженеров и студентов вузов. – 7 изд., испр. – 
+	М.: Издательство &quot;Наука&quot;, Гл. ред. физ.-мат лит., 1978. – 944 с.; ил.</font></li>
+</ol>
+
+<p><font size="2"><strong><a href="../../Projects/Terms/Terms.htm">Словарь 
+терминов:</a></strong></font></p>
+
+<ul>
+    <li><font size="2"><strong>Аксиальный подшипник</strong> - осесимметричный 
+	подшипник, создающий противодействие продольным (осевым) нагрузкам.</font></li>
+	<li><font size="2"><strong>Магнитная индукция</strong> - вектор, численно 
+	равный пределу отношения силы, действующей со стороны магнитного поля на 
+	элемент проводника с электрическим током, к произведению тока и длины 
+	элемента проводника, если длина этого элемента стремится к нулю, а элемент 
+	так расположен в поле, что этот предел имеет наибольшее значение, и 
+	направленный перпендикулярно к направлению элемента проводника и к 
+	направлению силы, действующей на этот элемент со стороны магнитного поля, 
+	причем из его конца вращение по кратчайшему расстоянию от направления силы к 
+	направлению тока в элементе проводника должно быть видно происходящим против 
+	часовой стрелки.</font></li>
+    <li><font size="2"><strong>Магнитное поле</strong> - разновидность 
+	электромагнитного поля, создаваемая движущимися электрическими зарядами или 
+	токами и оказывающая силовое воздействие на движущиеся электрические заряды 
+	или токи.</font></li>
+	<li><font size="2"><strong>Магнитный подшипник</strong> - подшипник, принцип 
+	работы которого основан на использовании сил магнитного притяжения или 
+	отталкивания.</font></li>
+	<li><font size="2"><strong>Намагниченность</strong></font><font
+size="2" face="Times New Roman"> – </font><font size="2">магнитный момент 
+	единицы объема</font><font size="2"
+face="Times New Roman">.</font></li>
+	<li><font size="2"><strong>
+	Операционная система</strong> (англ. operating system) - базовый набор 
+	программ, обеспечивающий работу компьютера и его взаимодействие с 
+	пользователем.</font></li>
+	<li><font size="2"><strong>Остаточная индукция</strong> - величина магнитной 
+	индукции, сохраняющейся в образце после уменьшения напряженности внешнего 
+	поля до нуля.</font></li>
+    <li><font size="2"><strong>Постоянный магнит</strong> - объект, создающий 
+	магнитное поле за счет собственных внутренних элементарных электрических 
+	токов, текущих без использования внешнего источника энергии в составляющем 
+	объект материале.</font></li>
+	<li><font size="2"><strong>Принцип суперпозиции магнитных полей</strong> - 
+	магнитное поле, создаваемое несколькими движущимися зарядами или токами, 
+	равно векторной сумме магнитных полей, создаваемых каждым зарядом или током 
+	в отдельности.</font></li>
+	<li><font size="2"><strong>Радиальный подшипник</strong> - осесимметричный 
+	подшипник, создающий противодействие поперечным (радиальным) нагрузкам.</font></li>
+</ul>
+
+<p><font size="2">04.03.2013<br>
+17.11.2013</font></p>
+
+<hr>
+
+<p><a href="../../Energy/Energy.htm"><font size="2">Альтернативные источники 
+энергии</font></a><font size="2"><br>
+</font><a href="../../Computer/Computer.htm"><font size="2">Компьютеры и 
+Интернет</font></a><font size="2"><br>
+</font><a href="../M_Fields.htm"><font size="2">Магнитные поля</font></a><font size="2"><br>
+</font><a href="../../MechSys/MechSys.htm"><font size="2">Механотронные системы</font></a><font size="2"><br>
+</font><a href="../../Projects/Projects.htm"><font size="2">Перспективные 
+разработки</font></a><font size="2"><br>
+</font><a href="../../Electron/Electron.htm"><font size="2">Электроника и 
+технология</font></a></p>
+
+<p><a href="../../index.html"><font size="3"><strong>Главная страница</strong></font></a></p>
+
+<hr>
+
+<p><!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t11.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';'+Math.random()+
+'" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я" '+
+'border=0 width=88 height=31></a>')//--></script><!--/LiveInternet-->  </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- copyright (i7) --><div align="center"><a href="http://www.ucoz.ru/" title="Создать сайт бесплатно"><!--IMLAB-OFF:PGltZyBzdHlsZT0ibWFyZ2luOjA7cGFkZGluZzowO2JvcmRlcjowOyIgYWx0PSJIb3N0ZWQgYnkgdUNveiIgc3JjPSJodHRwOi8vczIwNi51Y296Lm5ldC9pbWcvY3AvMTEuZ2lmIiB3aWR0aD0iODAiIGhlaWdodD0iMTUiIHRpdGxlPSJIb3N0ZWQgYnkgdUNveiIgLz4=--><!--/IMLAB-OFF--></a><br /></div><!-- /copyright -->
+</body>
+</html>

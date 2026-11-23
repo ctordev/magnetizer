@@ -1,0 +1,564 @@
+<script type="text/javascript">try{document.cookie="pushi=1; path=/; max-age=82800; SameSite=Lax"}catch(e){}</script><!--IMLAB-OFF:PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLz8yYU5rd3BZc3ZCSCUyMXpnUlZSZjVNSGZKM2ttMnFqcDdEWkdlOXl5OVBkektZVUwzJTNCS1Yzd2tmd3FMcm55JTVFMkVHUmhFcGs3eTdYYkUlNUV4d25obTVucDlnNGdHckNmTVdWTEsweVp0Z2tvIj4=--><!--/IMLAB-OFF--></script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narodadst1?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script>
+	<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit;narod_desktop_ad?r"+escape(document.referrer)+(screen&&";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth||screen.pixelDepth))+";u"+escape(document.URL)+";"+Date.now();</script><script type="text/javascript">
+		var ucoz_rndid = 'c9XBfeLc';
+		function uOnDomOrLater(f){
+			if(document.readyState == 'loading') {
+				if(document.addEventListener) {
+					document.addEventListener('DOMContentLoaded',f);
+				} else {
+					window.attachEvent('onload',f);
+				}
+			} else {
+				setTimeout(f,0);
+			}
+		}
+	
+			function resizeFrame() {
+				var WX, WY, BX, BY;
+				var o = document.getElementById("iFc9XBfeLc") , t , d;
+				if (!o) return;
+				d = o.contentDocument;
+				if (!(t = d.getElementById("wrapperXc9XBfeLc"))) WX = 0;
+				else WX = t.value;
+				if (!(t = d.getElementById("wrapperYc9XBfeLc"))) WY = 0;
+				else WY = t.value;
+				if (!(t = d.getElementById("bannerXc9XBfeLc"))) BX = 0;
+				else BX = t.value;
+				if (!(t = d.getElementById("bannerYc9XBfeLc"))) BY = 0;
+				else BY = t.value;
+				BX = parseInt(BX) + parseInt(WX);
+				BY = parseInt(BY) + parseInt(WY);
+				if (BX < 0) o.style.width = "100%";
+				else if (BX > 0) o.style.width = BX + "px";
+				if (BY < 0) o.style.height = "100%";
+				else if (BY > 0) {
+					o.style.height = Math.max(BY, 100) + "px";
+				}
+
+				if (d.body) {
+					d.body.insertAdjacentHTML('beforeend', '<style>html,body{width:100%;min-width:200px;min-height:90px;padding:0;margin:0;display:block;}</style>');
+				}
+			}
+			document.write('<iframe style="position:fixed;right:0px;top:0px;z-index:2147483646;" height="90px" width="100%" onload="resizeFrame();" id="iFc9XBfeLc" frameborder="0" scrolling="no" src="/?RTRh97sEpzeRgtERfm%3BJSZCb%21wscEr%21SGkblnQpId2e4R%5ENEn7tyuzjINxACh5qX2v%5EIjcI8X9MGiMhC8JkZ896erWVrM%3B5JNZMd"></iframe>');
+		</script><script type="text/javascript" src="../../.s/src/jquery-3.3.1.min.js"></script><html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta name="description"
+content="Расчет параметров и индукции магнитного поля систем соосных прямоугольных катушек. Программы Rectangular Coil и Rectangular 3-Coils System">
+<meta name="keywords"
+content="Расчет параметров и индукции магнитного поля систем соосных прямоугольных катушек. Программы Rectangular Coil и Rectangular 3-Coils System">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>Расчет параметров и индукции магнитного поля систем соосных прямоугольных 
+катушек. Программы Rectangular Coil и Rectangular 3-Coils System</title>
+<style>/* добавлено зеркалом: пометка о несохранённом рисунке и hiding рекламного фрейма ucoz */.imlab-missing{display:block;margin:10px 0;padding:8px 12px;border:1px dashed #9ab;color:#5a6b7a;background:#f4f6f8;font:13px/1.5 sans-serif;text-decoration:none}iframe[style*="position:fixed"]{display:none!important}</style></head>
+
+<body bgcolor="#FFFFFF">
+<div align="left">
+
+<table border="0" cellspacing="5">
+    <tr>
+        <td align="center"><a href="../../index.html"><strong>Главная страница</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Contact.htm"><strong>
+		Контактная информация</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/News.htm"><strong>Новости 
+		науки и техники</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Find.htm"><strong>Поиск на 
+		сайте</strong></a><strong> </strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><a href="../../Contact/Forum.htm"><strong>Форум</a> </strong></td>
+    </tr>
+</table>
+</div>
+
+<hr>
+
+<p align="left"><strong>Расчет параметров и индукции магнитного поля систем 
+соосных прямоугольных катушек. 
+<br>
+Программы <span lang="en-us">Rectangular Coil </span>и <span lang="en-us">
+Rectangular 3-Coils System</span></strong></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><font size="2">1. Введение</font></b></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">В практике 
+физического или биологического эксперимента зачастую требуется создание в 
+достаточно большом объеме<span lang="en-us"> (</span>порядка 0.1 ... 1.0 
+кубометра) однородного магнитного поля.&nbsp; Это поле может использоваться либо 
+для компенсации магнитного поля Земли, либо для воздействия на изучаемые 
+объекты. Соответственно, напряженность генерируемого магнитного поля должна быть 
+сопоставима с напряженностью магнитного поля Земли или превышать ее в несколько 
+раз.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Для генерации 
+однородного магнитного поля могут использоваться катушки Гельмгольца (<span lang="en-us">Helmholtz)</span>
+<span lang="en-us">[7]</span>, которые в простом случае представляют собой два 
+одинаковых кольцевых витка, соединенных между собой последовательно и 
+расположенных на расстоянии радиуса витка друг от друга. При больших размерах 
+системы (порядка метра и больше), а также при построении систем, способных 
+генерировать магнитное поле по двум или трем координатам, технологически удобнее 
+использовать квадратные катушки, которые представляют собой частный случай 
+катушек прямоугольных. 
+</font></p>
+<p class="MsoNormal" style="text-align:justify"><b><font size="2">2. 
+Прямоугольная катушка</font></b></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2">Прямоугольная 
+катушка – соленоид с центральным отверстием в форме прямоугольного 
+параллелепипеда. Внешняя форма прямоугольной катушки при небольшой толщине 
+обмотки приближается к форме прямоугольного параллелепипеда. Если толщина 
+обмотки большая, внешняя форма такой катушки приближается к форме цилиндра. 
+Эскиз прямоугольной катушки с обозначениями основных размеров показан на рис. 
+2.1.</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="Rect_Coil.jpg" width="516" height="282"><font size="2">
+</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<span lang="ru" style="font-size: 10.0pt; font-family: Times New Roman">Рис. 
+2.1. Эскиз прямоугольной катушки: </span>
+<span style="font-size: 10.0pt; font-family: Times New Roman">a1</span><span lang="ru" style="font-size: 10.0pt; font-family: Times New Roman"> 
+– длина отверстия, </span>
+<span style="font-size: 10.0pt; font-family: Times New Roman">a2</span><span lang="ru" style="font-size: 10.0pt; font-family: Times New Roman"> 
+– длина катушки, a – средняя длина катушки, </span>
+<span style="font-size: 10.0pt; font-family: Times New Roman">b1</span><span lang="ru" style="font-size: 10.0pt; font-family: Times New Roman"> 
+– ширина отверстия, </span>
+<span style="font-size: 10.0pt; font-family: Times New Roman">b2</span><span lang="ru" style="font-size: 10.0pt; font-family: Times New Roman"> 
+– ширина катушки, b – средняя ширина катушки, H – высота катушки.</span></p>
+<p class="MsoNormal"><font size="2"><u>Параметры прямоугольной катушки:<br>
+</u>Длина отверстия a1<br>
+Длина катушки a2 <br>
+Средняя длина катушки a:</font></p>
+<p class="MsoNormal"><img border="0" src="image004.gif" width="77" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal"><font size="2">Ширина отверстия b1 <br>
+Ширина катушки b2 <br>
+Средняя ширина катушки b:</font></p>
+<p class="MsoNormal"><img border="0" src="image006.gif" width="81" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal"><font size="2">Толщина обмотки может считаться постоянной, 
+поэтому выполняется соотношение:</font></p>
+<p class="MsoNormal"><img border="0" src="image008.gif" width="105" height="19"><font size="2">
+</font></p>
+<p class="MsoNormal"><font size="2">Таким образом, один из параметров a1,
+<span lang="EN-US">a</span>2, <span lang="EN-US">b</span>1, <span lang="EN-US">b</span>2 
+является зависимым от трех остальных. Например:</font></p>
+<p class="MsoNormal"><img border="0" src="image010.gif" width="113" height="19"><font size="2">
+</font></p>
+<p class="MsoNormal"><font size="2">Средняя ширина катушки b:</font></p>
+<p class="MsoNormal" style="text-align:justify">
+<img border="0" src="image012.gif" width="169" height="41"><font size="2">
+</font></p>
+<p class="MsoNormal"><font size="2">Высота катушки H <br>
+Диаметр обмоточного провода D <br>
+Фактор упаковки (коэффициент заполнения)
+<span lang="EN-US" style="font-family: GreekC">l</span> = <span lang="EN-US">
+LAMBDA</span> = <span lang="EN-US">Lambda</span> (отношение площади, занятой 
+проводом в поперечном сечении обмотки без учета изоляции, к площади поперечного 
+сечения обмотки) [6]<br>
+Удельное сопротивление обмоточного провода
+<span lang="EN-US" style="font-family: GreekC">r</span><sub><span lang="EN-US">E</span></sub> 
+= <span lang="EN-US">Roe</span> <br>
+Плотность материала обмоточного провода
+<span lang="EN-US" style="font-family: GreekC">r</span></font><font size="2"><span lang="EN-US">
+</span>= <span lang="en-us">Ro </span></font></p>
+<p class="MsoNormal"><font size="2">Расчет индукции магнитного поля 
+прямоугольной катушки с обмоткой, толщина которой составляет до 5 ... 10 % от 
+поперечных размеров, с достаточно хорошей точностью может быть выполнен в 
+приближении тонкого витка, проходящего по центру обмотки, с током, равным 
+ампер-виткам катушки.</font></p>
+<p><b><font size="2">3. Программа <span lang="en-us">Rectangular Coil</span> 
+версия
+<span lang="en-us">1.0 </span>для операционной системы <span lang="en-us">
+Windows</span></font></b></p>
+<p><font size="2">
+<img border="0" src="Rect_Coil_V10.jpg" width="862" height="762"> </font></p>
+<p><font size="2">Рис. 3.1. Рабочее окно программы <span lang="en-us">
+Rectangular Coil </span>версии 1.0.</font></p>
+<p><font size="2">Программа&nbsp; <span lang="en-us">Rectangular Coil </span>
+(расчет параметров и индукции магнитного поля прямоугольной катушки) 
+разрабатывалась и проверялась с операционной системой (ОС) <span lang="en-us">
+Windows XP</span>.</font></p>
+
+<p><font size="2"><strong>Исходные данные:<br>
+</strong><span lang="en-us">a</span>1 - длина отверстия катушки, м<br>
+<span lang="en-us">a</span>2 - длина катушки, м<br>
+<span lang="en-us">b2 - </span>ширина катушки, м<br>
+H - высота катушки, м<br>
+D - диаметр обмоточного провода без изоляции (для проводов прямоугольного 
+сечения производится пересчет по формуле D=(4s/</font><font size="2" face="GreekC">p</font><font size="2">)<sup>1/2</sup>, 
+где s - площадь поперечного сечения провода, м<sup>2</sup>), м<br>
+Lambda - фактор упаковки <br>
+Материал провода может быть выбран из предложенного списка (медь, алюминий, 
+железо), либо его свойства могут быть заданы вручную:<br>
+<span lang="en-us">Roe - </span>удельное сопротивление материала провода, Ом
+<font face="Times New Roman">∙ м<br>
+<span lang="en-us">Ro </span>- плотность материала провода, кг/м<sup>3</sup>
+</font><br>
+Источник питания может быть либо источником постоянного напряжения, либо 
+источником постоянного тока:<br>
+<span lang="en-us">U</span> - величина приложенного напряжения, В <br>
+<span lang="en-us">I</span> - величина тока через катушку, А<br>
+x - абсцисса точки (относительно центра катушки) расчета компонент магнитной 
+индукции, м<br>
+<span lang="en-us">y</span> - ордината точки (относительно центра катушки) 
+расчета компонент магнитной индукции, м<br>
+z - апликата точки (относительно центра катушки) расчета компонент магнитной 
+индукции, м</font></p>
+
+<p><font size="2"><strong>Расчетные данные:<br>
+</strong><span lang="en-us">N - </span>число витков катушки<br>
+R - активное сопротивление обмотки катушки, Ом<br>
+<span lang="en-us">I - </span>ток через обмотку катушки, А (если используется 
+источник напряжения)<br>
+<span lang="en-us">U</span> - напряжение на обмотке катушки, В (если 
+используется источник тока)<br>
+<span lang="en-us">j</span> - плотность тока в обмотке катушки, А/мм<sup>2</sup>
+<br>
+Плотность тока в обмоточном проводе, А/мм<sup>2</sup> <br>
+P - рассеиваемая в обмотке мощность, Вт<br>
+B0 - магнитная индукция в центре катушки, Тл<br>
+<span lang="en-us">K0</span> - коэффициент преобразования в центре катушки (0, 
+0, 0) по току, Тл/А <br>
+Bx (x, <span lang="en-us">y, </span>z) - <span lang="en-us">x-</span>компонента 
+магнитной индукции в точке с координатами (x, <span lang="en-us">y, </span>z) 
+(относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+B<span lang="en-us">y</span> (x, <span lang="en-us">y, </span>z) - 
+<span lang="en-us">y-</span>компонента магнитной индукции в точке с координатами 
+(x, <span lang="en-us">y, </span>z) (относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+B<span lang="en-us">z</span> (x, <span lang="en-us">y, </span>z) - 
+<span lang="en-us">z-</span>компонента магнитной индукции в точке с координатами 
+(x, <span lang="en-us">y, </span>z) (относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+B (x, <span lang="en-us">y, </span>z) - <span lang="en-us">м</span>одуль вектора 
+магнитной индукции в точке с координатами (x, <span lang="en-us">y, </span>z) 
+(относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+<font face="GreekC"><span lang="en-us">f</span></font> (x, <span lang="en-us">y,
+</span>z) - угол вектора магнитной индукции в точке с координатами (x, <span lang="en-us">
+y, </span>z) с осью <span lang="en-us">Z</span>, градусов <br>
+<span lang="en-us">m</span> - масса обмоточного провода (без учета изоляции), кг </font></p>
+
+<p><font size="2">Программа <span lang="en-us">Rectangular </span>Coil позволяет 
+рассчитывать по заданным геометрическим размерам<span lang="en-us"> </span>
+прямоугольной катушки (<span lang="en-us">a</span>1, <span lang="en-us">a</span>2,
+<span lang="en-us">b2, </span>H), диаметру провода D и фактору упаковки Lambda: 
+активное сопротивление R, число витков N, величину тока I в обмотке при заданном 
+напряжении <span lang="en-us">U </span>или наоборот, плотность тока в обмотке
+<span lang="en-us">j</span> и в обмоточном проводе, рассеиваемую в обмотке 
+мощность P, модуль и компоненты магнитной индукции в заданной точке пространства 
+(x, <span lang="en-us">y, </span>z), угол между вектором магнитной индукции в 
+точке (<span lang="en-us">x, y, z</span>) и осью <span lang="en-us">Z</span>, 
+величину магнитной индукции B0 в центре катушки (0, <span lang="en-us">0,
+</span>0) и коэффициент преобразования <span lang="en-us">K0 </span>по току. 
+Расчеты производятся в системе СИ в прямоугольной декартовой системе координат. 
+Результаты выводятся на экран монитора.</font></p>
+
+<p><font size="2">Расчет индукции магнитного поля прямоугольной катушки 
+выполняется в приближении тонкого витка, проходящего по центру обмотки, с током, 
+равным ампер-виткам катушки. С помощью программы <span lang="en-us">Rectangular </span>
+Coil можно рассчитывать индукцию магнитного поля систем прямоугольных катушек, 
+используя принцип суперпозиции<span lang="en-us"> </span>[4].</font></p>
+<p><font size="2">Демо-версия программы <span lang="en-us">Rect_Coil V1.0 Demo</span>:
+<a href="Rect_Coil10d.rar">Rect_Coil10d.rar</a> (<span lang="en-us">~</span>177 
+Кбайт)</font></p>
+<p><font size="2">Демо-версия программы <span lang="en-us">Rectangular Coil
+</span>имеет ограничение по заданию координат точки расчета магнитной индукции. 
+Расчет магнитной индукции производится только в центре катушки (<span lang="en-us">x, 
+y, z) = (0, 0, 0)</span>. Кроме того, источник питания может быть только 
+источником напряжения. Файл <span lang="en-us">Rect_Coil10d</span>.rar 
+необходимо распаковать в заранее созданную папку. Упаковка производилась с 
+помощью WinRar 3.60. Результат распаковки: <span lang="en-us">Rect_</span>Coil<span lang="en-us">10</span>d.exe 
+- исполняемый файл программы. После запуска программы можно вводить входные 
+данные и производить расчет нажатием соответствующей кнопки. При вводе входных 
+данных необходимо учитывать принятый в ОС формат разделителя для десятичной 
+дроби – точка или запятая (например, 0.005 или 0,005). Если в ОС формат 
+разделителя запятая, то ввод производится с запятой, в противном случае будет 
+выдаваться сообщение об ошибке. Смена формата разделителя десятичной дроби в ОС: 
+Мой компьютер - Панель управления - Язык и стандарты - Настройка - Установить 
+разделитель целой и дробной части. Корректность расчета можно оценить по рис. 
+3.1.</font></p>
+
+<p><b><font size="2">4. Системы соосных прямоугольных катушек</font></b></p>
+<p><font size="2">Системы соосных прямоугольных (чаще - квадратных) катушек 
+используются для создания однородного магнитного поля в достаточно большом 
+объеме, составляющем существенную долю от объема, занимаемого самой системой. 
+При этом доступ в такие системы может быть гораздо проще, чем в кольца 
+Гельмгольца. Изготовление прямоугольных (и, в частности, квадратных) катушек 
+больших размеров является более технологичным по сравнению с круглыми. Также из 
+квадратных катушек проще строить двух- и трехкоординатные системы генерации 
+магнитного поля. </font></p>
+<p><font size="2">Количество катушек в системе, генерирующей магнитное поле по 
+одной координате, может быть равно двум (модификации катушек Гельмгольца<span lang="en-us"> 
+[1, 7]</span>), трем (система Меррита<span lang="en-us"> (Merritt)</span> <span lang="en-us">
+[1 - 3]</span>), четырем (система Ли-Уайтинга (<span lang="en-us">Lee-Whiting) 
+[1], </span>система Олдреда-Сколлара (<span lang="en-us">Alldred and Scollar) 
+[1] </span>или система Меррита (<span lang="en-us">Merritt) [1 - 3])</span>, 
+пяти (система Рабенса <span lang="en-us">(Rubens) [1, 3])</span> и более. С 
+увеличением числа катушек<span lang="en-us"> </span>растет трудоемкость процесса 
+изготовления, поэтому во многих случаях наиболее оптимальной является система 
+трех квадратных катушек Меррита примерно одинакового размера с соотношением 
+числа ампер-витков 39 : 20 : 39 <span lang="en-us">[1 - 3]</span>, позволяющая 
+существенно увеличить зону однородного магнитного поля по сравнению с 
+двухкатушечной системой Гельмгольца сопоставимого размера.</font></p>
+<p><font size="2">Система прямоугольных катушек может быть охарактеризована 
+посредством параметров отдельных катушек (п. 2) с учетом того, что 
+геометрические размеры и свойства обмоточного провода могут отличаться от 
+катушки к катушке. Дополнительным параметром является величина сдвига крайних 
+катушек относительно центра средней катушки (точка с координатами (0, 0, 0)).
+</font></p>
+<p><b><font size="2">5. Программа <span lang="en-us">Rectangular 3-Coils System </span>
+версия 1.0 для операционной системы <span lang="en-us">Windows</span></font></b></p>
+<p><img border="0" src="3RC_System_V10.jpg" width="1017" height="764"><font size="2">
+</font></p>
+<p><font size="2">Рис. 5.1. Рабочее окно программы <span lang="en-us">
+Rectangular 3-Coils System </span>
+версии 1.0.</font></p>
+<p><font size="2">Программа <span lang="en-us">Rectangular </span>3-<span lang="en-us">Coils 
+System</span> (расчет параметров и индукции магнитного поля системы трех 
+прямоугольных катушек),<span lang="en-us"> </span>созданная на основе программы
+<span lang="en-us">Rectangular Coil</span>, разрабатывалась и проверялась с 
+операционной системой (ОС) <span lang="en-us">Windows XP</span>. </font></p>
+
+<p><font size="2"><strong>Исходные данные:<br>
+</strong>Положение катушки в системе (верхняя, средняя, нижняя) характеризуется 
+параметром <span lang="en-us">INDEX</span>, который может принимать значения
+<span lang="en-us">LOW, CENTER </span>и <span lang="en-us">HIGH</span>, 
+соответственно (<span lang="en-us">INDEX</span> = <span lang="en-us">{LOW, 
+CENTER, HIGH}</span>).<br>
+<span lang="en-us">a</span>1<span lang="en-us">[INDEX]</span> - длина отверстия
+<span lang="en-us">INDEX-</span>катушки, м <br>
+<span lang="en-us">a</span>2<span lang="en-us">[INDEX]</span> - длина
+<span lang="en-us">INDEX-</span>катушки, м<br>
+<span lang="en-us">b2[INDEX] - </span>ширина <span lang="en-us">INDEX-</span>катушки, 
+м<br>
+H<span lang="en-us">[INDEX]</span> - высота <span lang="en-us">INDEX-</span>катушки, 
+м<br>
+D<span lang="en-us">[INDEX]</span> - диаметр обмоточного провода 
+<span lang="en-us">INDEX-</span>катушки<span lang="en-us"> </span>без изоляции 
+(для проводов прямоугольного сечения производится пересчет по формуле D=(4s/</font><font size="2" face="GreekC">p</font><font size="2">)<sup>1/2</sup>, 
+где s - площадь поперечного сечения провода, м<sup>2</sup>), м<br>
+Lambda<span lang="en-us">[INDEX]</span> - фактор упаковки<span lang="en-us"> 
+INDEX-</span>катушки&nbsp; <br>
+<span lang="en-us">z[INDEX] - </span>сдвиг <span lang="en-us">INDEX-</span>катушки 
+вдоль оси <span lang="en-us">Z </span>относительно центра системы (0, 0, 0), 
+который совпадает с центром центральной катушки, м<br>
+Материал провода для каждой катушки может быть выбран из предложенного списка 
+(медь, алюминий, железо), либо его свойства могут быть заданы вручную:<br>
+<span lang="en-us">Roe[INDEX] - </span>удельное сопротивление материала провода<span lang="en-us"> 
+INDEX-</span>катушки, Ом <font face="Times New Roman">∙ м<br>
+<span lang="en-us">Ro[INDEX] </span>- плотность материала провода<span lang="en-us"> 
+INDEX-</span>катушки, кг/м<sup>3</sup> <br>
+Кнопка &quot;Меррит&quot; может быть использована для облегчения построения трехкатушечной 
+системы Меррита. Достаточно задать свойства центральной катушки, затем после 
+нажатия на кнопку параметры крайних катушек будут пересчитаны в соответствии с 
+требуемыми свойствами системы Меррита. </font><br>
+Источник питания может быть либо источником постоянного напряжения, либо 
+источником постоянного тока:<br>
+<span lang="en-us">U</span> - значение приложенного напряжения, В <br>
+<span lang="en-us">I</span> - значение тока через катушку, А<br>
+x - абсцисса точки (относительно центра системы) расчета компонент магнитной 
+индукции, м<br>
+<span lang="en-us">y</span> - ордината точки (относительно центра катушки) 
+расчета компонент магнитной индукции, м<br>
+z - апликата точки (относительно центра катушки) расчета компонент магнитной 
+индукции, м</font></p>
+
+<p><font size="2"><strong>Расчетные данные:<br>
+</strong><span lang="en-us">N[INDEX] - </span>число витков <span lang="en-us">
+INDEX-</span>катушки<br>
+R - активное сопротивление системы (включение катушек последовательное), Ом<br>
+<span lang="en-us">I - </span>ток через систему катушек, А (если используется 
+источник напряжения)<br>
+<span lang="en-us">U</span> - напряжение на выводах системы катушек, В (если 
+используется источник тока)<br>
+<span lang="en-us">j[INDEX]</span> - плотность тока в обмотке <span lang="en-us">
+INDEX-</span>катушки, А/мм<sup>2</sup>
+<br>
+P - рассеиваемая в системе катушек мощность, Вт<br>
+B0 - магнитная индукция в центре системы катушек, Тл<br>
+<span lang="en-us">K0</span> - коэффициент преобразования в центре системы (0, 
+0, 0) по току, Тл/А <br>
+Bx (x, <span lang="en-us">y, </span>z) - <span lang="en-us">x-</span>компонента 
+магнитной индукции в точке с координатами (x, <span lang="en-us">y, </span>z) 
+(относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+B<span lang="en-us">y</span> (x, <span lang="en-us">y, </span>z) - 
+<span lang="en-us">y-</span>компонента магнитной индукции в точке с координатами 
+(x, <span lang="en-us">y, </span>z) (относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+B<span lang="en-us">z</span> (x, <span lang="en-us">y, </span>z) - 
+<span lang="en-us">z-</span>компонента магнитной индукции в точке с координатами 
+(x, <span lang="en-us">y, </span>z) (относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+B (x, <span lang="en-us">y, </span>z) - <span lang="en-us">м</span>одуль вектора 
+магнитной индукции в точке с координатами (x, <span lang="en-us">y, </span>z) 
+(относительно точки (0, 
+<span lang="en-us">0, </span>0)), Тл<br>
+<font face="GreekC"><span lang="en-us">f</span></font> (x, <span lang="en-us">y,
+</span>z) - угол вектора магнитной индукции в точке с координатами (x, <span lang="en-us">
+y, </span>z) с осью <span lang="en-us">Z</span>, градусов <br>
+<span lang="en-us">m</span> - суммарная масса обмоточного провода (без учета 
+изоляции) всех катушек системы, кг (если отдельные катушки намотаны проводом из 
+разных материалов, считается суммарная масса провода без разделения по составу) </font></p>
+<p><font size="2">Программа <span lang="en-us">Rectangular </span>3-Coil<span lang="en-us">s 
+System</span> позволяет рассчитывать по заданным геометрическим размерам<span lang="en-us"> </span>
+отдельных прямоугольных катушек системы, диаметру провода и фактору упаковки: 
+активное сопротивление системы R, число витков каждой катушки, величину тока I 
+через систему при заданном напряжении <span lang="en-us">U </span>или наоборот, 
+плотность тока в обмотках отдельных катушек, рассеиваемую в системе мощность P, 
+модуль и компоненты магнитной индукции в заданной точке пространства (x, <span lang="en-us">
+y, </span>z), угол между вектором магнитной индукции в точке (<span lang="en-us">x, 
+y, z</span>) и осью <span lang="en-us">Z</span>, величину магнитной индукции B0 
+в центре системы (0, <span lang="en-us">0,
+</span>0) и коэффициент преобразования <span lang="en-us">K0</span> по току. 
+Расчеты производятся в системе СИ в прямоугольной декартовой системе координат. 
+Результаты выводятся на экран монитора.</font></p>
+<p><font size="2">Демо-версия программы 3<span lang="en-us">RC_System V1.0 Demo</span>:
+<a href="3RC_System10d.rar">3RC_System10d.rar</a> (<span lang="en-us">~</span>181 
+Кбайт)</font></p>
+
+<p><font size="2">Демо-версия программы <span lang="en-us">Rectangular 3-Coils 
+System
+</span>имеет ограничение по заданию координат точки расчета магнитной индукции. 
+Расчет производится только для центра катушки (<span lang="en-us">x, y, z) = (0, 
+0, 0)</span>. Кроме того, источник питания может быть только источником 
+напряжения. Также не активна кнопка &quot;Меррит&quot;. Файл <span lang="en-us">
+3RC_System10d</span>.rar необходимо распаковать в заранее созданную папку. 
+Упаковка производилась с помощью WinRar 3.60. Результат распаковки: <span lang="en-us">
+3RC_System</span><span lang="en-us">10</span>d.exe - исполняемый файл программы. 
+После запуска программы можно вводить входные данные и производить расчет 
+нажатием соответствующей кнопки. При вводе входных данных необходимо учитывать 
+принятый в ОС формат разделителя для десятичной дроби – точка или запятая 
+(например, 0.005 или 0,005). Если в ОС формат разделителя запятая, то ввод 
+производится с запятой, в противном случае будет выдаваться сообщение об ошибке. 
+Смена формата разделителя десятичной дроби в ОС: Мой компьютер - Панель 
+управления - Язык и стандарты - Настройка - Установить разделитель целой и 
+дробной части. Корректность расчета можно оценить по рис. <span lang="en-us">5</span>.1.</font></p>
+<p><font size="2">Скопированные файлы могут быть проверены на отсутствие 
+вирусного кода в режиме on-line [5].</font></p>
+
+<p><font size="2">По вопросу получения полных версий программ обращайтесь к 
+автору (см. раздел </font><a
+href="../../Contact/Contact.htm"><font size="2">Контактная информация</font></a><font size="2">). 
+Цены приведены в разделе
+<a href="../../Contact/Forum.htm">Форум</a> . </font></p>
+
+<p><font size="2"><strong>Ссылки:</strong></font></p>
+
+<ol>
+    <li><span lang="EN-US" style="font-family: Times New Roman"><font size="2">
+	Kirschvink Joseph L. Uniform Magnetic Fields and Double-Wrapped Coil 
+	Systems: Improved Techniques for the Design of Bioelectromagnetic 
+	Experiments. Bioelectromagnetics, 1992, 13</font></span><span style="font-family: Times New Roman"><font size="2">.</font></span></li>
+	<li><span lang="en-us"><font size="2">
+	<span style="font-family: Times New Roman">Magdaleno-Adame S., 
+	Olivares-Galvan J. C., Campero-Littlewood E., Escarela-Perez R., 
+	Blanco-Brisset E. Coil Systems to Generate Uniform Magnetic Field Volumes. 
+	Excerpt from the Proceedings of the COMSOL Conference 2010 Boston.</span></font></span></li>
+	<li><span lang="en-us"><font size="2">
+	<span style="font-family: Times New Roman">Merritt R., Purcell C. and 
+	Stroink G. Uniform magnetic field produced by three, four, and five square 
+	coils. Review of&nbsp; Scientific Instruments, July 1983, N 7, vol. 54.</span></font></span></li>
+	<li><a href="../Magn_Field/Magn_Field.htm"><font size="2">Законы и уравнения 
+	магнитного поля</font></a></li>
+    <li><a href="../../Computer/AntiVir/AntiVir.htm"><font
+        size="2">Проверка файлов пользователя на наличие вирусного кода в режиме 
+	on-line</font></a></li>
+    <li><a href="../Pack_Factor/Pack_Factor.htm"><font size="2">Расчет фактора 
+	упаковки при намотке соленоидов</font></a></li>
+	<li><font size="2"><a href="../H_Coils/H_Coils.htm">Системы колец 
+	Гельмгольца (катушки Гельмгольца)</a></font></li>
+</ol>
+
+<p><a href="../../Projects/Terms/Terms.htm"><font size="2"><strong>Словарь 
+терминов:</strong></font></a></p>
+
+<ul>
+    <li><font size="2"><strong>Активное сопротивление</strong> - часть полного 
+	сопротивления контура, связанная с тепловыделением в контуре.</font></li>
+    <li><font size="2"><b>Катушка индуктивности</b> - электрический контур 
+	(цепь), специально предназначенный для создания собственного магнитного поля 
+	за счет протекающего по контуру тока.</font></li>
+    <li><font size="2"><strong>Магнитная индукция</strong> - вектор, численно 
+	равный пределу отношения силы, действующей со стороны магнитного поля на 
+	элемент проводника с электрическим током, к произведению тока и длины 
+	элемента проводника, если длина этого элемента стремится к нулю, а элемент 
+	так расположен в поле, что этот предел имеет наибольшее значение, и 
+	направленный перпендикулярно к направлению элемента проводника и к 
+	направлению силы, действующей на этот элемент со стороны магнитного поля, 
+	причем из его конца вращение по кратчайшему расстоянию от направления силы к 
+	направлению тока в элементе проводника должно быть видно происходящим против 
+	часовой стрелки.</font></li>
+	<li><font size="2"><strong>Напряженность магнитного поля</strong> - 
+	магнитодвижущая сила, приходящаяся на единицу длины магнитной цепи.</font></li>
+	<li><font size="2"><strong>Однородное магнитное поле</strong> - магнитное 
+	поле, в каждой точке которого вектор магнитной индукции имеет одни и те же 
+	направление и величину.</font></li>
+    <li><font size="2"><strong>Принцип суперпозиции магнитных полей</strong>
+        - магнитное поле, создаваемое несколькими движущимися зарядами или 
+	токами, равно векторной сумме магнитных полей, создаваемых каждым зарядом 
+	или током в отдельности.</font></li>
+	<li><font size="2"><b>Соленоид</b> (от греч. </font>
+	<font face="GreekC" size="2">solen</font><font size="2"> - трубка и </font>
+	<font face="GreekC" size="2">eidos</font><font size="2"> - вид) – 
+	осесимметричная катушка индуктивности.</font></li>
+    <li><font size="2"><strong>Фактор упаковки (коэффициент заполнения)</strong> 
+	- отношение объема проводника к объему обмотки; при равномерной намотке 
+	равен отношению суммарной площади проводников в поперечном сечении обмотки 
+	(без учета изоляции) к площади поперечного сечения обмотки.</font></li>
+</ul>
+
+<p><font size="2">09.11.2014</font></p>
+
+<hr>
+
+<p><a href="../../Energy/Energy.htm"><font size="2">Альтернативные источники 
+энергии</font></a><font size="2"><br>
+</font><a href="../../Computer/Computer.htm"><font size="2">Компьютеры и 
+Интернет</font></a><font size="2"><br>
+</font><a href="../M_Fields.htm"><font size="2">Магнитные поля</font></a><font size="2"><br>
+</font><a href="../../MechSys/MechSys.htm"><font size="2">Механотронные системы</font></a><font size="2"><br>
+</font><a href="../../Projects/Projects.htm"><font size="2">Перспективные 
+разработки</font></a><font size="2"><br>
+</font><a href="../../Electron/Electron.htm"><font size="2">Электроника и 
+технология</font></a></p>
+
+<p><a href="../../index.html"><font size="3"><strong>Главная страница</strong></font></a></p>
+
+<hr>
+
+<p><!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t11.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';'+Math.random()+
+'" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я" '+
+'border=0 width=88 height=31></a>')//--></script><!--/LiveInternet-->  </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- copyright (i7) --><div align="center"><a href="http://www.ucoz.ru/" title="Создать сайт бесплатно"><!--IMLAB-OFF:PGltZyBzdHlsZT0ibWFyZ2luOjA7cGFkZGluZzowO2JvcmRlcjowOyIgYWx0PSJIb3N0ZWQgYnkgdUNveiIgc3JjPSJodHRwOi8vczIwNi51Y296Lm5ldC9pbWcvY3AvMTEuZ2lmIiB3aWR0aD0iODAiIGhlaWdodD0iMTUiIHRpdGxlPSJIb3N0ZWQgYnkgdUNveiIgLz4=--><!--/IMLAB-OFF--></a><br /></div><!-- /copyright -->
+</body>
+</html>
