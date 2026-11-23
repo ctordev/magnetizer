@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 640" role="img" aria-label="Блок 1 — цепь заряда: T1 на П-сердечнике с двумя симметричными катушками (в каждой половина первички и половина вторички с отводом от середины), катушки вторички соединены последовательно (выводы 2–3 на колодке T1), сдвоенный SA3 («255» — обе катушки целиком, «127» — половины по отводам a и b, «0» — разомкнуто), диммер US1, мост VDS1, балласт EL1, кнопка SB1; корпус T1 на PE не заводится">
+  <style>
+    .w{stroke:#cfd7e4;stroke-width:2;fill:none}
+    .w2{stroke:#cfd7e4;stroke-width:1.4;fill:none}
+    .core{stroke:#cfd7e4;stroke-width:4;fill:none;stroke-linecap:round}
+    .lbl{fill:#9fb0c8;font:12px/1.2 "Segoe UI",Arial,sans-serif}
+    .lblb{fill:#e6edf7;font:600 13px/1.2 "Segoe UI",Arial,sans-serif}
+    .pin{fill:#e6edf7;font:600 13px/1.2 "Segoe UI",Arial,sans-serif}
+  </style>
+  <rect class="bg" x="0" y="0" width="1180" height="640" fill="#10141b"/>
+
+  <text x="40" y="28" class="lblb" font-size="14">Блок 1 — цепь заряда (ПР-1). Обозначения: ГОСТ 2.721, 2.730</text>
+
+  <!-- сеть: L через QF1 и FU1 на верх первички, N через QF1 на низ нижней половины первички -->
+  <text x="16" y="114" class="lblb">L</text>
+  <text x="16" y="156" class="lblb">N</text>
+  <path class="w" d="M36 110 H56 M76 110 H96 M136 110 H210 M36 152 H56 M76 152 H96 M136 152 H160 V232 H210"/>
+  <path class="w" d="M56 110 L88 94 M56 152 L88 136"/>
+  <circle cx="56" cy="110" r="3" fill="#cfd7e4"/><circle cx="76" cy="110" r="3" fill="#cfd7e4"/>
+  <circle cx="56" cy="152" r="3" fill="#cfd7e4"/><circle cx="76" cy="152" r="3" fill="#cfd7e4"/>
+  <path class="w2" d="M66 118 V144" stroke-dasharray="5 4"/>
+  <path class="w2" d="M52 106 L60 114 M60 106 L52 114 M52 148 L60 156 M60 148 L52 156"/>
+  <rect x="96" y="98" width="40" height="24" rx="2" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M96 110 H136"/>
+  <text x="116" y="88" class="lblb">FU1 6,3 А</text>
+  <text x="100" y="176" class="lblb">QF1</text>
+
+  <!-- T1: П-сердечник, две катушки. Слева половины первички Ia/Ib (соединены последовательно), справа половины вторички IIa/IIb -->
+  <path class="w" d="M210 110 a11 11 0 0 1 0 22 a11 11 0 0 1 0 22"/>
+  <path class="w" d="M210 188 a11 11 0 0 1 0 22 a11 11 0 0 1 0 22"/>
+  <path class="w" d="M210 154 V188"/>
+  <path class="core" d="M236 100 V242"/>
+  <path class="w" d="M262 110 a11 11 0 0 0 0 22 a11 11 0 0 0 0 22"/>
+  <path class="w" d="M262 188 a11 11 0 0 0 0 22 a11 11 0 0 0 0 22"/>
+  <circle cx="217" cy="117" r="3" fill="#cfd7e4"/><circle cx="255" cy="117" r="3" fill="#cfd7e4"/>
+  <text x="236" y="90" text-anchor="middle" class="lblb">T1</text>
+  <text x="146" y="272" class="lbl">230 В, 2×288 витк.</text>
+  <text x="262" y="292" class="lbl">2×127,5 В (отводы 63,75), 2×319 витк.</text>
+  <text x="268" y="100" class="lblb">1</text>
+  <text x="340" y="150" class="lblb">a</text>
+  <text x="322" y="170" class="lblb">2</text>
+  <text x="278" y="178" class="lblb">3</text>
+  <text x="340" y="192" class="lblb">b</text>
+  <text x="278" y="250" class="lblb">4</text>
+
+  <!-- вторичка: катушки соединены последовательно — выводы 2 и 3 на колодке T1; отводы от середины
+       a (катушка IIa) и b (IIb) — на контакты «127» SA3, выводы 1 и 4 — на контакты «255» -->
+  <path class="w" d="M262 110 H440"/>
+  <path class="w" d="M262 132 H390"/>
+  <path class="w" d="M262 154 H310 V188 H262"/>
+  <path class="w" d="M262 210 H390"/>
+  <path class="w" d="M262 232 H440"/>
+
+  <!-- SA3: сдвоенный переключатель 255–0–127 (два полюса на одной ручке, мехсвязь пунктиром).
+       Полюс 1 — верхняя катушка IIa: ось на Lin диммера, «255» — вывод 1 (вся катушка), «127» — отвод a (половина).
+       Полюс 2 — нижняя IIb: ось на Nin, «255» — вывод 4, «127» — отвод b. Рычаги показаны в «255» -->
+  <circle cx="440" cy="110" r="3" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="390" cy="132" r="3" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="390" cy="210" r="3" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="440" cy="232" r="3" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="480" cy="150" r="3.5" fill="#cfd7e4"/>
+  <circle cx="480" cy="245" r="3.5" fill="#cfd7e4"/>
+  <path class="w" d="M480 150 H540 V205 H560"/>
+  <path class="w" d="M480 245 H560"/>
+  <path class="w" d="M480 150 L442 112"/>
+  <path class="w" d="M480 245 L442 233"/>
+  <path class="w2" d="M480 150 V245" stroke-dasharray="5 4"/>
+  <text x="496" y="200" class="lblb">SA3</text>
+  <text x="432" y="98" text-anchor="end" class="lbl">255</text>
+  <text x="382" y="150" text-anchor="end" class="lbl">127</text>
+  <text x="426" y="132" class="lbl">0</text>
+  <text x="395" y="190" text-anchor="end" class="lbl">127</text>
+  <text x="432" y="248" text-anchor="end" class="lbl">255</text>
+  <text x="426" y="210" class="lbl">0</text>
+
+  <!-- US1: диммер, квадратный блок: Lin Nin слева, Lout Nout справа -->
+  <text x="560" y="140" class="lblb" style="fill:#ff9f43">US1 — диммер (16 А)</text>
+  <rect x="560" y="170" width="100" height="100" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <text x="566" y="200" class="lbl">Lin</text>
+  <text x="566" y="254" class="lbl">Nin</text>
+  <text x="654" y="200" text-anchor="end" class="lbl">Lout</text>
+  <text x="654" y="254" text-anchor="end" class="lbl">Nout</text>
+  <path class="w" d="M660 205 H680 M660 245 H680"/>
+
+  <!-- VDS1: диодный мост, квадратный блок: вход ~ ~ слева, выход + − справа -->
+  <rect x="680" y="170" width="100" height="100" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w" d="M780 205 H814 V120 H838 M780 245 H800 V400 H974"/>
+  <text x="730" y="146" text-anchor="middle" class="lblb">VDS1</text>
+  <text x="730" y="290" text-anchor="middle" class="lbl">мост 1000 В</text>
+  <text x="690" y="212" class="lblb">~</text>
+  <text x="690" y="252" class="lblb">~</text>
+  <text x="770" y="212" text-anchor="end" class="lblb">+</text>
+  <text x="770" y="252" text-anchor="end" class="lblb">−</text>
+
+  <!-- шина «+»: балласт и кнопка -->
+  <circle cx="852" cy="120" r="14" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M842 110 L862 130 M862 110 L842 130"/>
+  <text x="830" y="86" text-anchor="middle" class="lbl">EL1 — 2×100 Вт (242 Ом)</text>
+  <path class="w" d="M866 120 H884"/>
+  <circle cx="884" cy="120" r="3" fill="#cfd7e4"/><circle cx="924" cy="120" r="3" fill="#cfd7e4"/>
+  <path class="w" d="M884 120 L920 100"/>
+  <path class="w2" d="M902 108 V94 M894 94 H910"/>
+  <text x="952" y="104" class="lblb">SB1</text>
+  <path class="w" d="M924 120 H962"/>
+  <circle cx="968" cy="120" r="6" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <text x="968" y="164" text-anchor="end" class="lblb" style="fill:#ffb020">к блоку 2 «+»</text>
+  <circle cx="968" cy="400" r="6" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <text x="948" y="378" text-anchor="end" class="lblb" style="fill:#ffb020">к блоку 2 «−»</text>
+
+  <!-- примечания -->
+  <text x="40" y="440" class="lblb" style="fill:#ffb020">T1 — П-сердечник, 2 симметричные катушки: в каждой ½ первички (115 В, 288 витков) + ½ вторички (127,5 В, 319 витков, отвод от середины);</text>
+  <text x="40" y="462" class="lblb" style="fill:#ffb020">половины первички соединены последовательно (230 В). Катушки вторички соединены последовательно: выводы 2–3 на колодке T1, отводы a и b — по 63,75 В.</text>
+  <text x="40" y="484" class="lblb" style="fill:#ffb020">«255 В» — SA3 подаёт обе катушки целиком (выводы 1 и 4): пик 340 / 356 / 392 В при 220 / 230 / 253 В; 300 В за 57 с (71 с при 220 В).</text>
+  <text x="40" y="506" class="lblb" style="fill:#ffb020">«127 В» — SA3 подаёт по половине каждой катушки (отводы a и b): 120 В за 32 с, 150 В за 68 с, 160 В за 99 с; обе катушки работают.</text>
+  <text x="40" y="528" class="lblb" style="fill:#ffb020">Потолок «127 В» ≈ 175 В (пик 167 / 175 / 193 В) — режим на 120…160 В. Токи: 255 В — 1,04 А / 265 ВА (сеть 1,20 А); 127 В — 0,51 А / 65 ВА (0,30 А).</text>
+  <text x="40" y="550" class="lblb" style="fill:#ffb020">Фазировка катушек (холостой ход, «255»): между выводами 1 и 4 ≈ 255 В; около нуля — поменять местами выводы одной катушки на колодке.</text>
+  <text x="40" y="572" class="lblb" style="fill:#ffb020">Провод вторички не тоньше ⌀1,5 мм (в «255» каждая катушка несёт полный ток). US1 — диммер 16 А: VS1 600 В, снаббер, упор RP1 на 300 В.</text>
+  <text x="40" y="594" class="lbl">VDS1 — готовый мост, пик 1000 В. EL1 — балласт: 2 лампы 100 Вт параллельно (242 Ом). SB1 — кнопка «Заряд», без фиксации. «0» SA3 — разомкнуто.</text>
+  <text x="40" y="616" class="lbl">Полное КЗ регулятора без балласта: 255 В — 1049 А / 29 кА²с; 127 В — 518 А / 7,1 кА²с. Корпус T1 и кожух на PE не заводятся.</text>
+</svg>

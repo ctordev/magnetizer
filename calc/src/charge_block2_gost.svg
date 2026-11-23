@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1310 822" role="img" aria-label="Блок 2: шины постоянного тока, банк, варистор, разряд и цепь намагничивания">
+  <style>
+    .w{stroke:#cfd7e4;stroke-width:2;fill:none}
+    .w2{stroke:#cfd7e4;stroke-width:1.4;fill:none}
+    .coil{stroke:#ffb020;stroke-width:2.4;fill:none}
+    .steel{fill:#5b6577}
+    .lbl{fill:#9fb0c8;font:12px/1.2 "Segoe UI",Arial,sans-serif}
+    .lblb{fill:#e6edf7;font:600 13px/1.2 "Segoe UI",Arial,sans-serif}
+  </style>
+  <rect class="bg" x="0" y="0" width="1310" height="822" fill="#10141b"/>
+
+  <text x="40" y="36" class="lblb" font-size="14">Блок 2 — банк, разряд и цепь намагничивания (ПР-2)</text>
+  <text x="1270" y="36" text-anchor="end" class="lbl" font-size="13">вход — с блока 1, пока удерживается SB1</text>
+
+  <!-- вход: блок 1 показан как ссылка, он рисован отдельно -->
+  <rect x="120" y="150" width="360" height="470" fill="none" stroke="#5b6577" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="140" y="182" class="lblb">БЛОК 1 — цепь заряда</text>
+  <text x="140" y="206" class="lbl">сеть 230 В → QF1 → FU1 → T1</text>
+  <text x="140" y="226" class="lbl">→ SA3 → VS1 (фазовое упр.)</text>
+  <text x="140" y="246" class="lbl">→ VDS1 → EL1 242 Ом → SB1</text>
+  <text x="140" y="266" class="lbl">Схема, витки и режим —</text>
+  <text x="140" y="286" class="lbl">рисунок выше и §5.1 п. 1.</text>
+  <text x="140" y="540" class="lblb" style="fill:#ffb020">Заряд идёт, пока держат SB1.</text>
+  <text x="140" y="560" class="lbl">Отпустили кнопку — вторичка</text>
+  <text x="140" y="580" class="lbl">обесточена, банк остаётся заряженным.</text>
+  <circle cx="490" cy="210" r="7" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="490" cy="560" r="7" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+
+  <!-- шины постоянного тока -->
+  <path class="w" d="M490 210 H1080 M490 560 H1080"/>
+  <text x="500" y="200" class="lblb">+  (после SB1)</text>
+  <text x="500" y="592" class="lblb">−  (общий)</text>
+
+  <!-- минусовая шина на корпус -->
+  <path class="w" d="M600 560 V606 M578 606 H622 M586 616 H614 M594 626 H606"/>
+  <text x="600" y="648" text-anchor="middle" class="lbl">корпус кожуха — шина «−», без PE</text>
+
+  <!-- RV1: варистор на шинах -->
+  <circle cx="640" cy="210" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M640 210 V250 M640 290 V560"/>
+  <rect x="630" y="250" width="20" height="40" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M624 296 L656 244 M656 244 V236"/>
+  <circle cx="640" cy="560" r="4" fill="#cfd7e4"/>
+  <text x="624" y="264" text-anchor="end" class="lblb">RV1</text>
+  <text x="624" y="282" text-anchor="end" class="lbl">470 В</text>
+
+  <!-- C1…C10: банк -->
+  <circle cx="780" cy="210" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M780 210 V300 M780 314 V560"/>
+  <path class="w" d="M750 300 H810 M750 314 H810"/>
+  <text x="756" y="292" class="lblb">+</text>
+  <text x="784" y="290" class="lblb">C1…C10</text>
+  <text x="784" y="272" class="lbl">47 мФ</text>
+  <circle cx="780" cy="560" r="4" fill="#cfd7e4"/>
+
+  <!-- SA1 + EL2: разряд банки при открытом кожухе -->
+  <circle cx="880" cy="210" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M880 210 V250 M880 290 V324 M880 356 V560"/>
+  <circle cx="880" cy="250" r="3" fill="#cfd7e4"/><circle cx="880" cy="290" r="3" fill="#cfd7e4"/>
+  <path class="w" d="M880 250 L896 282"/>
+  <circle cx="880" cy="340" r="16" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M869 329 L891 351 M891 329 L869 351"/>
+  <text x="902" y="262" class="lblb">SA1</text>
+  <text x="902" y="345" class="lblb">EL2</text>
+  <circle cx="880" cy="560" r="4" fill="#cfd7e4"/>
+
+  <!-- PV1: вольтметр с делителем -->
+  <circle cx="970" cy="210" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M970 210 V246 M970 282 V340 M970 380 V400 M970 440 V560"/>
+  <circle cx="970" cy="264" r="18" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <text x="970" y="270" text-anchor="middle" class="lblb" font-size="15">V</text>
+  <rect x="960" y="340" width="20" height="40" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <rect x="960" y="400" width="20" height="40" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <text x="994" y="270" class="lblb">PV1</text>
+  <text x="994" y="352" class="lblb">R2</text>
+  <text x="994" y="370" class="lbl">10 МОм</text>
+  <text x="994" y="412" class="lblb">R3</text>
+  <text x="994" y="430" class="lbl">10 кОм</text>
+  <circle cx="970" cy="560" r="4" fill="#cfd7e4"/>
+
+  <!-- цепь намагничивания: VT1, оснастка L1, VD6 на её клеммах -->
+  <circle cx="1060" cy="210" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M1060 210 V300 M1060 326 V352 M1060 448 V560"/>
+  <path d="M1046 300 L1074 300 L1060 326 z" fill="#ff9f43"/>
+  <path class="w" d="M1044 326 H1076"/>
+  <path class="w" d="M1076 322 L1094 338"/>
+  <path class="coil" d="M1060 352 q14 12 0 24 q14 12 0 24 q14 12 0 24 q14 12 0 24" fill="none"/>
+  <circle cx="1060" cy="352" r="4" fill="#cfd7e4"/><circle cx="1060" cy="448" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M1060 352 H1120 V396 M1120 420 V448 H1060"/>
+  <path d="M1108 420 L1132 420 L1120 396 z" fill="#43c59e"/>
+  <path class="w" d="M1108 396 H1132"/>
+  <circle cx="1060" cy="560" r="4" fill="#cfd7e4"/>
+  <text x="1060" y="190" text-anchor="middle" class="lblb" style="fill:#ff9f43">VT1</text>
+  <text x="1097" y="392" text-anchor="middle" class="lblb">L1</text>
+  <text x="1140" y="404" class="lblb" style="fill:#43c59e">VD6</text>
+  <text x="1140" y="426" class="lbl" style="fill:#43c59e">= D2, §2</text>
+
+  <!-- US1: узел запуска VT1 -->
+  <path class="w2" d="M1094 338 H1186" stroke-dasharray="5 4"/>
+  <rect x="1186" y="314" width="112" height="96" fill="none" stroke="#5b6577" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="1242" y="340" text-anchor="middle" class="lblb">US1</text>
+  <text x="1242" y="360" text-anchor="middle" class="lbl">запуск VT1</text>
+  <text x="1242" y="382" text-anchor="middle" class="lbl">SA2 «Пуск»</text>
+  <text x="1242" y="400" text-anchor="middle" class="lbl">делитель, C</text>
+
+  <!-- примечания -->
+  <text x="40" y="696" class="lblb" style="fill:#43c59e">Всё, что слева от шины «+», — чужая цепь: блок 1 показан пунктирным прямоугольником со ссылкой, чтобы разрядная часть читалась отдельно.</text>
+  <text x="40" y="718" class="lbl">Защита банка: RV1 470 В стоит выше паспорта 400 В, то есть от перезаряда он не защищает. Перезаряд держится режимом заряда (пик 356 В при 230 В в сети,</text>
+  <text x="40" y="740" class="lbl">392 В при 253 В) и вольтметром PV1; автоматической защиты в установке нет.</text>
+  <text x="40" y="762" class="lbl">EL2 вместе с балластом EL1 из блока 1 образует делитель: при включённой разрядной цепи напряжение не поднимется выше 104–178 В, поэтому на время заряда</text>
+  <text x="40" y="784" class="lbl">SA1 и EL2 разомкнуты концевиком кожуха.</text>
+  <text x="40" y="806" class="lblb" style="fill:#ffb020">Цепь намагничивания — крайняя правая ветвь (VT1 → L1) без плавкой вставки: КЗ в оснастке — это ~23 кА в петле 5 мкГн, тиристор это держит, выводы банок — нет.</text>
+</svg>
