@@ -12,13 +12,14 @@
   <text x="40" y="34" class="lblb" font-size="14">Упрощённая версия — заряд от сети диммером US1, лампы 2×100 Вт и мост VDS1, банк 1 × 4700 мкФ, тиристор Т160</text>
   <text x="1270" y="34" text-anchor="end" class="lbl" font-size="13">обозначения: ГОСТ 2.721, 2.730</text>
 
-  <!-- сеть: L через QF1 (2 полюса) и FU1 на шину «+», N через второй полюс QF1 на шину «−» -->
+  <!-- сеть: L через QF1 (2 полюса) и FU1 → диммер → лампы → вход AC1 моста; N через второй полюс QF1 —
+       только на вход AC2 моста; шина «−» питается только от выхода «−» моста (AC2 и «−» не соединять!) -->
   <text x="16" y="204" class="lblb">L</text>
   <text x="16" y="564" class="lblb">N</text>
   <circle cx="36" cy="200" r="6" fill="none" stroke="#cfd7e4" stroke-width="2"/>
   <circle cx="36" cy="560" r="6" fill="none" stroke="#cfd7e4" stroke-width="2"/>
   <path class="w" d="M42 200 H64 M104 200 H112 M152 200 H170 M270 200 H300"/>
-  <path class="w" d="M42 560 H64 M104 560 H1250"/>
+  <path class="w" d="M42 560 H64 M104 560 H336"/>
   <path class="w" d="M64 200 L100 178 M64 560 L100 538"/>
   <circle cx="64" cy="200" r="3" fill="#cfd7e4"/><circle cx="104" cy="200" r="3" fill="#cfd7e4"/>
   <circle cx="64" cy="560" r="3" fill="#cfd7e4"/><circle cx="104" cy="560" r="3" fill="#cfd7e4"/>
@@ -41,7 +42,7 @@
   <text x="314" y="146" text-anchor="middle" class="lblb">EL1, EL2 2×100 Вт</text>
 
   <!-- VDS1: диодный мост — полный, обе полуволны -->
-  <path class="w" d="M328 200 H344 V185 H354 M354 215 H336 V560 M454 185 H470 V200 H1250 M454 215 H470 V560"/>
+  <path class="w" d="M328 200 H344 V185 H354 M354 215 H336 V560 M454 185 H470 V200 H1250 M454 215 H470 V560 H1250"/>
   <rect x="354" y="170" width="100" height="60" fill="none" stroke="#cfd7e4" stroke-width="2"/>
   <text x="404" y="190" text-anchor="middle" class="lblb">VDS1</text>
   <text x="404" y="208" text-anchor="middle" class="lbl">25 А/1000 В</text>
@@ -51,12 +52,12 @@
 
   <!-- шины постоянного тока -->
   <text x="500" y="190" class="lblb">+  (после VDS1)</text>
-  <text x="352" y="592" class="lblb">−  (общий)</text>
+  <text x="475" y="592" text-anchor="end" class="lblb">−  (общий)</text>
 
-  <!-- минусовая шина на корпус -->
-  <path class="w" d="M430 560 V606 M408 606 H452 M416 616 H444 M424 626 H436"/>
-  <text x="430" y="648" text-anchor="middle" class="lbl">корпус кожуха — шина «−», без PE</text>
-  <text x="430" y="668" text-anchor="middle" class="lblb" style="fill:#ff9f43">относительно земли: минус 310…358 В</text>
+  <!-- минусовая шина на корпус: только шина «−» моста (N на неё не заводится) -->
+  <path class="w" d="M505 560 V606 M483 606 H527 M491 616 H519 M499 626 H511"/>
+  <text x="505" y="648" text-anchor="middle" class="lbl">корпус кожуха — шина «−», без PE</text>
+  <text x="505" y="668" text-anchor="middle" class="lblb" style="fill:#ff9f43">относительно земли: минус 310…358 В</text>
 
   <!-- R1: разрядник банка -->
   <circle cx="560" cy="200" r="4" fill="#cfd7e4"/>
