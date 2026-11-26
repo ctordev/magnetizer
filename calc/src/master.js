@@ -69,3 +69,11 @@ require('fs').writeFileSync(__dirname+'/vd6_data.json', JSON.stringify({
           uminA: rA.umin, uminB: rA.B.umin, i2tD: rA.i2tD, i2tS: rA.i2tS, tau: rA.tau, niA: rA.ni, niB: rA.B.ni, E: rA.E, Q: rA.Q }
 }));
 console.log('\nvd6_data.json перезаписан: 47 мФ (10×4700) / 300 В');
+
+// ---------- узел управления тиристором (US1, §5.2) ----------
+const { gate } = require('./gate.js');
+for (const [mode, U] of [['режим «255»', 300], ['режим «127»', 127]]) {
+  const g = gate(U);
+  console.log(`затвор ${mode}: ${f(g.iGate, 2)} А в затвор (из C2 ${f(g.iTot, 2)} А), τ=${f(g.tau * 1e6, 0)} мкс, ` +
+    `на R4 ${f(g.pR4, 2)} Вт, C2 готов за ${f(g.t95, 1)} с`);
+}

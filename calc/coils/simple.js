@@ -22,6 +22,7 @@ const EM = require('../src/em.js');
 const { sim, split, scrStress, T160, VL200, Rs, VSCR } = require('../src/rlc.js');
 const { SYS, circuit, boreMin } = require('./motors.js');
 const { W, f, wind, shot, cov, Radd } = require('./winding.js');
+const { gate } = require('../src/gate.js');                          // узел управления тиристором (§2.1)
 
 // ── сеть и зарядный узел ──
 const MAINS = [220, 230, 253];                       // 220 номинал, 230 паспорт ЕС, 253 = +10 %
@@ -192,6 +193,9 @@ if (require.main === module) {
   console.log(`  PV1: прибор 0…${PV.Ufs} В + R2 ${f(PV.R2 / 1e6, 0)} МОм (делитель ${f(pvK, 0)}:1, шкала ×${f(pvK, 0)}); ` +
     `при ${peak(253)} В → ${f(pvRead(peak(253)), 0)} В, при 360 В → ${f(pvRead(360), 0)} В, при 150 В → ${f(pvRead(150), 0)} В; ` +
     `на R2 ${f(pvP2(400) * 1e3, 0)} мВт при 400 В; τ делителя ${f(pvTau(CAP_A) / 3600, 0)} ч — на фоне R1 (${f(cA.bleed50 / 60, 0)} мин) ничто`);
+  const gA = gate(peak(230)), gB = gate(MODE_B.U);
+  console.log(`  затвор (узел US2, §2.1): ток в затвор ${f(gB.iGate, 2)}…${f(gate(peak(253)).iGate, 2)} А, ` +
+    `τ=${f(gA.tau * 1e6, 0)} мкс, на R3 пик ${f(gA.pR3, 0)} Вт (импульс), C2 готов за ${f(gA.t95, 1)} с`);
   console.log(`  режим B (${f(MODE_B.C * 1e3, 1)} мФ, диммер α=${f(cB.alpha * 180 / Math.PI, 0)}°, пик ${f(cB.Upk, 0)} В): до 95 % за ${f(cB.t95, 0)} с, ` +
     `до 99 % за ${f(cB.t99, 0)} с; τ разрядника ${f(cB.bleedTau, 0)} с, до 50 В за ${f(cB.bleed50, 0)} с`);
 

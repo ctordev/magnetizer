@@ -9,6 +9,7 @@ const EM = require('../src/em.js');
 const { SYS, MAT, circuit, voiceCoil, B_POLE, boreMin } = require('./motors.js');
 const WND = require('./winding.js');                                  // их исходники выкладываем в браузер
 const RLC = require('../src/rlc.js');
+const { gate } = require('../src/gate.js');                          // узел управления тиристором — §8
 const { W, C0, f, wind, magOf, shot, pullToCenter, boreScan, basketEffect, BASKET, cov, recommend } = WND;
 
 const US = [120, 150, 180, 200, 300];
@@ -444,6 +445,10 @@ ${Object.keys(SYS).map(k => `${short(k)} ≥ ${f(SYS[k].BgapNom, 2)} Тл`).join
 <li>Если B недобран — <b>поднимать напряжение ступенями до 250 В</b>, а не доматывать витки. МДС у нас с запасом, а
 неопределённость — в утечках, клее и реальных зазорах. Проверить и зазор витки→магнит: он в разы важнее числа витков
 (см. §4).</li>
+<li>Пуск: узел управления тиристором (C2 1 мкФ + R4 220 кОм + SA2 «Пуск» + R3 100 Ом импульсный + VD7 + VD8 12 В + R5 22 Ом) —
+схема и числа в <a href="magnetizer.html#s5-2">magnetizer.html, §5.2</a> и <a href="magnetizer-simple.html#s2g">magnetizer-simple.html, §2.1</a>:
+ток в затвор ${f(gate(127).iGate, 1)}…${f(gate(358).iGate, 1)} А, τ ≈ ${f(gate(300).tau * 1e6, 0)} мкс — во всех режимах ≥0,5 А.
+Провод затвора — витая пара ≤100 мм к выводу.</li>
 </ul></div>
 
 <div class="card"><h2 style="margin-top:0">9. Границы модели</h2>

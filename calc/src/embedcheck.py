@@ -103,6 +103,14 @@ def main():
     report('simple_shema_gost.svg: вошитый svg == standalone', emb is not None and emb == body,
            'тело вошитого svg отличается от standalone (пересобрать вшивку из standalone)')
 
+    # 7) схема управления тиристором: вошитый svg в обеих установках == standalone
+    aria, body = standalone_body(SRC / 'gate_shema_gost.svg')
+    key = aria[:40]
+    for host_name, host in (('magnetizer.html', doc), ('magnetizer-simple.html', doc2)):
+        emb = inlined_body(host, key)
+        report(f'gate_shema_gost: вошитый svg в {host_name} == standalone', emb is not None and emb == body,
+               'тело вошитого svg отличается от standalone (пересобрать вшивку из standalone)')
+
     print(f'проверок: {checks}, расхождений: {len(fails)}')
     return 1 if fails else 0
 

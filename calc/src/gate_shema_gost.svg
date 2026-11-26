@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 620" role="img" aria-label="Узел управления тиристором: C2 заряжается от шины через R4, кнопка SA2 «Пуск» бросает C2 в затвор VT1 через R3 и VD7; VD8 и R5 — у затвора; корпус — шина «−», без PE">
+  <style>
+    .w{stroke:#cfd7e4;stroke-width:2;fill:none}
+    .w2{stroke:#cfd7e4;stroke-width:1.4;fill:none}
+    .lbl{fill:#9fb0c8;font:12px/1.2 "Segoe UI",Arial,sans-serif}
+    .lblb{fill:#e6edf7;font:600 13px/1.2 "Segoe UI",Arial,sans-serif}
+  </style>
+  <rect class="bg" x="0" y="0" width="1040" height="620" fill="#10141b"/>
+
+  <text x="40" y="34" class="lblb" font-size="14">Узел управления тиристором: C2 заряжается через R4, SA2 бросает импульс в затвор через R3 и VD7</text>
+  <text x="1000" y="34" text-anchor="end" class="lbl" font-size="13">обозначения: ГОСТ 2.721, 2.730</text>
+
+  <!-- шины -->
+  <path class="w" d="M60 120 H980 M60 470 H980"/>
+  <text x="66" y="108" class="lblb">+  (шина постоянного тока)</text>
+  <text x="66" y="492" class="lblb">−  (общий)</text>
+
+  <!-- R4: заряд C2 от «+»; C2: накопитель импульса -->
+  <circle cx="140" cy="120" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M140 120 V180 M140 240 V300 M140 300 V340 M140 354 V470"/>
+  <rect x="130" y="180" width="20" height="60" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w" d="M118 340 H162 M118 354 H162"/>
+  <circle cx="140" cy="470" r="4" fill="#cfd7e4"/>
+  <text x="124" y="196" text-anchor="end" class="lblb">R4</text>
+  <text x="124" y="214" text-anchor="end" class="lbl">220 кОм</text>
+  <text x="124" y="232" text-anchor="end" class="lbl">1 Вт</text>
+  <text x="170" y="336" class="lblb">C2</text>
+  <text x="170" y="354" class="lbl">1 мкФ/400 В</text>
+
+  <!-- SA2 «Пуск»: бросает C2 в цепь затвора -->
+  <path class="w" d="M140 300 H270 M330 300 H400"/>
+  <circle cx="270" cy="300" r="3" fill="#cfd7e4"/><circle cx="330" cy="300" r="3" fill="#cfd7e4"/>
+  <path class="w" d="M272 298 L322 276"/>
+  <path class="w2" d="M297 250 V270 M287 250 H307"/>
+  <text x="297" y="236" text-anchor="middle" class="lblb">SA2 «Пуск»</text>
+
+  <!-- R3: импульсный резистор; VD7: защита от обратной полярности затвора -->
+  <rect x="400" y="290" width="60" height="20" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w" d="M460 300 H500 M528 300 H700"/>
+  <text x="430" y="278" text-anchor="middle" class="lblb">R3 100 Ом</text>
+  <path d="M500 288 L500 312 L528 300 z" fill="#cfd7e4"/>
+  <path class="w" d="M528 288 V312"/>
+  <text x="514" y="278" text-anchor="middle" class="lblb">VD7</text>
+  <text x="360" y="344" class="lbl">витая пара ≤100 мм</text>
+
+  <!-- R5 (Rг-к) и VD8 у затвора -->
+  <circle cx="560" cy="300" r="4" fill="#cfd7e4"/><circle cx="620" cy="300" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M560 300 V340 M560 390 V430 M620 300 V340 M620 368 V430"/>
+  <rect x="550" y="340" width="20" height="50" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path d="M608 340 L632 340 L620 368 z" fill="#cfd7e4"/>
+  <path class="w" d="M608 368 H632"/>
+  <text x="544" y="356" text-anchor="end" class="lblb">R5</text>
+  <text x="544" y="374" text-anchor="end" class="lbl">22 Ом</text>
+  <text x="644" y="356" class="lblb">VD8</text>
+  <text x="644" y="374" class="lbl">12 В</text>
+
+  <!-- VT1: тиристор, затвор — с линии 300 -->
+  <circle cx="720" cy="120" r="4" fill="#cfd7e4"/><circle cx="720" cy="470" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M720 120 V210 M700 300 V230 H717"/>
+  <path d="M706 210 L734 210 L720 236 z" fill="#ff9f43"/>
+  <path class="w" d="M704 236 H736 M720 236 V430"/>
+  <path class="w" d="M560 430 H720 M620 430 H720"/>
+  <text x="748" y="220" class="lblb" style="fill:#ff9f43">VT1</text>
+  <text x="748" y="238" class="lbl" style="fill:#ff9f43">Т160-6 / Т253</text>
+
+  <!-- примечания -->
+  <text x="40" y="524" class="lblb" style="fill:#ffb020">C2 заряжается от «+» через R4: 95 % за 0,7 с после включения QF1; на R4 0,41…0,58 Вт — нужен резистор на 1 Вт.</text>
+  <text x="40" y="546" class="lblb" style="fill:#ffb020">Пуск: SA2 бросает C2 в затвор через R3 и VD7. Ток в затвор 0,6…2,9 А, τ ≈ 100 мкс — во всех режимах ≥0,5 А и ≥3× Iу.от.</text>
+  <text x="40" y="568" class="lbl">VD8 держит Uз-к ≤12 В; VD7 не даёт обратного (обратное Uз-к тиристора — 10 В). R5 22 Ом — шунт затвора при dv/dt (§5 основной).</text>
+  <text x="40" y="590" class="lbl">R3 — импульсный (Р3-25, ОИМ-2, 2 Вт): пик 130…1190 Вт на 100 мкс. Провод затвора — витая пара, как можно ближе к выводу.</text>
+</svg>
