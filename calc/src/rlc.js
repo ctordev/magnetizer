@@ -10,6 +10,12 @@ const Rs = 0.0040, VF = 1.2, VSCR = 1.5, IH = 0.5, dt = 2e-6;   // ESR банк�
 // отечественные компоненты установки (см. BOM в magnetizer.html)
 const T253 = { itsm: 28e3, i2t: 3920e3, dit: 200, u0: 0.95, rt: 0.2e-3, igt: 0.2 };   // VT1 Т253-1250-16
 const VL200 = { i2t: 180e3, itsm: 6e3 };                                              // VD6 = 2× ВЛ200
+// VT1 упрощённой версии (calc/coils/simple.js, magnetizer-simple.html) — Т160/Т161-160, паспорт:
+// Itsm = 4000 А (полуволна 10 мс, Тп = 125 °C, неповторяющийся) ⇒ i²t = 4000²·(10/2) мс = 80 кА²·с;
+// (di/dt)кр = 80 А/мкс; tвыкл ≤ 250 мкс; Uпр ≤ 1,75 В при 3,14·160 = 502 А и r_д = 1,4 мОм
+// ⇒ U0 = 1,75 − 1,4·0,502 = 1,05 В; Iу.от = 0,2 А (25 °C); класс 6 = 600 В, максимально допустимое
+// постоянное Uзс = 0,75·600 = 450 В. Теплоёмкость кристалла выводим из условия Itsm (см. simple.js).
+const T160 = { itsm: 4000, i2t: 80e3, dit: 80, tq: 250e-6, u0: 1.05, rt: 1.4e-3, igt: 0.2, cls: 600 };
 
 function sim(C, U0, L, Rf, N) {            // A: с VD6, B: без VD6
   const T = 0.25;
@@ -57,7 +63,25 @@ function splitParts(Ipk, parts) {          // деление по Z=sqrt(ESL/C)
 }
 function split(Ipk) { return splitParts(Ipk, BANK_PARTS); }
 
-module.exports = { sim, split, splitParts, BANK_PARTS, T253, VL200, Rs, VF, VSCR, IH, dt };
+// Оценка режима тиристора в импульсе — общая для всех скриптов, чтобы оценка была одна и та же
+// и в консоли, и в документах: пик и i²t против паспорта + ΔTj кристалла за выстрел.
+// Теплоёмкость кристалла выводим из условия Itsm: полуволна 10 мс с пиком itsm даёт на переходе
+// E = U0·Q + r_t·i²t и поднимает его на 125 К (паспортный Itsm задан при Тп = 125 °C) ⇒ Cth = E/125.
+// Q_тир и i²t берём из истории sim() по току тиристора (он несёт только передний фронт импульса).
+function scrStress(r, scr) {
+  const Qs10 = 2 / Math.PI * scr.itsm * 0.01, i2t10 = scr.itsm ** 2 * 0.005;
+  const Cth = (scr.u0 * Qs10 + scr.rt * i2t10) / 125;
+  const h = r.hist;
+  const QS = h.reduce((s, p, n) => n ? s + (p[4] + h[n - 1][4]) / 2 * (p[0] - h[n - 1][0]) : s, 0);
+  const ES = VSCR * QS + scr.rt * r.i2tS;
+  let iLtc = 0;                                                 // ток катушки в момент гашения тиристора
+  for (const p of h) if (p[0] <= r.tc) iLtc = p[1];
+  return { Cth, QS, ES, dTj: ES / Cth, pctItsm: r.ipk / scr.itsm, pctI2t: r.i2tS / scr.i2t,
+           dit: r.dmx / 1e6, ditPct: r.dmx / 1e6 / scr.dit, tRev: r.Thalf - r.tc, tq: scr.tq,
+           dVdt: iLtc / r.C / 1e6, iLtc };
+}
+
+module.exports = { sim, split, splitParts, scrStress, BANK_PARTS, T253, T160, VL200, Rs, VF, VSCR, IH, dt };
 
 if (require.main === module) {
   const EM = require('./em.js');

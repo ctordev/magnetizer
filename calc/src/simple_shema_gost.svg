@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1310 812" role="img" aria-label="Упрощённая версия: заряд от сети через лампу EL1 и диод VD1, банк C1, разрядник R1, вольтметр PV1, разряд SA1/EL2, цепь намагничивания VT1 (Т160) → оснастка L1 с VD6; корпус — шина «−», без PE">
+  <style>
+    .w{stroke:#cfd7e4;stroke-width:2;fill:none}
+    .w2{stroke:#cfd7e4;stroke-width:1.4;fill:none}
+    .coil{stroke:#ffb020;stroke-width:2.4;fill:none}
+    .lbl{fill:#9fb0c8;font:12px/1.2 "Segoe UI",Arial,sans-serif}
+    .lblb{fill:#e6edf7;font:600 13px/1.2 "Segoe UI",Arial,sans-serif}
+  </style>
+  <rect class="bg" x="0" y="0" width="1310" height="812" fill="#10141b"/>
+
+  <text x="40" y="34" class="lblb" font-size="14">Упрощённая версия — заряд от сети через лампу, банк 1 × 4700 мкФ, тиристор Т160</text>
+  <text x="1270" y="34" text-anchor="end" class="lbl" font-size="13">обозначения: ГОСТ 2.721, 2.730</text>
+
+  <!-- сеть: L через QF1 (2 полюса) и FU1 на шину «+», N через второй полюс QF1 на шину «−» -->
+  <text x="16" y="204" class="lblb">L</text>
+  <text x="16" y="564" class="lblb">N</text>
+  <circle cx="36" cy="200" r="6" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="36" cy="560" r="6" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w" d="M42 200 H64 M104 200 H112 M152 200 H202 M230 200 H256 M292 200 H1250"/>
+  <path class="w" d="M42 560 H64 M104 560 H1250"/>
+  <path class="w" d="M64 200 L100 178 M64 560 L100 538"/>
+  <circle cx="64" cy="200" r="3" fill="#cfd7e4"/><circle cx="104" cy="200" r="3" fill="#cfd7e4"/>
+  <circle cx="64" cy="560" r="3" fill="#cfd7e4"/><circle cx="104" cy="560" r="3" fill="#cfd7e4"/>
+  <path class="w2" d="M84 208 V552" stroke-dasharray="5 4"/>
+  <path class="w2" d="M60 196 L68 204 M68 196 L60 204 M60 556 L68 564 M68 556 L60 564"/>
+  <text x="64" y="148" class="lblb">QF1 (2р, 6 А)</text>
+  <rect x="112" y="188" width="40" height="24" rx="2" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M112 200 H152"/>
+  <text x="132" y="176" text-anchor="middle" class="lblb">FU1 1 А</text>
+
+  <!-- EL1: лампа накаливания 100 Вт — балласт и индикатор заряда -->
+  <circle cx="216" cy="200" r="14" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M206 190 L226 210 M226 190 L206 210"/>
+  <text x="216" y="146" text-anchor="middle" class="lblb">EL1 100 Вт</text>
+
+  <!-- VD1: зарядный диод (полуволновой) -->
+  <path d="M256 186 L256 214 L284 200 z" fill="#cfd7e4"/>
+  <path class="w" d="M284 186 V214"/>
+  <text x="270" y="176" text-anchor="middle" class="lblb">VD1 10 А/1000 В</text>
+
+  <!-- шины постоянного тока -->
+  <text x="352" y="190" class="lblb">+  (после VD1)</text>
+  <text x="352" y="592" class="lblb">−  (общий)</text>
+
+  <!-- минусовая шина на корпус -->
+  <path class="w" d="M430 560 V606 M408 606 H452 M416 616 H444 M424 626 H436"/>
+  <text x="430" y="648" text-anchor="middle" class="lbl">корпус кожуха — шина «−», без PE</text>
+  <text x="430" y="668" text-anchor="middle" class="lblb" style="fill:#ff9f43">относительно земли: минус 310…358 В</text>
+
+  <!-- R1: разрядник банка -->
+  <circle cx="560" cy="200" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M560 200 V300 M560 360 V560"/>
+  <rect x="550" y="300" width="20" height="60" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="560" cy="560" r="4" fill="#cfd7e4"/>
+  <text x="544" y="316" text-anchor="end" class="lblb">R1</text>
+  <text x="544" y="334" text-anchor="end" class="lbl">47 кОм</text>
+  <text x="544" y="352" text-anchor="end" class="lbl">5 Вт</text>
+
+  <!-- C1: банк -->
+  <circle cx="660" cy="200" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M660 200 V300 M660 314 V560"/>
+  <path class="w" d="M630 300 H690 M630 314 H690"/>
+  <text x="636" y="292" class="lblb">+</text>
+  <text x="668" y="292" class="lblb">C1</text>
+  <text x="668" y="254" class="lbl">400 В</text>
+  <text x="668" y="272" class="lbl">4700 мкФ</text>
+  <circle cx="660" cy="560" r="4" fill="#cfd7e4"/>
+
+  <!-- SA1 + EL2: разряд при снятом кожухе -->
+  <circle cx="760" cy="200" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M760 200 V250 M760 290 V324 M760 356 V560"/>
+  <circle cx="760" cy="250" r="3" fill="#cfd7e4"/><circle cx="760" cy="290" r="3" fill="#cfd7e4"/>
+  <path class="w" d="M760 250 L776 282"/>
+  <circle cx="760" cy="340" r="16" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <path class="w2" d="M749 329 L771 351 M771 329 L749 351"/>
+  <circle cx="760" cy="560" r="4" fill="#cfd7e4"/>
+  <text x="782" y="262" class="lblb">SA1</text>
+  <text x="782" y="280" class="lbl">концевик</text>
+  <text x="782" y="345" class="lblb">EL2</text>
+  <text x="782" y="363" class="lbl">100 Вт</text>
+
+  <!-- PV1: вольтметр с делителем -->
+  <circle cx="860" cy="200" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M860 200 V246 M860 282 V340 M860 380 V560"/>
+  <circle cx="860" cy="264" r="18" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <text x="860" y="270" text-anchor="middle" class="lblb" font-size="15">V</text>
+  <rect x="850" y="340" width="20" height="40" fill="none" stroke="#cfd7e4" stroke-width="2"/>
+  <circle cx="860" cy="560" r="4" fill="#cfd7e4"/>
+  <text x="884" y="270" class="lblb">PV1</text>
+  <text x="884" y="288" class="lbl">до 450 В</text>
+  <text x="884" y="352" class="lblb">R2</text>
+  <text x="884" y="370" class="lbl">10 МОм</text>
+
+  <!-- цепь намагничивания: VT1 (Т160), оснастка L1, VD6 на её клеммах -->
+  <circle cx="1000" cy="200" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M1000 200 V300 M1000 326 V352 M1000 448 V560"/>
+  <path d="M986 300 L1014 300 L1000 326 z" fill="#ff9f43"/>
+  <path class="w" d="M984 326 H1016"/>
+  <path class="w" d="M1016 322 L1034 338"/>
+  <path class="coil" d="M1000 352 q14 12 0 24 q14 12 0 24 q14 12 0 24 q14 12 0 24" fill="none"/>
+  <circle cx="1000" cy="352" r="4" fill="#cfd7e4"/><circle cx="1000" cy="448" r="4" fill="#cfd7e4"/>
+  <path class="w" d="M1000 352 H1060 V396 M1060 420 V448 H1000"/>
+  <path d="M1048 420 L1072 420 L1060 396 z" fill="#43c59e"/>
+  <path class="w" d="M1048 396 H1072"/>
+  <circle cx="1000" cy="560" r="4" fill="#cfd7e4"/>
+  <text x="1000" y="186" text-anchor="middle" class="lblb" style="fill:#ff9f43">VT1 Т160-6</text>
+  <text x="1037" y="392" text-anchor="middle" class="lblb">L1</text>
+  <text x="1080" y="404" class="lblb" style="fill:#43c59e">VD6</text>
+  <text x="1080" y="448" class="lbl" style="fill:#43c59e">= D2, §2</text>
+
+  <!-- US1: узел запуска VT1 -->
+  <path class="w2" d="M1034 338 H1120" stroke-dasharray="5 4"/>
+  <rect x="1120" y="310" width="150" height="104" fill="none" stroke="#5b6577" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="1195" y="334" text-anchor="middle" class="lblb">US1 — запуск VT1</text>
+  <text x="1195" y="356" text-anchor="middle" class="lbl">SA2 «Пуск»</text>
+  <text x="1195" y="376" text-anchor="middle" class="lbl">C2 1 мкФ/400 В</text>
+  <text x="1195" y="396" text-anchor="middle" class="lbl">R3 100 Ом</text>
+
+  <!-- примечания -->
+  <text x="40" y="704" class="lblb" style="fill:#ffb020">Напряжение не регулируется: банк стоит на пике сети — 311 / 325 / 358 В при 220 / 230 / 253 В. EL1 100 Вт ограничивает ток заряда ≤0,7 А:</text>
+  <text x="40" y="726" class="lblb" style="fill:#ffb020">до 90 % пика 32 с, до 95 % — 52 с, до 99 % — 136 с. Лампа горит в начале и гаснет по мере заряда — это индикатор. Гальванической развязки нет.</text>
+  <text x="40" y="748" class="lbl">VD1 обратный ток не пропускает: без R1 банк после вырывания вилки остаётся под напряжением. R1 47 кОм: до 50 В за ~7 мин, на нём 2,7 Вт при 358 В.</text>
+  <text x="40" y="770" class="lbl">Режим A (схема): 4,7 мФ / 325 В → 2,28 кА, T/2 = 1,8 мс, N·I = 64 кА·вит. Режим B (33 мФ / 150 В, T/2 = 4,8 мс) заряжается от вторички 106 В — на схеме не показан.</text>
+  <text x="40" y="792" class="lbl">Защиты полупроводников по постоянному току нет: режим держат число витков и PV1, запас VT1 по i²t — 25×. Затвор — коротким витым проводом, импульс ≥0,5 А.</text>
+</svg>

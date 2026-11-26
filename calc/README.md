@@ -1,6 +1,7 @@
 # Импульсный магнетизер — расчёты и артефакты
 
 Документ проекта: `../magnetizer.html` (открывается офлайн, всё встроено).
+Упрощённая версия (заряд от сети через лампу, Т160): `../magnetizer-simple.html` (генератор — `coils/doc_simple.js`).
 Галерея промышленных катушек: `../katushki-promyshlennye.html` (+ `../img/fixtures/`).
 3D-модели ярма: `../yarmo.html` (генератор — `src/yoke3d.js`).
 Копия сайта imlab.narod.ru (установки намагничивания, генераторы, оснастка): `../refs/imlab/`
@@ -58,8 +59,8 @@ r контура: обмотка 8.5 + шина/тиристор 3.5 + ESR ба�
 | `rlc.js` | **общий решатель режима** `sim(C,U0,L,Rf,N)` (A с VD6, B без) и `split(Ipk)` (токи по 16 банкам) + паспортные данные VT1/VD6. Его используют `master.js` и `coils/` — чтобы режим везде считался одной моделью. `node src/rlc.js` — контрольный прогон оснастки проекта | `require('./rlc.js')` |
 | `variants.js` | сравнение вариантов намотки (1×12, 1×24, 2×12, 3×8, 2×18, 2×24) при одном банке: L, I, N·I, поле, η, i²t VD6, токи на банку → §3.2 и §4 | `node src/variants.js` |
 | `coil_len.js` | **высота (длина) намотки**: точная индуктивность (Neumann + эллиптические интегралы), поле в кольце, допуски по центровке, 1/2/3 слоя → §4.1 | `node src/coil_len.js` |
-| `fig_vd6.js` | двухпанельная осциллограмма §2 (с VD6 / без) из `vd6_data.json` | `node src/fig_vd6.js` → `out/fig_vd6.svg` + `out/fig_vd6.frag.html` |
-| `fig_d2.js` | первая осциллограмма §2 (ток оснастки / VT1 / VD6 / U банка, врезка фронта) из того же `vd6_data.json` | `node src/fig_d2.js` → `out/fig_d2.svg` + `out/fig_d2.frag.html` |
+| `fig_vd6.js` | двухпанельная осциллограмма §2 (с VD6 / без). Аргументы `[данные.json] [префикс]`: по умолчанию `vd6_data.json`/`fig_vd6` (основная установка), для упрощённой — `calc/src/simple_A/B_data.json` и префикс `fig_vd6_simple(B)`; подписи шапки — из `meta.cap` данных | `node src/fig_vd6.js [данные.json] [префикс]` → `out/<префикс>.svg` + `out/<префикс>.frag.html` |
+| `fig_d2.js` | первая осциллограмма §2 (ток оснастки / VT1 / VD6 / U банка, врезка фронта). Те же аргументы `[данные.json] [префикс]`, что у `fig_vd6.js` | `node src/fig_d2.js [данные.json] [префикс]` → `out/<префикс>.svg` + `out/<префикс>.frag.html` |
 | `bank_real.js` | варианты банка из наличия (16/17/15/12/10/7 банок) при 300/320/350 В | `node src/bank_real.js` |
 | `charge.js` | старая экспоненциальная оценка τ=RC (оптимистичнее в 2,5–2,7 раза — для сравнения) + **общая модель разряда банки в обмотку `rlc(R,L,U,C)`**, её берут остальные скрипты | `node src/charge.js` |
 | `charge3.js` | **точная** модель заряда (каждый полупериод, окно [α, π−α]) и **выбор вторички T1** (`design()`): два ограничения — пик при открытом регуляторе и 253 В ≤ 400 В, и время заряда ≤ 60 с; таблицы по режимам вторички («255 В» — вся обмотка, «127 В» — половина от вывода 1 до отвода 4; у «127 В» потолок ≈ 175 В), удар без балласта, скан балласта. Позиция регулятора (по схеме — вторичка) на эти числа не влияет: приведённая ко вторичке цепь та же; 1.21 А — это сеть, 1.04 А — вторичка | `node src/charge3.js` |
@@ -73,7 +74,7 @@ r контура: обмотка 8.5 + шина/тиристор 3.5 + ESR ба�
 | `mirror_imlab.py` | зеркало imlab.narod.ru → `../refs/imlab/` (BFS по ссылкам, HTML + картинки + .rar; скачанное не трогает, при недоступе сайта ждёт и повторяет). Режим `FILES=…` — докачать готовый список URL без обхода ссылок | `SEEDS="https://imlab.narod.ru/M_Fields/Magn_Equip/Magn_Equip.htm" python3 src/mirror_imlab.py`; `FILES=../refs/imlab/_notes/missing_images.txt python3 src/mirror_imlab.py` |
 | `imlab_check.py` | **целостность копии**: недостающие картинки, битые внутренние ссылки, обрезанные/пустые страницы, оставшиеся обращения в сеть → `../refs/imlab/_notes/integrity.md` + `_notes/missing_images.txt`. `--fix` — вместо несохранённого `<img>` пунктирный блок со ссылкой на оригинал (обратимо), `--restore` — вернуть `<img>` когда файл докачан, `--offline`/`--online` — убрать/вернуть чужие сетевые запросы (ucoz, счётчики), скачанное подтянуть локально | `python3 src/imlab_check.py [--fix --restore --offline --online]` |
 | `htmlcheck.py` | **целостность наших документов**: неразрывная вложенность тегов, несуществующие локальные `src`/`href`, повторные `id`, «сырой» `<` внутри `pre`/`code`, обозначения со svg-схем ⊆ таблицы своей секции / текст документа | `python3 src/htmlcheck.py ../magnetizer.html ../yarmo.html …` |
-| `embedcheck.py` | **вшитое == исходник**: тела `out/fig_*.frag.html` в `magnetizer.html`, `src/*_section.html` в свои секции, копия `mag10.js` в документе, `t1_shema` == `charge_block1`, вошитые svg блоков 1–2 == standalone (для mag10 допустима адаптация `fill="` → `style="fill:`) | `python3 src/embedcheck.py` |
+| `embedcheck.py` | **вшитое == исходник**: тела `out/fig_*.frag.html` в `magnetizer.html`, `src/*_section.html` в свои секции, копия `mag10.js` в документе, `t1_shema` == `charge_block1`, вошитые svg блоков 1–2 == standalone (для mag10 допустима адаптация `fill="` → `style="fill:`); для `magnetizer-simple.html` — документ == свежий вывод `doc_simple.js`, вошиты 4 frag'а, схема == тело `simple_shema_gost.svg` | `python3 src/embedcheck.py` |
 | `imlab_text.py` | текст всех страниц копии → `refs/imlab/_text/…` (чтобы искать по всему собранному) | `python3 src/imlab_text.py` |
 | `imlab_specs.py` | выжимка «Назначение / Технические данные / Конструкция» по установкам → `refs/imlab/_notes/specs.md` | `python3 src/imlab_specs.py` |
 | `imlab_table.py` | паспортные данные оснасток (зона → B → ток, витки, L, R) → `refs/imlab/_notes/fixtures.{json,md}` | `python3 src/imlab_table.py` |
@@ -92,6 +93,8 @@ r контура: обмотка 8.5 + шина/тиристор 3.5 + ESR ба�
 | `coils/coils.js` | намотки из провода ⌀3,3 мм в тряпочной изоляции: L и R из геометрии, режим на нашем банке 47 мФ при 120…300 В, давление на намотку, тяга к центру, нагрев, наведённые ЭДС в ЗК и в корзине (по её материалу), проверка самого провода; раздел «весь список МС» — МДС, bore и рекомендуемая оснастка для каждой головки | `node coils/coils.js` |
 | `coils/doc10gd.js` | **генерирует `../katushki-10gd.html`** — документ с разрезами обоих моторов, всеми таблицами (МДС, варианты намотки, режим, провод, побочные эффекты, запуск и приёмка) и §10. В §10 он выкладывает исходники `em.js`/`rlc.js`/`winding.js` как есть (`fn.toString()`), плюс `SELFTEST` (контрольные точки) и `PREFILL` (рекомендованная намотка) — правки цифр только здесь | `node coils/doc10gd.js` → `../katushki-10gd.html` |
 | `coils/webcalc.js` | интерфейс калькулятора §10: bore/провод/слои/витки/напряжение/ёмкость/×L, два живых графика (форма импульса при соседних напряжениях и N·I+охват против напряжения) и `calcCheck()` — сверка страницы с контрольными точками node. Своей модели нет: только общие функции | `node --check coils/webcalc.js` (браузерный, запускать через `node` нельзя) |
+| `coils/simple.js` | **упрощённая версия**: режим A (1×4700 мкФ до пика сети 311…358 В, T/2 = 1,8 мс) и режим B (32,9 мФ / 150 В, T/2 = 4,8 мс), проверка тиристора Т160 общим `rlc.js: scrStress()`, запрет банка 47 мФ, заряд от сети через лампу 100 Вт (настоящий процесс по полуволнам, не τ=RC), разрядник, покрытие шести МС. Пишет `src/simple_A/B_data.json` для осциллограмм. Паспорт Т160 — в `src/rlc.js` | `node coils/simple.js` |
+| `coils/doc_simple.js` | **генерирует `../magnetizer-simple.html`** — схема (тело `src/simple_shema_gost.svg`), таблицы режимов, проверка Т160, заряд, безопасность, BOM; осциллограммы — из `out/fig_*_simple*.frag.html`. Правки цифр только здесь | `node coils/doc_simple.js` → `../magnetizer-simple.html` |
 | `coils/README.md` | что построено (bore ⌀95, 2 слоя × 14), почему 120…180 В вместо 300 В, что обязательно измерить при первом пуске, границы модели | — |
 
 ## Пересчёт и вшивка в документ
@@ -99,6 +102,12 @@ r контура: обмотка 8.5 + шина/тиристор 3.5 + ESR ба�
 ```bash
 node calc/src/master.js && node calc/src/fig_vd6.js && node calc/src/fig_d2.js
 node calc/src/yoke3d.js          # если менялась геометрия ярма/оснастки или тексты/ссылки в поле `imlab`
+node calc/coils/simple.js        # упрощённая версия: таблицы + simple_A/B_data.json, затем его осциллограммы:
+node calc/src/fig_d2.js calc/src/simple_A_data.json fig_d2_simple
+node calc/src/fig_vd6.js calc/src/simple_A_data.json fig_vd6_simple
+node calc/src/fig_d2.js calc/src/simple_B_data.json fig_d2_simpleB
+node calc/src/fig_vd6.js calc/src/simple_B_data.json fig_vd6_simpleB
+node calc/coils/doc_simple.js    # ...и перегенерировать magnetizer-simple.html (вшивку руками не править)
 python3 calc/src/htmlcheck.py *.html   # после любой правки документов: теги, локальные ссылки, картинки
 ```
 

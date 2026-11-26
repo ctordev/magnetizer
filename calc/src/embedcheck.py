@@ -9,9 +9,11 @@
 #  4) calc/src/t1_shema_gost.svg == calc/src/charge_block1_gost.svg (двойник-копия);
 #  5) вошитые <svg> блоков 1–2 в magnetizer.html и charge_section.html совпадают с телом
 #     standalone-рисунков (charge_block1/2_gost.svg: тело после <rect class="bg">, без
-#     xmlns/style/фона), сопоставление по aria-label.
+#     xmlns/style/фона), сопоставление по aria-label;
+#  6) magnetizer-simple.html == вывод calc/coils/doc_simple.js; вошиты frag'и fig_*_simple;
+#     вошитая схема == тело calc/src/simple_shema_gost.svg.
 # Выход ≠ 0, если есть расхождение; на каждую проверку строка ok/РАСХОЖДЕНИЕ.
-import pathlib, re, sys
+import pathlib, re, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent   # каталог проекта
 SRC = ROOT / 'calc' / 'src'
@@ -70,7 +72,7 @@ def main():
         return (aria.group(1) if aria else ''), norm(body)
 
     def inlined_body(host: str, aria_frag: str):
-        for m in re.finditer(r'<svg viewBox="[^"]*"[^>]*>', host):
+        for m in re.finditer(r'<svg[^>]*viewBox="[^"]*"[^>]*>', host):
             tag = m.group(0)
             aria = re.search(r'aria-label="([^"]*)"', tag)
             if aria and aria_frag in aria.group(1):
@@ -85,6 +87,21 @@ def main():
             emb = inlined_body(host, key)
             report(f'{stem}: вошитый svg в {host_name} == standalone', emb is not None and emb == body,
                    'тело вошитого svg отличается от standalone (пересобрать вшивку из standalone)')
+
+    # 6) упрощённая версия: документ == вывод генератора (в HTML цифрами не правят),
+    #    осциллограммы вошиты целиком, схема в документе == тело standalone
+    doc2_path = ROOT / 'magnetizer-simple.html'
+    doc2 = doc2_path.read_text('utf-8')
+    subprocess.run(['node', 'calc/coils/doc_simple.js'], cwd=ROOT, capture_output=True, text=True)
+    report('magnetizer-simple.html == вывод doc_simple.js', doc2 == doc2_path.read_text('utf-8'),
+           'в HTML правили вручную — перегенерировать (node calc/coils/doc_simple.js)')
+    for name in ('fig_d2_simple', 'fig_vd6_simple', 'fig_d2_simpleB', 'fig_vd6_simpleB'):
+        frag = (OUT / f'{name}.frag.html').read_text('utf-8')
+        report(f'вшита {name}.frag.html', frag.strip() in doc2, 'тело frag не найдено в magnetizer-simple.html целиком')
+    aria, body = standalone_body(SRC / 'simple_shema_gost.svg')
+    emb = inlined_body(doc2, aria[:40])
+    report('simple_shema_gost.svg: вошитый svg == standalone', emb is not None and emb == body,
+           'тело вошитого svg отличается от standalone (пересобрать вшивку из standalone)')
 
     print(f'проверок: {checks}, расхождений: {len(fails)}')
     return 1 if fails else 0

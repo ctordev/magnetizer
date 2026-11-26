@@ -1,13 +1,22 @@
 // §2, рисунок 1: осциллограмма контура — ток оснастки L1, ток VT1, ток VD6, напряжение банка,
 // плюс врезка фронта. Данные — из calc/src/vd6_data.json (пишет master.js): одна модель и для
-// этого рисунка, и для таблиц. Пуск: node calc/src/fig_d2.js → calc/out/fig_d2.svg (+ .frag.html
-// для вшивки в magnetizer.html: то же тело, но без standalone-шапки — классы .lbl/.lblb даёт CSS
+// этого рисунка, и для таблиц. Пуск: node calc/src/fig_d2.js [данные.json] [префикс] →
+// calc/out/<префикс>.svg (+ <префикс>.frag.html для вшивки в документ: то же тело, но без
+// standalone-шапки — классы .lbl/.lblb даёт CSS
 // документа; цветные подписи — inline style="fill:…", атрибут fill класс бы перебил).
+// Подписи шапки рисунка — из meta.cap (для основной установки — прежний текст по умолчанию).
 // Шрифт подписей — моноширинный класс документа: метрики предсказуемы, раскладка считается
 // под JetBrains Mono (строка 12px ≈ 7.2px ширины, bbox ≈ 16px).
 const fs = require('fs');
-const D = JSON.parse(fs.readFileSync(__dirname + '/vd6_data.json', 'utf8'));
+const DATA = process.argv[2] || __dirname + '/vd6_data.json';   // данные (meta + A/B)
+const OUTP = process.argv[3] || 'fig_d2';                        // префикс файлов в calc/out
+const D = JSON.parse(fs.readFileSync(DATA, 'utf8'));
 const M = D.meta, A = D.A;                    // [t, i_оснастки, u_банка, i_VD6, i_VT1]
+// подписи шапки рисунка — из meta.cap (для основной установки по умолчанию то, что было)
+const CAP = Object.assign({
+  title: `Осциллограмма контура: банк ${(M.C * 1e3).toFixed(1)} мФ (10 × EPCOS 4700 мкФ), ${M.U0} В, оснастка 2 слоя × 12 витков / ${(M.L * 1e6).toFixed(0)} мкГн / контур 16 мОм (обмотка 8.5 + шины 3.5 + ESR 4.0)`,
+  sub: 'модель: C→VT1(Т253-1250)→(L, r) с VD6 на клеммах оснастки; VD6 = 2× ВЛ200 (1,84 В + 1,37 мОм), тиристор гаснет на нуле тока',
+}, M.cap || {});
 
 const IMAX = Math.ceil((M.ipkA / 1000) * 1.25 / 2) * 2;
 let TEND = 0.02; for (const p of A) if (Math.abs(p[1]) > M.ipkA * 0.01) TEND = p[0];
@@ -26,25 +35,25 @@ let g = '';
 for (let q = 0; q <= 8; q++) { const ms = Math.round(TMAX * 1000 * q / 8), x = X(ms / 1e3);
   g += `<path d="M${x.toFixed(1)} ${PT} V${PB}" stroke="#2b3140" stroke-width="1"/>` +
        `<text x="${x.toFixed(1)}" y="${PB + 22}" text-anchor="middle" class="lbl">${ms}</text>`; }
-for (let q = 0; q <= 5; q++) { const kA = Math.round(IMAX * q / 5), y = Y(kA);
-  g += `<path d="M${PL} ${y.toFixed(1)} H${PR}" stroke="#2b3140" stroke-width="1"/>` +
-       `<text x="${PL - 12}" y="${(y + 5).toFixed(1)}" text-anchor="end" class="lbl">${kA}</text>`; }
+for (let q = 0; q <= 5; q++) { const kA = IMAX * q / 5, y = Y(kA);   // точные значения делений: при
+  g += `<path d="M${PL} ${y.toFixed(1)} H${PR}" stroke="#2b3140" stroke-width="1"/>` +            // IMAX=4
+       `<text x="${PL - 12}" y="${(y + 5).toFixed(1)}" text-anchor="end" class="lbl">${Number.isInteger(kA) ? kA : kA.toFixed(1)}</text>`; }  // округление давало бы два «2» в одной точке
 for (let v = 0; v <= M.U0; v += 100) { const y = YU(v); g += `<text x="${PR + 12}" y="${(y + 5).toFixed(1)}" class="lbl" style="fill:#6b7789">${v}</text>`; }
 
 // врезка фронта: рамка на 68…320, заголовок внутри, верхняя метка шкалы не наезжает на него
 const IL = 470, IR = 780, IT = 96, IB = 290, XT = t => IL + (IR - IL) * t / INSET, YT = k => IB - (IB - IT) * k / IMAX;
 let gi = '';
-for (let q = 0; q <= 4; q++) { const ms = Math.round(INSET * 1000 * q / 4), x = XT(ms / 1e3);
-  gi += `<path d="M${x.toFixed(1)} ${IT} V${IB}" stroke="#2b3140" stroke-width="1"/>` +
-        `<text x="${x.toFixed(1)}" y="${IB + 18}" text-anchor="middle" class="lbl">${ms}</text>`; }
+for (let q = 0; q <= 4; q++) { const ms = INSET * 1000 * q / 4, x = XT(ms / 1e3);   // точные значения:
+  gi += `<path d="M${x.toFixed(1)} ${IT} V${IB}" stroke="#2b3140" stroke-width="1"/>`
+        + `<text x="${x.toFixed(1)}" y="${IB + 18}" text-anchor="middle" class="lbl">${Number.isInteger(ms) ? ms : ms.toFixed(1)}</text>`; }
 for (let q = 0; q <= 4; q++) { const kA = Math.round(IMAX * q / 4), y = YT(kA);
   gi += `<text x="${IL - 8}" y="${(y + 5).toFixed(1)}" text-anchor="end" class="lbl">${kA}</text>`; }
 
 const ELc = 0.5 * M.L * Math.pow(M.ipkA, 2) / 1e3;
 const XT_ = X(M.tcommA).toFixed(1);
 const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Осциллограмма тока диода VD6 и тиристора">
-<text x="24" y="30" class="lblb">Осциллограмма контура: банк ${(M.C * 1e3).toFixed(1)} мФ (10 × EPCOS 4700 мкФ), ${M.U0} В, оснастка 2 слоя × 12 витков / ${(M.L * 1e6).toFixed(0)} мкГн / контур 16 мОм (обмотка 8.5 + шины 3.5 + ESR 4.0)</text>
-<text x="24" y="50" class="lbl">модель: C→VT1(Т253-1250)→(L, r) с VD6 на клеммах оснастки; VD6 = 2× ВЛ200 (1,84 В + 1,37 мОм), тиристор гаснет на нуле тока</text>
+<text x="24" y="30" class="lblb">${CAP.title}</text>
+<text x="24" y="50" class="lbl">${CAP.sub}</text>
 ${g}
 <path d="${area}" fill="#4da3ff" fill-opacity="0.13"/>
 <path d="${line(AV, p => X(p[0]), p => Y(p[1] / 1e3))}" stroke="#e8ecf3" stroke-width="2.2" fill="none"/>
@@ -75,7 +84,9 @@ const head = `<?xml version="1.0" encoding="UTF-8"?>
   </style>
   <rect x="0" y="0" width="${W}" height="${H}" fill="#0b0d12"/>
 `;
-fs.writeFileSync(__dirname + '/../out/fig_d2.svg', head + svg.replace(/^<svg[^>]*>\n/, '').replace(/<\/svg>$/, '') + '</svg>\n');
-fs.writeFileSync(__dirname + '/../out/fig_d2.frag.html', svg + '\n');
-console.log('fig_d2.svg:', (fs.statSync(__dirname + '/../out/fig_d2.svg').size / 1024).toFixed(0) + ' KB',
+fs.writeFileSync(__dirname + `/../out/${OUTP}.svg`, head + svg.replace(/^<svg[^>]*>\n/, '').replace(/<\/svg>$/, '') + '</svg>\n');
+fs.writeFileSync(__dirname + `/../out/${OUTP}.frag.html`, svg + '\n');
+if (CAP.title.length > 155 || CAP.sub.length > 180)
+  console.warn(`⚠ ${OUTP}: подпись шире viewBox — title ${CAP.title.length} (≤155), sub ${CAP.sub.length} (≤180) знаков`);
+console.log(`${OUTP}.svg:`, (fs.statSync(__dirname + `/../out/${OUTP}.svg`).size / 1024).toFixed(0) + ' KB',
   '| Ipk', (M.ipkA / 1e3).toFixed(2), 'кА | tcomm', (M.tcommA * 1e3).toFixed(2), 'мс | τ', (M.tau * 1e3).toFixed(1), 'мс | i²t VD6', (M.i2tD / 1e3).toFixed(0), 'кА²с | окно', (TMAX * 1e3).toFixed(0), 'мс');
