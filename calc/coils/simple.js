@@ -35,6 +35,16 @@ const BLEED = 47e3;                                  // разрядник ба�
 const VD = 1.0;                                      // падение на одном диоде; в мосте VDS1 последовательно
 const VBR = 2 * VD;                                  // два диода → 2 В на пути заряда
 
+// PV1 — цифровой панельный вольтметр 0…200 В (Rвх ≈ 10 МОм) с последовательным R2 10 МОм:
+// делитель 2:1, шкала «показание ×2», полный угол прибора = 400 В (паспорт банка).
+// R2 = Rвх·(Uверх/Ufs − 1) — для прибора с другим Rвх пересчитать. Последовательный элемент один,
+// и он же защита: обрыв R2 — прибор на нуле; КЗ входа прибора — R2 держит 40 мкА, стабилитрон не нужен.
+const PV = { Ufs: 200, Rin: 10e6, R2: 10e6 };
+const pvK = (PV.R2 + PV.Rin) / PV.Rin;                // 2 — коэффициент деления
+const pvRead = (U) => U / pvK;                        // что покажет прибор при U на шинах
+const pvP2 = (U) => (U - pvRead(U)) ** 2 / PV.R2;     // мощность на R2 (при 400 В — 4 мВт)
+const pvTau = (C) => (PV.R2 + PV.Rin) * C;            // вклад делителя в разряд банка: 26 ч на 4,7 мФ
+
 // Принятая оснастка — та же, что в основной установке и в katushki-10gd.html: ⌀95, 2 слоя × 14.
 const MAIN = { bore: boreMin(SYS.gd34).bore, per: 14, nL: 2 };
 const wMain = wind(MAIN.bore, MAIN.per, MAIN.nL);
@@ -114,7 +124,7 @@ function writeData() {
 }
 
 module.exports = { MAINS, peak, LAMP, Rlamp, Rcold, BLEED, VD, MAIN, wMain, CAP_A, CAP_A2, MODE_B,
-  MODE_B_LS, alphaFor, point, charge, cover, figData, FIGS, writeData, T160 };
+  MODE_B_LS, alphaFor, point, charge, cover, figData, FIGS, writeData, T160, PV, pvK, pvRead, pvP2, pvTau };
 
 // ══════════════════════════ прогон в консоль ══════════════════════════
 if (require.main === module) {
@@ -179,6 +189,9 @@ if (require.main === module) {
   }
   const cA = charge(CAP_A, 253), cB = charge(MODE_B.C, 230, LAMP.P * LAMP.n, alphaFor(MODE_B.U, 230));
   console.log(`  разрядник ${f(BLEED / 1e3, 0)} кОм: τ=${f(cA.bleedTau, 0)} с, до 50 В за ${f(cA.bleed50, 0)} с, на нём ${f(cA.bleedP, 1)} Вт (банк 4,7 мФ / ${peak(253)} В)`);
+  console.log(`  PV1: прибор 0…${PV.Ufs} В + R2 ${f(PV.R2 / 1e6, 0)} МОм (делитель ${f(pvK, 0)}:1, шкала ×${f(pvK, 0)}); ` +
+    `при ${peak(253)} В → ${f(pvRead(peak(253)), 0)} В, при 360 В → ${f(pvRead(360), 0)} В, при 150 В → ${f(pvRead(150), 0)} В; ` +
+    `на R2 ${f(pvP2(400) * 1e3, 0)} мВт при 400 В; τ делителя ${f(pvTau(CAP_A) / 3600, 0)} ч — на фоне R1 (${f(cA.bleed50 / 60, 0)} мин) ничто`);
   console.log(`  режим B (${f(MODE_B.C * 1e3, 1)} мФ, диммер α=${f(cB.alpha * 180 / Math.PI, 0)}°, пик ${f(cB.Upk, 0)} В): до 95 % за ${f(cB.t95, 0)} с, ` +
     `до 99 % за ${f(cB.t99, 0)} с; τ разрядника ${f(cB.bleedTau, 0)} с, до 50 В за ${f(cB.bleed50, 0)} с`);
 
