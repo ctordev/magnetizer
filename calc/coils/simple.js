@@ -26,13 +26,14 @@ const { W, f, wind, shot, cov, Radd } = require('./winding.js');
 // ── сеть и зарядный узел ──
 const MAINS = [220, 230, 253];                       // 220 номинал, 230 паспорт ЕС, 253 = +10 %
 const peak = (U) => Math.round(U * Math.SQRT2);      // 311 / 325 / 358 В — куда реально зарядится банк
-const LAMP = { P: 100, U: 220 };                     // балласт: лампа 100 Вт, R в горячем состоянии
-const Rlamp = LAMP.U * LAMP.U / LAMP.P;              // 484 Ом
+const LAMP = { P: 100, U: 220, n: 2 };               // балласт: 2 лампы 100 Вт параллельно (как в основной установке)
+const Rlamp = LAMP.U * LAMP.U / (LAMP.P * LAMP.n);   // 242 Ом в горячем состоянии
 const Rcold = Rlamp / 10;                            // холодная спираль ≈ в 10 раз меньше
-const BLEED = 47e3;                                  // разрядник банка: 47 кОм, 5 Вт (диод в заряде
-                                                     // обратный ток не пускает — без резистора банк
-                                                     // после вырывания вилки остаётся под напряжением)
-const VD = 1.0;                                      // падение на зарядном диоде
+const BLEED = 47e3;                                  // разрядник банка: 47 кОм, 5 Вт (при выключенном
+                                                     // диммере тиристор блокирует путь банка через лампы —
+                                                     // без резистора банк после вырывания вилки остаётся под напряжением)
+const VD = 1.0;                                      // падение на одном диоде; в мосте VDS1 последовательно
+const VBR = 2 * VD;                                  // два диода → 2 В на пути заряда
 
 // Принятая оснастка — та же, что в основной установке и в katushki-10gd.html: ⌀95, 2 слоя × 14.
 const MAIN = { bore: boreMin(SYS.gd34).bore, per: 14, nL: 2 };
@@ -51,31 +52,31 @@ function point(C, U, w = wMain) {
            dTcu: 0.9 * r.E / (w.mass * 385), sp: split(r.ipk) };
 }
 
-// Заряд банка от сети через диммер US1, лампу и диод (полуволновой): считаем настоящий процесс,
-// а не τ = R·C, потому что диод пропускает только положительные полуволны и у пика банк
-// дозаряжается «лесенкой» — последние проценты идут в разы дольше, чем τ. Umain — действующее
-// напряжение сети; alpha — угол открытия диммера (π/2 = полностью), банк заряжается до пика
-// срезанной синусоиды Up·sin α (так диммер и задаёт напряжение: U = √2·Uсети·sin α − U_диода).
-function charge(C, Umain, P = LAMP.P, alpha = Math.PI / 2) {
+// Заряд банка от сети через диммер US1, лампы и диодный мост VDS1: считаем настоящий процесс,
+// а не τ = R·C, потому что у пика банк дозаряжается «лесенкой» — последние проценты идут в разы
+// дольше, чем τ. Мост выпрямляет обе полуволны (импульсов заряда вдвое больше, чем у полуволнового
+// диода). Umain — действующее напряжение сети; alpha — угол открытия диммера (π/2 = полностью),
+// банк заряжается до пика срезанной синусоиды Up·sin α − 2·U_диода (так диммер и задаёт напряжение).
+function charge(C, Umain, P = LAMP.P * LAMP.n, alpha = Math.PI / 2) {
   const R = LAMP.U * LAMP.U / P, Up = Math.SQRT2 * Umain, dt = 1e-4, w = 2 * Math.PI * 50;
   const Upk = Up * Math.sin(alpha);                   // пик срезанной полуволны — куда зарядится банк
   let u = 0, t = 0, i0 = 0, t90 = null, t95 = null;
-  const tgt = (k) => k * (Upk - VD);
+  const tgt = (k) => k * (Upk - VBR);
   for (; t < 3600; t += dt) {
-    const th = (w * t) % Math.PI;                      // фаза внутри полуволны (диммер режет обе)
+    const th = (w * t) % Math.PI;                      // мост складывает обе полуволны в «горячую» фазу
     const um = th >= alpha ? Up * Math.sin(th) : 0;
-    if (um > u + VD) { const i = (um - VD - u) / R; i0 = Math.max(i0, i); u += i / C * dt; }
+    if (um > u + VBR) { const i = (um - VBR - u) / R; i0 = Math.max(i0, i); u += i / C * dt; }
     if (t90 === null && u >= tgt(0.90)) t90 = t;
     if (t95 === null && u >= tgt(0.95)) t95 = t;
     if (u >= tgt(0.99)) break;
   }
-  return { R, Up, Upk, alpha, t90, t95, t99: t, i0, i0cold: (Upk - VD) / (R / 10), tau: R * C,
-           bleedTau: BLEED * C, bleed50: BLEED * C * Math.log((Upk - VD) / 50),
-           bleedP: (Upk - VD) ** 2 / BLEED };
+  return { R, Up, Upk, alpha, t90, t95, t99: t, i0, i0cold: (Upk - VBR) / (R / 10), tau: R * C,
+           bleedTau: BLEED * C, bleed50: BLEED * C * Math.log((Upk - VBR) / 50),
+           bleedP: (Upk - VBR) ** 2 / BLEED };
 }
 
-// Угол диммера, при котором банк встаёт на U: sin α = (U + U_диода) / пик сети.
-const alphaFor = (U, Umain) => Math.asin(Math.min(1, (U + VD) / (Math.SQRT2 * Umain)));
+// Угол диммера, при котором банк встаёт на U: sin α = (U + 2·U_диода) / пик сети.
+const alphaFor = (U, Umain) => Math.asin(Math.min(1, (U + VBR) / (Math.SQRT2 * Umain)));
 
 // ── покрытие головок: чем берём в каждом режиме ──
 function cover(p) {
@@ -105,7 +106,7 @@ function writeData() {
   fs.writeFileSync(FIGS.A, JSON.stringify(figData(CAP_A, peak(230), 'A',
     `Упрощённая версия, режим A: банк ${(CAP_A * 1e3).toFixed(1)} мФ (1 × EPCOS 4700 мкФ/400 В), ` +
     `${peak(230)} В (пик сети 230 В), оснастка 2 слоя × 14 / ${(wMain.L * 1e6).toFixed(0)} мкГн / контур ${((wMain.R + Radd + Rs) * 1e3).toFixed(1)} мОм`,
-    `модель: C→VT1(Т160)→(L, r) с VD6 на клеммах оснастки; VD6 = 2× ВЛ200; заряд от сети диммером US1 (полный угол) через лампу 100 Вт и диод`)));
+    `модель: C→VT1(Т160)→(L, r) с VD6 на клеммах оснастки; VD6 = 2× ВЛ200; заряд от сети диммером US1 (полный угол) через лампы 2×100 Вт и мост VDS1`)));
   fs.writeFileSync(FIGS.B, JSON.stringify(figData(MODE_B.C, MODE_B.U, 'B',
     `Упрощённая версия, режим B: банк ${(MODE_B.C * 1e3).toFixed(1)} мФ (7 × EPCOS 4700 мкФ), ${MODE_B.U} В, ` +
     `оснастка 2 слоя × 14 / ${(wMain.L * 1e6).toFixed(0)} мкГн / контур ${((wMain.R + Radd + Rs) * 1e3).toFixed(1)} мОм`,
@@ -142,7 +143,7 @@ if (require.main === module) {
 
   console.log('\n── РЕЖИМ B: длинный импульс, заряд от сети диммером (α от руки, контроль PV1) ──');
   for (const [C, U] of MODE_B_LS) {
-    const p = point(C, U), a = alphaFor(U, 230), c = charge(C, 230, LAMP.P, a);
+    const p = point(C, U), a = alphaFor(U, 230), c = charge(C, 230, LAMP.P * LAMP.n, a);
     console.log(`${f(C * 1e3, 1)} мФ / ${U} В: I_pk=${f(p.r.ipk / 1e3, 2)} кА (${f(p.s.pctItsm * 100, 0)}% Itsm) ` +
       `i²t=${f(p.r.i2tS / 1e3, 1)} кА²с (${f(p.s.pctI2t * 100, 0)}%) ΔTj=+${f(p.s.dTj, 0)} К T/2=${f(p.r.Thalf * 1e3, 1)} мс ` +
       `N·I=${f(p.NI / 1e3, 0)} кА·вит E=${f(p.r.E, 0)} Дж +${f(p.dTcu, 1)} °C меди · диммер α=${f(a * 180 / Math.PI, 0)}° (пик ${f(c.Upk, 0)} В): ` +
@@ -164,19 +165,19 @@ if (require.main === module) {
   console.log(`режим B (${MODE_B.U} В, ${f(MODE_B.C * 1e3, 1)} мФ, T/2=${f(pb.r.Thalf * 1e3, 1)} мс, N·I=${f(pb.NI / 1e3, 0)} кА·вит):`);
   for (const c of cover(pb)) console.log(`   ${c.name}: нужно ${f(c.need / 1e3, 0)} → ${f(c.x, 1)}×, охват ${f(c.cov * 100, 0)}% — ${c.short}`);
 
-  console.log('\n── зарядный узел: диммер US1 + лампа 100 Вт (сеть 230 В) ──');
-  console.log('  напряжение задаётся углом: U = √2·230·sin α − 1 В; контроль PV1, верх ручки — упор на 360 В');
+  console.log('\n── зарядный узел: диммер US1 + лампы 2×100 Вт + мост VDS1 (сеть 230 В) ──');
+  console.log('  напряжение задаётся углом: U = √2·230·sin α − 2 В (мост); контроль PV1, верх ручки — упор на 360 В');
   for (const U of [358, 325, 300, 250, 200, 150]) {
-    const a = alphaFor(U, 230), cA = charge(CAP_A, 230, LAMP.P, a), cB = charge(MODE_B.C, 230, LAMP.P, a);
+    const a = alphaFor(U, 230), cA = charge(CAP_A, 230, LAMP.P * LAMP.n, a), cB = charge(MODE_B.C, 230, LAMP.P * LAMP.n, a);
     console.log(`  ${U} В: α=${f(a * 180 / Math.PI, 1)}°, ток ≤${f(cA.i0, 2)} А · банк 4,7 мФ: ${f(cA.t90, 0)}/${f(cA.t95, 0)} с (90/95 %)` +
       ` · банк ${f(MODE_B.C * 1e3, 1)} мФ: ${f(cB.t90, 0)}/${f(cB.t95, 0)} с`);
   }
-  for (const P of [75, 100, 150, 200]) {
+  for (const P of [100, 200, 300]) {
     const c = charge(CAP_A, 230, P);
-    console.log(`  (на полном угле) лампа ${P} Вт (R=${f(c.R, 0)} Ом): ${f(c.t90, 0)} с до 90 %, ${f(c.t95, 0)} с до 95 %, ${f(c.t99, 0)} с до 99 % пика ${f(c.Up, 0)} В; ` +
-      `ток заряда ≤${f(c.i0, 1)} А (холодная спираль ≤${f(c.i0cold, 0)} А)`);
+    console.log(`  (на полном угле) лампы суммарно ${P} Вт (R=${f(c.R, 0)} Ом): ${f(c.t90, 0)} с до 90 %, ${f(c.t95, 0)} с до 95 %, ${f(c.t99, 0)} с до 99 % пика ${f(c.Up, 0)} В; ` +
+      `ток заряда ≤${f(c.i0, 1)} А (холодные спирали ≤${f(c.i0cold, 0)} А)`);
   }
-  const cA = charge(CAP_A, 253), cB = charge(MODE_B.C, 230, LAMP.P, alphaFor(MODE_B.U, 230));
+  const cA = charge(CAP_A, 253), cB = charge(MODE_B.C, 230, LAMP.P * LAMP.n, alphaFor(MODE_B.U, 230));
   console.log(`  разрядник ${f(BLEED / 1e3, 0)} кОм: τ=${f(cA.bleedTau, 0)} с, до 50 В за ${f(cA.bleed50, 0)} с, на нём ${f(cA.bleedP, 1)} Вт (банк 4,7 мФ / ${peak(253)} В)`);
   console.log(`  режим B (${f(MODE_B.C * 1e3, 1)} мФ, диммер α=${f(cB.alpha * 180 / Math.PI, 0)}°, пик ${f(cB.Upk, 0)} В): до 95 % за ${f(cB.t95, 0)} с, ` +
     `до 99 % за ${f(cB.t99, 0)} с; τ разрядника ${f(cB.bleedTau, 0)} с, до 50 В за ${f(cB.bleed50, 0)} с`);
